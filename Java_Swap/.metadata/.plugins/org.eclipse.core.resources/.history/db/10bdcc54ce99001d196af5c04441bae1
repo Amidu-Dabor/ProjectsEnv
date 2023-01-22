@@ -1,0 +1,17 @@
+package SwapStrings;
+
+public class SwapConfig {
+
+	String firstName;
+	String lastName;
+	String names;
+
+	public void setNames(String firstName, String lastName) {
+		this.names = firstName + " " + lastName;
+	}
+	
+	public void getNames() {
+		System.out.println(names);
+	}
+	
+}

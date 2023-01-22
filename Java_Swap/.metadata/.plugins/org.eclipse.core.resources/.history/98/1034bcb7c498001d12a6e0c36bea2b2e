@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author Amid
+ *
+ */
+module SwapNames {
+}

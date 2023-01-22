@@ -1,0 +1,31 @@
+package SwapStrings;
+
+public class SwapConfig {
+
+	// Declaration of variables
+	String firstName, lastName, names;
+
+	// Set names
+	public void setNames(String firstName, String lastName) {
+		this.names = firstName + " " + lastName;
+	}
+	
+	// Get names
+	public void getNames() {
+		System.out.println(names);
+	}
+	
+	// Join names as a single string
+	public void joinNames() {
+		this.names.replaceAll("\\s", "");
+	}
+	
+	// Swap names
+	public void swapNames() {
+		String lengthOfFirstName = this.firstName.substring(0)
+		String lengthOfLastName = this.lastName.substring(0);
+		
+		
+	}
+	
+}
