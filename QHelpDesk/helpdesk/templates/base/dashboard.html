@@ -1,0 +1,314 @@
+{% extends 'main.html' %}  
+
+{% block content %}
+{% load static %}
+{% comment %} <!DOCTYPE html>
+{% load static %}
+<html class="dashboard-html">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>QSupport Dashboard</title>
+
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"> -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/dashboard.css' %}">
+    {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}"> {% endcomment %}
+	{% comment %} </head> {% endcomment %}
+	<body class="layout dashboard-body">
+		<div class="container"> 
+      <!-- Aside Start -->
+      <aside class="dashboard-aside">
+        <div class="top">
+          <div class="date">
+            <input type="date">
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-symbols-sharp">close</span>
+          </div>
+        </div>
+    
+        <div class="sidebar">
+          <a class="active dashboard-a" href="{% url 'dashboard' %}" id="defaultOpen">
+            <span class="material-symbols-sharp" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+            <h3 class="dashboard-h3">Dashboard</h3>
+          </a>
+          <a title="Notifications" class="dashboard-a" href="{% url 'home' %}">
+            <span class="material-symbols-sharp">notifications</span>
+            <h3 class="dashboard-h3">Notifications</h3>
+            <span class="notification-count">26</span>
+          </a>
+          <a title="Analytics" class="dashboard-a tablink" onclick="openPage('Analytics', this)">
+            <span class="material-symbols-sharp">insights</span>
+            <h3 class="dashboard-h3">Analytics</h3>
+          </a>
+          <a title="Reports" class="dashboard-a" href="#">
+            <span class="material-symbols-sharp">summarize</span>
+            <h3 class="dashboard-h3">Reports</h3>
+          </a>
+          <a title="Staff" class="dashboard-a tablink" onclick="openPage('Staff', this)">
+            <span class="material-symbols-sharp">person</span>
+            <h3 class="dashboard-h3">Staff</h3>
+          </a>          
+          <a title="Settings" class="dashboard-a tablink" onclick="openPage('Settings', this)">
+            <span class="material-symbols-sharp">settings</span>
+            <h3 class="dashboard-h3">Settings</h3>
+          </a>
+          <a title="Make Requests" class="dashboard-a tablink" onclick="openPage('Requests', this)">
+            <span class="material-symbols-sharp">add</span>
+            <h3 class="dashboard-h3">Requests</h3>
+          </a>
+          {% comment %} <a title="Logout" class="dashboard-a" href="#">
+            <span class="material-symbols-sharp">logout</span>
+            <h3 class="dashboard-h3">Logout</h3>
+          </a> {% endcomment %}
+        </div>
+      </aside>
+      <!-- Aside End -->
+    
+      <!-- Start Main -->
+      <main class="dashboard-main">    
+        <!-- Start Insights -->
+        <div class="insights">
+          <!-- Start Open -->
+          <div class="open" style="font-variation-settings: 'FILL' 1;">
+            <span class="material-symbols-sharp">flag</span>
+            <div class="middle">
+              <div class="left">
+                <h3 class="dashboard-h3">Open</h3>
+                <h1 class="dashboard-h1">250</h1>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx='38' cy='38' r='36'></circle>
+                </svg>
+                <div class="number">
+                  <p class="dashboard-p">81%</p>
+                </div>
+              </div>
+            </div>
+            <small class="dashboard-text-muted dashboard-small">Last 24 Hours</small>
+          </div>
+          <!-- End Open -->
+    
+          <!-- Start Pending -->
+          <div class="pending">
+            <span class="material-symbols-sharp">pending_actions</span>
+            <div class="middle">
+              <div class="left">
+                <h3 class="dashboard-h3">Pending</h3>
+                <h1 class="dashboard-h1">141</h1>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx='38' cy='38' r='36'></circle>
+                </svg>
+                <div class="number">
+                  <p class="dashboard-p">62%</p>
+                </div>
+              </div>
+            </div>
+            <small class="dashboard-text-muted dashboard-small">Last 24 Hours</small>
+          </div>
+          <!-- End Pending -->
+    
+          <!-- Start Resolved -->
+          <div class="resolved">
+            <span class="material-symbols-sharp">done</span>
+            <div class="middle">
+              <div class="left">
+                <h3 class="dashboard-h3">Resolved</h3>
+                <h1 class="dashboard-h1">464</h1>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx='38' cy='38' r='36'></circle>
+                </svg>
+                <div class="number">
+                  <p class="dashboard-p">44%</p>
+                </div>
+              </div>
+            </div>
+            <small class="dashboard-text-muted dashboard-small">Last 24 Hours</small>
+          </div>
+          <!-- End Resolved -->
+    
+          <!-- Start Closed -->
+          <div class="closed">
+            <span class="material-symbols-sharp">block</span>
+            <div class="middle">
+              <div class="left">
+                <h3 class="dashboard-h3">Closed</h3>
+                <h1 class="dashboard-h1">114</h1>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx='38' cy='38' r='36'></circle>
+                </svg>
+                <div class="number">
+                  <p class="dashboard-p">27%</p>
+                </div>
+              </div>
+            </div>
+            <small class="dashboard-text-muted dashboard-small">Last 24 Hours</small>
+          </div>
+          <!-- End Closed -->
+        </div>
+        <!-- End Insights -->
+    
+        <div class="recent-requests">
+          <h2 class="dashboard-h2">Recent Requests</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Staff</th>
+                <th>RequestID</th>
+                <th>Subject</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            
+              <tbody>
+                {% for ticket in tickets %}
+                  <tr>
+                    <td>{{ ticket.creator }}</td>
+                    <td>{{ ticket.id }}</td>
+                    <td>{{ ticket.subject.name }}</td>
+                    <td class="warning">Pending</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+          </table>
+          <a class="dashboard-a" href="#">Show All</a>
+        </div>
+      </main>
+      <!-- End Main -->
+    
+      <!-- Right -->
+      <div class="dashboard-right">    
+        <!-- Start Recent Updates -->
+        <div class="recent-updates">
+          {% include 'base/components/activity_component.html' %}
+          {% comment %} <div class="updates">
+            {% for comment in ticket_comments %}
+
+            <div class="activities__boxHeader roomListRoom__header">
+              <a href="{% url 'user-profile' comment.user.id %}" class="roomListRoom__author">
+                  <div class="avatar avatar--small">
+                      <img src="{{ comment.user.avatar.url }}" />
+                  </div>
+                  <p>
+                      {% if request.user == comment.user %}
+                          @You
+                      {% else %}
+                          @{{comment.user}}
+                      {% endif %}
+                  </p>
+              </a>
+            </div>
+            <div class="activities__boxContent">
+              <p>responded to request</p>
+              <a href="{% url 'ticket' comment.ticket.id %}" class="roomListRoom__author">
+                  "{{comment.ticket}}"
+              </a>
+              <div class="activities__boxRoomContent">
+                  {{comment.body}}
+              </div>
+          </div> {% endcomment %}
+
+              {% comment %} <div class="update"> {% endcomment %}
+                {% comment %} <a href="{% url 'user-profile' comment.user.id %}" class="roomListRoom__author">
+                  <div class="avatar avatar--small">
+                      <img src="{{ comment.user.avatar.url }}" />
+                  </div>
+                  <p>
+                      {% if request.user == comment.user %}
+                          @You
+                      {% else %}
+                          @{{comment.user}}
+                      {% endif %}
+                  </p>
+                </a> {% endcomment %}
+                {% comment %} <div class="profile">
+                  <div class="profile__avatar">
+                    <div class="avatar avatar-small">
+                      <img src="{{ comment.user.avatar.url }}">
+                    </div>
+                  </div>
+                </div>
+                <div class="message">
+                  <a href="{% url 'user-profile' comment.user.id %}" class="roomListRoom__author">
+                    <p>{{ comment.user }}</p>
+                  </a>
+                  responded to request
+                  <a href="{% url 'ticket' comment.ticket.id %}" class="roomListRoom__author">
+                    "{{ comment.ticket.subject.name }}"
+                  </a>
+                  <small class="dashboard-text-muted dashboard-small">{{comment.created|timesince}} ago</small>
+                </div>
+              </div> {% endcomment %}
+            {% comment %} {% endfor %} {% endcomment %}
+            {% comment %} <div class="update">
+              <div class="message">
+                <small class="dashboard-text-muted dashboard-small">More</small>
+              </div>
+            </div> {% endcomment %}
+          </div>
+        </div>
+        <!-- End Recent Updates -->
+    
+        {% comment %} <!-- Start Requests Analytics -->
+        <div class="requests-analytics">
+          <h2>Requests Analytics</h2>
+          <div class="item online">
+            <div class="icon" style="font-variation-settings: 'FILL' 1;">
+              <span class="material-symbols-sharp">shopping_cart</span>
+            </div>
+            <div class="dashboard-right">
+              <div class="info">
+                <h3>ONLINE ORDERS</h3>
+                <small class="dashboard-text-muted dashboard-small">Last 24 Hours</small>
+              </div>
+              <h5 class="success">+39%</h5>
+              <h3>3849</h3>
+            </div>
+          </div>
+          <div class="item offline">
+            <div class="icon" style="font-variation-settings: 'FILL' 1;">
+              <span class="material-symbols-sharp">local_mall</span>
+            </div>
+            <div class="dashboard-right">
+              <div class="info">
+                <h3>OFFLINE ORDERS</h3>
+                <small class="dashboard-text-muted dashboard-small">Last 24 Hours</small>
+              </div>
+              <h5 class="danger">-17%</h5>
+              <h3>1100</h3>
+            </div>
+          </div>
+          <div class="item customers">
+            <div class="icon" style="font-variation-settings: 'FILL' 1;">
+              <span class="material-symbols-sharp">shopping_cart</span>
+            </div>
+            <div class="dashboard-right">
+              <div class="info">
+                <h3>NEW CUSTOMERS</h3>
+                <small class="dashboard-text-muted dashboard-small">Last 24 Hours</small>
+              </div>
+              <h5 class="warning">+25%</h5>
+              <h3>849</h3>
+            </div>
+          </div>
+          <div class="item add-product">
+            <div>
+              <span class="material-symbols-sharp">add</span>
+            </div>
+          </div>
+        </div>
+        <!-- End Requests Analytics --> {% endcomment %}
+      </div>
+      <!-- End Right -->
+    </div>
+  </body>
+{% endblock content %}
+

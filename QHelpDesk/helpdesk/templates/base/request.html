@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link href="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.css" rel="stylesheet">
+    <style>
+      .select,
+      #locale {
+        width: 100%;
+      }
+      .like {
+        margin-right: 10px;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div class="select">
+      <select class="form-control" id="locale">
+        <option value="af-ZA">af-ZA</option>
+        <option value="ar-SA">ar-SA</option>
+        <option value="ca-ES">ca-ES</option>
+        <option value="cs-CZ">cs-CZ</option>
+        <option value="da-DK">da-DK</option>
+        <option value="de-DE">de-DE</option>
+        <option value="el-GR">el-GR</option>
+        <option value="en-US" selected>en-US</option>
+        <option value="es-AR">es-AR</option>
+        <option value="es-CL">es-CL</option>
+        <option value="es-CR">es-CR</option>
+        <option value="es-ES">es-ES</option>
+        <option value="es-MX">es-MX</option>
+        <option value="es-NI">es-NI</option>
+        <option value="es-SP">es-SP</option>
+        <option value="et-EE">et-EE</option>
+        <option value="eu-EU">eu-EU</option>
+        <option value="fa-IR">fa-IR</option>
+        <option value="fi-FI">fi-FI</option>
+        <option value="fr-BE">fr-BE</option>
+        <option value="fr-FR">fr-FR</option>
+        <option value="he-IL">he-IL</option>
+        <option value="hr-HR">hr-HR</option>
+        <option value="hu-HU">hu-HU</option>
+        <option value="id-ID">id-ID</option>
+        <option value="it-IT">it-IT</option>
+        <option value="ja-JP">ja-JP</option>
+        <option value="ka-GE">ka-GE</option>
+        <option value="ko-KR">ko-KR</option>
+        <option value="ms-MY">ms-MY</option>
+        <option value="nb-NO">nb-NO</option>
+        <option value="nl-NL">nl-NL</option>
+        <option value="pl-PL">pl-PL</option>
+        <option value="pt-BR">pt-BR</option>
+        <option value="pt-PT">pt-PT</option>
+        <option value="ro-RO">ro-RO</option>
+        <option value="ru-RU">ru-RU</option>
+        <option value="sk-SK">sk-SK</option>
+        <option value="sv-SE">sv-SE</option>
+        <option value="th-TH">th-TH</option>
+        <option value="tr-TR">tr-TR</option>
+        <option value="uk-UA">uk-UA</option>
+        <option value="ur-PK">ur-PK</option>
+        <option value="uz-Latn-UZ">uz-Latn-UZ</option>
+        <option value="vi-VN">vi-VN</option>
+        <option value="zh-CN">zh-CN</option>
+        <option value="zh-TW">zh-TW</option>
+      </select>
+    </div>
+    
+    <div id="toolbar">
+      <button id="remove" class="btn btn-danger" disabled>
+        <i class="fa fa-trash"></i> Delete
+      </button>
+    </div>
+    <table
+      id="table"
+      data-toolbar="#toolbar"
+      data-search="true"
+      data-show-refresh="true"
+      data-show-toggle="true"
+      data-show-fullscreen="true"
+      data-show-columns="true"
+      data-show-columns-toggle-all="true"
+      data-detail-view="true"
+      data-show-export="true"
+      data-click-to-select="true"
+      data-detail-formatter="detailFormatter"
+      data-minimum-count-columns="2"
+      data-show-pagination-switch="true"
+      data-pagination="true"
+      data-id-field="id"
+      data-page-list="[10, 25, 50, 100, all]"
+      data-show-footer="true"
+      data-side-pagination="server"
+      data-url="https://examples.wenzhixin.net.cn/examples/bootstrap_table/data"
+      data-response-handler="responseHandler">
+    </table>
+    
+
+
+    <script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table-locale-all.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/extensions/export/bootstrap-table-export.min.js"></script>
+    <script>
+      var $table = $('#table')
+      var $remove = $('#remove')
+      var selections = []
+    
+      function getIdSelections() {
+        return $.map($table.bootstrapTable('getSelections'), function (row) {
+          return row.id
+        })
+      }
+    
+      function responseHandler(res) {
+        $.each(res.rows, function (i, row) {
+          row.state = $.inArray(row.id, selections) !== -1
+        })
+        return res
+      }
+    
+      function detailFormatter(index, row) {
+        var html = []
+        $.each(row, function (key, value) {
+          html.push('<p><b>' + key + ':</b> ' + value + '</p>')
+        })
+        return html.join('')
+      }
+    
+      function operateFormatter(value, row, index) {
+        return [
+          '<a class="like" href="javascript:void(0)" title="Like">',
+          '<i class="fa fa-heart"></i>',
+          '</a>  ',
+          '<a class="remove" href="javascript:void(0)" title="Remove">',
+          '<i class="fa fa-trash"></i>',
+          '</a>'
+        ].join('')
+      }
+    
+      window.operateEvents = {
+        'click .like': function (e, value, row, index) {
+          alert('You click like action, row: ' + JSON.stringify(row))
+        },
+        'click .remove': function (e, value, row, index) {
+          $table.bootstrapTable('remove', {
+            field: 'id',
+            values: [row.id]
+          })
+        }
+      }
+    
+      function totalTextFormatter(data) {
+        return 'Total'
+      }
+    
+      function totalNameFormatter(data) {
+        return data.length
+      }
+    
+      function totalPriceFormatter(data) {
+        var field = this.field
+        return '$' + data.map(function (row) {
+          return +row[field].substring(1)
+        }).reduce(function (sum, i) {
+          return sum + i
+        }, 0)
+      }
+    
+      function initTable() {
+        $table.bootstrapTable('destroy').bootstrapTable({
+          height: 550,
+          locale: $('#locale').val(),
+          columns: [
+            [{
+              field: 'state',
+              checkbox: true,
+              rowspan: 2,
+              align: 'center',
+              valign: 'middle'
+            }, {
+              title: 'Item ID',
+              field: 'id',
+              rowspan: 2,
+              align: 'center',
+              valign: 'middle',
+              sortable: true,
+              footerFormatter: totalTextFormatter
+            }, {
+              title: 'Item Detail',
+              colspan: 3,
+              align: 'center'
+            }],
+            [{
+              field: 'name',
+              title: 'Item Name',
+              sortable: true,
+              footerFormatter: totalNameFormatter,
+              align: 'center'
+            }, {
+              field: 'price',
+              title: 'Item Price',
+              sortable: true,
+              align: 'center',
+              footerFormatter: totalPriceFormatter
+            }, {
+              field: 'operate',
+              title: 'Item Operate',
+              align: 'center',
+              clickToSelect: false,
+              events: window.operateEvents,
+              formatter: operateFormatter
+            }]
+          ]
+        })
+        $table.on('check.bs.table uncheck.bs.table ' +
+          'check-all.bs.table uncheck-all.bs.table',
+        function () {
+          $remove.prop('disabled', !$table.bootstrapTable('getSelections').length)
+    
+          // save your data, here just save the current page
+          selections = getIdSelections()
+          // push or splice the selections if you want to save all data selections
+        })
+        $table.on('all.bs.table', function (e, name, args) {
+          console.log(name, args)
+        })
+        $remove.click(function () {
+          var ids = getIdSelections()
+          $table.bootstrapTable('remove', {
+            field: 'id',
+            values: ids
+          })
+          $remove.prop('disabled', true)
+        })
+      }
+    
+      $(function() {
+        initTable()
+    
+        $('#locale').change(initTable)
+      })
+    </script>
+  </body>	
+</html>
+
+
+
+
+
+
+    <!-- CSS -->
+    {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'styles/jquery.dataTables.min.css' %}"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'styles/buttons.dataTables.min.css' %}"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap.min.css' %}"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'styles/datatables.min.css' %}"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1/dist/bootstrap-table.min.css"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.21.1/bootstrap-table.min.css"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'styles/all.css' %}"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css"> {% endcomment %}
+
+    {% comment %} <link rel="stylesheet" type="text/css" href="styles/datatables.min.css"/> {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="{% static 'styles/datatables.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/buttons.dataTables.min.css' %}"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.2/css/buttons.dataTables.min.css"> {% endcomment %}
+    
+    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.21.1/bootstrap-table.min.css"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css"> {% endcomment %}
+    {% comment %} <title>REQUESTS TABLE</title>
+  </head>
+
+  <body>
+    <div class="container mb-2 mt-2">
+      <table class="display requests-table"
+            data-toggle="table" {% endcomment %}
+            {% comment %} data-pagination="true" {% endcomment %}
+            {% comment %} data-search="true" {% endcomment %}
+            {% comment %} data-search-align="left" {% endcomment %}
+            {% comment %} data-show-columns="true" {% endcomment %}
+            {% comment %} data-height="600" {% endcomment %}
+            {% comment %} data-detail-view="true" {% endcomment %}
+            {% comment %} data-detail-formatter="detailFormatter" {% endcomment %}
+            {% comment %} data-show-footer="true" {% endcomment %}
+            {% comment %} data-show-toggle="true" {% endcomment %}
+            {% comment %} data-show-refresh="true" {% endcomment %}
+            {% comment %} data-show-fullscreen="true" {% endcomment %}
+            {% comment %} data-show-pagination-switch="true" {% endcomment %}
+            {% comment %} data-pagination-pre-text="Previous" {% endcomment %}
+            {% comment %} data-pagination-next-text="Next" {% endcomment %}
+            {% comment %} data-pagination-h-align="left" {% endcomment %}
+            {% comment %} data-pagination-detail-h-align="right" {% endcomment %}
+            {% comment %} data-page-list="[5, 10, 20, 30, 40, 50, All]" {% endcomment %}
+            >
+        {% comment %} <thead> {% endcomment %}
+          {% comment %} <tr>
+            <th colspan="8" data-align="center">REQUESTS TABLE</th>
+          </tr> {% endcomment %}
+          {% comment %} <tr>
+            <th rowspan="2" data-checkbox="true" data-valign="middle"></th>
+            <th colspan="3" data-align="center">Staff</th>
+            <th colspan="5" data-align="center">Requests Details</th>
+          </tr>
+          <tr>
+            <th data-field="staffid" data-sortable="true">StaffID</th>
+            <th data-field="name" data-sortable="true">Name</th>
+            <th data-field="department" data-sortable="true" data-footer-formatter="totalFormatter">Department</th>
+            <th data-field="requestid" data-sortable="true" data-footer-formatter="amountFormatter">RequestID</th>
+            <th data-field="subject" data-sortable="true">Subject</th>
+            <th data-field="description" data-sortable="false">Description</th>
+            <th data-field="action" data-sortable="false" data-align="center" data-formatter="actionFormatter">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for request in tickets %}
+            <tr>
+              <td></td>
+              <td>{{ request.creator.id }}</td>
+              <td>{{ request.creator }}</td>
+              <td>{{ request.creator.department }}</td>
+              <td>{{ request.id }}</td>
+              <td>{{ request.subject }}</td>
+              <td>{{ request.description }}</td>
+              <td data-align="center">
+                <a class="edit" href="" title="Edit"><i class="fa fa-edit"></i></a>
+                <a class="remove" href="" title="Remove"><i class="fa fa-trash"></i></a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+        <tfoot>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </tfoot>
+      </table>
+    </div> {% endcomment %}
+
+
+    <!-- JavaScript Bundle with Popper -->
+    {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"></script> {% endcomment %}
+    {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script> {% endcomment %}
+    {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"></script> {% endcomment %}
+    {% comment %} <script src=" https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.21.1/bootstrap-table.min.js"></script> {% endcomment %}
+    <!-- Datatables -->
+    {% comment %} <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script> {% endcomment %}
+    {% comment %} <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script> {% endcomment %}
+    {% comment %} <script type="text/javascript" src="{% static 'js/datatables.js' %}"></script> {% endcomment %}
+    {% comment %} <script type="text/javascript" src="js/datatables.min.js"></script> {% endcomment %}
+    {% comment %} <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.13.1/e-2.0.10/af-2.5.1/b-2.3.3/b-colvis-2.3.3/b-html5-2.3.3/b-print-2.3.3/cr-1.6.1/date-1.2.0/fc-4.2.1/fh-3.3.1/kt-2.8.0/r-2.4.0/rg-1.3.0/rr-1.3.1/sc-2.0.7/sb-1.4.0/sp-2.1.0/sl-1.5.0/sr-1.2.0/datatables.min.js"></script> {% endcomment %}
+
+    {% comment %} <script type="text/javascript" src="{% static 'js/jquery-3.6.0.js' %}"></script> {% endcomment %}
+    {% comment %} <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script> {% endcomment %}
+    {% comment %} <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> {% endcomment %}
+    {% comment %} <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> {% endcomment %}
+    {% comment %} <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> {% endcomment %}
+    {% comment %} <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script> {% endcomment %}
+    {% comment %} <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script> {% endcomment %}
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script> {% endcomment %}
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1/dist/bootstrap-table.min.js"></script> {% endcomment %}
+    {% comment %} <script type="text/javascript" src="{% static 'js/bootstrap-table.min.js' %}"></script> {% endcomment %}
+    {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.21.1/bootstrap-table.min.js"></scrip> {% endcomment %}
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> {% endcomment %}
+    {% comment %} <script type="text/javascript" src="{% static 'js/jquery.dataTables.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/dataTables.buttons.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jszip.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/pdfmake.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/vfs_fonts.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/buttons.html5.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/buttons.print.min.js' %}"></script> {% endcomment %}
+    {% comment %} <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script> {% endcomment %}
+    {% comment %} <script> {% endcomment %}
+      {% comment %} $(document).ready( function () {
+        let printCounter = 0;
+        $('.requests-table').append('<caption style="caption-side: top; font-size: 14px; font-weight: bold">QSUPPORT</caption>');
+
+        $('.requests-table').DataTable({
+          dom: 'Bfrtip',
+          buttons: [
+            'copyHtml5',
+            {
+              extend: 'csvHtml5',
+              footer: true,
+              messageBottom: 'Copyright ©️ to QSupport, QCell SL.'
+            },
+            {
+              extend: 'excelHtml5',
+              footer: true,
+              messageBottom: 'Copyright ©️ to QSupport, QCell SL.'
+            },
+            {
+              extend: 'pdf',
+              footer: true,
+              messageBottom: 'Copyright ©️ to QSupport, QCell SL.'
+            },
+            {
+              extend: 'print',
+              footer: true,
+              messageBottom: 'Copyright ©️ to QSupport, QCell SL.',
+              messageTop: function () {
+                printCounter++;
+                if ( printCounter === 1 ) {
+                  return 'This is your first print of this document.';
+                }
+                else {
+                  return 'You have printed this document ' + printCounter + ' times';
+                }
+              },
+              exportOptions: {
+                columns: ':visible'
+              }
+            }
+          ]
+        });        
+      } ); {% endcomment %}
+
+      {% comment %} var table = $('.requests-table').DataTable();
+ 
+      new $.fn.dataTable.Buttons( table, {
+          buttons: [
+            'copy', 'excel', 'pdf'
+          ]
+      } ); {% endcomment %}
+      {% comment %} function detailFormatter(index, row) {
+        let html = []
+        $.each(row, function(key, value) {
+          html.push('<p class="row" style="width: 100%"><b class="col-md-2">' + key + '</b><span class="col-md-10">: ' + value + '</span></p>')
+        })
+        return html.join('')
+      } {% endcomment %}
+      {% comment %} function totalFormatter() {
+        return 'Requests'
+      } {% endcomment %}
+      {% comment %} function amountFormatter(data) {
+        return data.length
+      } {% endcomment %}
+      {% comment %} function salaryFormatter(data) {
+        let field = this.field
+        return '$' + data.map(function(row){
+          return + row[field].substring(1)
+        }).reduce(function(sum, i){
+          return sum + i
+        }, 0)
+      } {% endcomment %}
+      {% comment %} function colorFormatter(value) {
+        let color = '#' + Math.floor(Math.random() * 6777215).toString(16)
+        return '<div style="color: ' + color + '">' + '<i class="fa fa-dollar-sign"></i>' + value.substring(1) + '</div>'
+      } {% endcomment %}
+      {% comment %} function actionFormatter(index, row) {
+        let html = []
+        $.each(row, function(key, value) {
+          if (key == 'requestid') {
+            html.push('<a class="edit" href="?edit='+value+'" title="edit"><i class="fa fa-edit"></i></a>')
+            html.push('<a class="remove" href="?remove='+value+'" title="remove"><i class="fa fa-trash"></i></a>')
+          }
+        })
+        return html.join('')
+      } {% endcomment %}
+
+      {% comment %} $(document).ready(function () {
+        $('.request_datatable').DataTable({
+            scrollY: 300,
+            scrollX: false,
+            scrollCollapse: true,
+            paging: true,
+            pagingType: 'full_numbers',
+            lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, 'All']],
+            columnDefs: [
+              {visible: false, targets: 1}
+            ],
+            order: [[2, 'asc']],
+            displayLength: 10,
+
+            drawCallback: function (settings) {
+              let api = this.api();
+              let rows = api.rows({page:'current'}).nodes();
+              let last=null;
+
+              api.column(1, {page:'current'}).data().each( function (group, i) {
+                if(last !== group) {
+                  $(rows).eq(i).before(
+                    '<tr class="bg-primary text-light"><td colspan="4">' + group + '</td></tr>'
+                  );
+                  last = group;
+                }
+              });
+            },
+        });
+      }); {% endcomment %}
+    {% comment %} </script> {% endcomment %}
+  {% comment %} </body> {% endcomment %}
+{% comment %} </html> {% endcomment %}

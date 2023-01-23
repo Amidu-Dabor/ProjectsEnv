@@ -1,0 +1,12 @@
+<h3>Users</h3>
+<hr>
+
+{% for user in all_users %}
+    <div>
+        {% if user == request.user %}
+            <a href="">@You</a>
+        {% else %}
+            <a href="">@{{user}}</a>
+        {% endif %}
+    </div>
+{% endfor %}

@@ -1,0 +1,15 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block branding %}
+    <div class="header__logo">
+        <img src="{% static 'images/logo.bmp' %}" alt="QCell Logo">
+        <h1 id="site-name"><a href="{% url 'admin:index' %}">QSupport Admin Panel</a></h1>
+    </div>
+{% endblock %}
+
+{% block extrastyle %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'styles/admin.css' %}">
+
+{% endblock %}
