@@ -26,7 +26,7 @@ class UserAdmin(admin.ModelAdmin):
 
 
     def profile_photo(self, obj):
-        return format_html(f'<img src="/images/{obj.avatar}" style="height:30px;width:30px;>')
+        return format_html(f'<img src="/images/{obj.avatar}" style="height:25px;width:25px;border-radius:50%;">')
 
 
 class DepartmentAdmin(admin.ModelAdmin):
