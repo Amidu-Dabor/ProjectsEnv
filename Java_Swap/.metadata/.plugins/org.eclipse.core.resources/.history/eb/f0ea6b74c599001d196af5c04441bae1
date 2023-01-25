@@ -1,0 +1,37 @@
+package SwapStrings;
+import java.util.*;
+
+public class Swap {
+	
+	String firstName;
+	String lastName;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Swap swapObj = new Swap();
+		Scanner strInput = new Scanner(System.in);
+		
+		System.out.print
+		
+		swapObj.setFirstName(fName);
+		swapObj.setLastName(lName);
+		
+		swapObj.printNames(Names);
+		swapObj.printSwappedNames(swappedNames);
+
+	}
+	
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+}

@@ -1,0 +1,21 @@
+package SwapStrings;
+import java.util.*;
+
+public class Swap {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		SwapConfig swapObj = new SwapConfig();
+		Scanner strInput = new Scanner(System.in);
+		
+		String fName = swapObj.firstName = strInput.nextLine();
+		String lName = swapObj.lastName = strInput.nextLine();
+		
+		System.out.println("Enter first name: " + fName);
+		System.out.println("Enter last name: " + lName);
+		
+		
+	}
+
+}
