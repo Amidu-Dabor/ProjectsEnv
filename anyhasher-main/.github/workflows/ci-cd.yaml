@@ -65,7 +65,7 @@ jobs:
           path: frontend/node_modules
           key: fe-node-${{ hashFiles('frontend/package-lock.json') }}
 
-      - name: Install deps
+      - name: Install Dependencies
         run: cd frontend && npm i
 
       - name: 😂 Lint code
