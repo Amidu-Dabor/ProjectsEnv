@@ -7,7 +7,8 @@ jobs:
   Package and Compile:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
+      - name: Code by Checkout
         uses: actions/checkout@v4
-      - run: cd backend && npm i && npm run build
+      - run: cd backend && npm i
+      - run: npm run build
       - run: echo "Job Status:${{ job.status }}."
