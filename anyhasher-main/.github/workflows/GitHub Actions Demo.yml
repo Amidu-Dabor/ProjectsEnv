@@ -1,6 +1,9 @@
 name: Continuous Integration
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on:
+  push:
+    branches:
+      - master
 jobs:
   compile:
     runs-on: ubuntu-latest
