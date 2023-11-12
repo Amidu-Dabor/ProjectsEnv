@@ -1,21 +1,19 @@
 ---
-name: CI
+name: Continuous Integration
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
-  - push
+  push:
+    branches: ["master"]
+
+  pull_request:
+    branches: [ "master" ]
+
 jobs:
   Package and Compile:
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
       - name: Code by Checkout
         uses: actions/checkout@v4
       - run: cd backend && npm i
-      - run: npm run build
-=======
-      - name: Checkout
-        uses: actions/checkout@v4
-      - run: cd backend && npm i
       - run: cd backend && npm run build
->>>>>>> 8c5f43df9b144b6c92e632b811d77a1afbecf0b3
       - run: echo "Job Status:${{ job.status }}."
