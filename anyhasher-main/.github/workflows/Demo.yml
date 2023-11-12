@@ -1,5 +1,5 @@
 ---
-name: Continuous Integration
+name: CI
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   - push
@@ -7,7 +7,8 @@ jobs:
   Package and Compile:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
+      - name: Checkout
         uses: actions/checkout@v4
-      - run: cd backend && npm i && npm run build
+      - run: cd backend && npm i
+      - run: cd backend && npm run build
       - run: echo "Job Status:${{ job.status }}."
