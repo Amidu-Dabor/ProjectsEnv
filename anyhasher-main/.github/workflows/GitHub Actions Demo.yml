@@ -7,8 +7,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - run: cd backend
-      - run: npm i
+      - run: cd backend && npm i
       - run: npm run build
 
       - run: echo "Job Status:${{ job.status }}."
