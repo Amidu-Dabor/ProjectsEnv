@@ -5,9 +5,9 @@ jobs:
   compile:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
+      - name: Check my code
         uses: actions/checkout@v4
-      - run: cd backend && npm i
+      - run: npm i
       - run: npm run build
 
       - run: echo "Job Status:${{ job.status }}."
