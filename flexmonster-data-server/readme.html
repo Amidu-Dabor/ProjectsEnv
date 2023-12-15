@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Flexmonster Data Server Installation Package</title>
+	<link href="http://mozilla.github.io/foundation-icons/assets/foundation-icons.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+		<header class="mainheader fixed-head">
+			<div class="container-xl">
+				<a href="https://www.flexmonster.com/?r=rm_fds" target="blank" class="logo">
+					<img src="https://www.flexmonster.com/base/assets/img/svg/logo.svg" alt="" />
+				</a>
+				<ul class="mainnav">
+					<li>
+						<a href="https://www.flexmonster.com/doc/?r=rm_fds" target="_blank">Docs</a>
+					</li>
+					<li>
+						<a href="https://www.flexmonster.com/help-center/?r=rm_fds" target="_blank">Help center</a>
+					</li>
+					<li>
+						<a href="https://www.flexmonster.com/contact/?r=rm_fds" target="_blank">Contact us</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<div class="ContentArea">
+			<div class="MainArea">
+				<h1>Thank you for downloading Flexmonster Data Server!</h1>
+				<p><b>Flexmonster Data Server</b> is a powerful tool designed to work with large datasets.
+					The Data Server fetches your data from the data source, aggregates it, and passes it to Flexmonster
+					Pivot in a ready-to-show format.</p>
+				<p>The diagram below shows how the Data Server interacts with Flexmonster Pivot:</p>
+				<img class="scheme" src="https://cdn.flexmonster.com/img/DiagramFDS.svg" />
+				<h2 id="install-fds">Install Flexmonster Data Server</h2>
+				<p>If the Data Server is not already installed, install it by running the <code>service-install.bat</code> file.</p>
+				<h2 id="install-admin-panel">Install Flexmonster Admin Panel</h2>
+				<p>Flexmonster Admin Panel is a desktop application that provides a graphical user interface for
+					Flexmonster Data Server.</p>
+				<p>If the Admin Panel is not already installed, run the <code>Flexmonster-Admin-Panel.exe</code> file to
+					install it.</p>
+				<h2 id="usage">Get started with the Data Server</h2>
+				<p>Find everything you need to know about the Data Server:</p>
+				<ul>
+					<li><a href="https://www.flexmonster.com/doc/intro-to-flexmonster-data-server/?r=rm_fds" target="_blank">
+						Introduction to Flexmonster Data Server</a>
+					</li>
+					<li><a href="https://www.flexmonster.com/doc/getting-started-with-data-server/?r=rm_fds/#connect-to-data-server" target="_blank">
+						Connecting to the Data Server</a>
+					</li>
+					<li><a href="https://www.flexmonster.com/doc/admin-panel-guide/?r=rm_fds" target="_blank">
+						Flexmonster Admin Panel Guide</a>
+					</li>
+					<li><a href="https://www.flexmonster.com/doc/data-sources-guide/?r=rm_fds" target="_blank">
+						Connect the Data Server to your data source</a>
+					</li>
+					<li><a href="https://www.flexmonster.com/doc/security-and-authorization-guide/?r=rm_fds" target="_blank">
+						Configure security and authorization</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<style type="text/css">
+		html,
+		body {
+			font-family: "Open Sans", "Arial", sans-serif, serif;
+			color: #555;
+			line-height: 1;
+			font-size: 15px;
+			-webkit-font-smoothing: antialiased !important;
+			text-rendering: optimizeLegibility !important;
+			-webkit-text-size-adjust: none
+		}
+
+		div.container {
+			width: 900px;
+			margin-left: auto;
+			margin-right: auto
+		}
+
+		p,
+		div,
+		ol,
+		li,
+		ul {
+			text-align: left
+		}
+
+		ul {
+			list-style: circle;
+			margin-bottom: 24px;
+			padding-left: 32px;
+			line-height: 1.7;
+		}
+
+		ul>li {
+			margin-bottom: 4px;
+			position: relative;
+			line-height: 1.86;
+		}
+
+		p {
+			margin-bottom: 12px;
+			line-height: 1.86;
+		}
+
+		a {
+			color: #00A45A;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		code {
+			font-family: "Roboto Mono", monospace;
+			font-weight: 500;
+			line-height: 1.43;
+			color: #DF3800;
+			padding: 0 6px;
+			background: #FAFAFA;
+			border: 1px solid #E8E8E8;
+			border-radius: 4px;
+		}
+
+		.ContentArea {
+			margin-top: 80px;
+		}
+
+		h1 {
+			font-weight: 300;
+			font-size: 36px;
+			line-height: 1.3;
+			margin-bottom: 16px;
+		}
+
+		h2 {
+			font-size: 28px;
+			line-height: 1.4;
+			margin-top: 60px;
+			margin-bottom: 16px;
+			font-weight: normal;
+		}
+
+		.mainheader {
+			padding: 7px 80px;
+			position: absolute;
+			font-size: 0;
+			width: 100%;
+			min-width: 460px;
+			top: 0;
+			left: 0;
+			-webkit-transition: all 0.1s;
+			-o-transition: all 0.1s;
+			transition: all 0.1s;
+			z-index: 999;
+			border-bottom: 1px solid transparent;
+			display: block;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		.mainheader.fixed-head {
+			background-color: #fff;
+			position: fixed;
+			border-bottom: 1px solid #cdcdcf;
+			-webkit-box-shadow: 0px 2px 10px rgba(226, 230, 232, 0.6);
+			box-shadow: 0px 2px 10px rgba(226, 230, 232, 0.6);
+			z-index: 1001;
+		}
+
+		.mainheader .container-xl {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: justify;
+			-webkit-justify-content: space-between;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		.mainheader .logo {
+			width: 225px;
+			display: block;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+			border: none;
+		}
+
+		.mainheader .mainnav {
+			padding-top: 2px;
+			margin: 0 10px;
+		}
+
+		.mainnav li {
+			display: inline-block;
+			padding-left: 24px;
+		}
+
+		.mainnav li a {
+			font-size: 14px;
+			line-height: 1.35714;
+			text-transform: uppercase;
+			color: #454545;
+			position: relative;
+			font-weight: 600;
+		}
+
+		.mainnav li a:hover {
+			text-decoration: none !important;
+		}
+
+		.mainnav li a:hover:before {
+			opacity: 1;
+			width: 100%;
+		}
+
+		.mainnav li a:before {
+			bottom: -2px;
+			width: 0;
+			height: 2px;
+			background: #df3800;
+			-webkit-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			transition: all 0.3s;
+			opacity: 0;
+			content: "";
+			display: block;
+			position: absolute;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+		}
+
+		@media screen and (max-width: 730px) {
+			.mainnav li {
+				display: block;
+			}
+
+			.mainheader {
+				padding: 7px 30px;
+			}
+
+		}
+
+		.scheme {
+			max-width: 900px;
+			margin: 32px 0;
+			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+		}
+	</style>
+</body>
+
+</html>

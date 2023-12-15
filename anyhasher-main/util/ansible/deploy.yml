@@ -1,0 +1,7 @@
+---
+- name: Update web servers
+  hosts: ec2
+  gather_facts: false
+  roles:
+    - configure-server
+    - deploy-artifact

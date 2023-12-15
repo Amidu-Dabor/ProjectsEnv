@@ -1,0 +1,157 @@
+<!-- Start Main -->
+<main class="dashboard-main">    
+    <!-- Start Insights -->
+    <div class="insights">
+      <!-- Start Open -->
+      <div class="open" style="font-variation-settings: 'FILL' 1;">
+        <span class="material-symbols-sharp">flag</span>
+        <div class="middle">
+          <div class="left">
+            <h3 class="dashboard-h3">Open</h3>
+            <h1 class="dashboard-h1">250</h1>
+          </div>
+          <div class="progress">
+            <svg>
+              <circle cx='38' cy='38' r='36'></circle>
+            </svg>
+            <div class="number">
+              <p class="dashboard-p">81%</p>
+            </div>
+          </div>
+        </div>
+        <small class="dashboard-text-muted dashboard-small">Last 24 Hours</small>
+      </div>
+      <!-- End Open -->
+
+      <!-- Start Pending -->
+      <div class="pending">
+        <span class="material-symbols-sharp">pending_actions</span>
+        <div class="middle">
+          <div class="left">
+            <h3 class="dashboard-h3">Pending</h3>
+            <h1 class="dashboard-h1">141</h1>
+          </div>
+          <div class="progress">
+            <svg>
+              <circle cx='38' cy='38' r='36'></circle>
+            </svg>
+            <div class="number">
+              <p class="dashboard-p">62%</p>
+            </div>
+          </div>
+        </div>
+        <small class="dashboard-text-muted dashboard-small">Last 24 Hours</small>
+      </div>
+      <!-- End Pending -->
+
+      <!-- Start Resolved -->
+      <div class="resolved">
+        <span class="material-symbols-sharp">done</span>
+        <div class="middle">
+          <div class="left">
+            <h3 class="dashboard-h3">Resolved</h3>
+            <h1 class="dashboard-h1">464</h1>
+          </div>
+          <div class="progress">
+            <svg>
+              <circle cx='38' cy='38' r='36'></circle>
+            </svg>
+            <div class="number">
+              <p class="dashboard-p">44%</p>
+            </div>
+          </div>
+        </div>
+        <small class="dashboard-text-muted dashboard-small">Last 24 Hours</small>
+      </div>
+      <!-- End Resolved -->
+
+      <!-- Start Closed -->
+      <div class="closed">
+        <span class="material-symbols-sharp">block</span>
+        <div class="middle">
+          <div class="left">
+            <h3 class="dashboard-h3">Closed</h3>
+            <h1 class="dashboard-h1">114</h1>
+          </div>
+          <div class="progress">
+            <svg>
+              <circle cx='38' cy='38' r='36'></circle>
+            </svg>
+            <div class="number">
+              <p class="dashboard-p">27%</p>
+            </div>
+          </div>
+        </div>
+        <small class="dashboard-text-muted dashboard-small">Last 24 Hours</small>
+      </div>
+      <!-- End Closed -->
+    </div>
+    <!-- End Insights -->
+
+    <div class="recent-requests">
+      <h2 class="dashboard-h2">Recent Requests</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Staff</th>
+            <th>RequestID</th>
+            <th>Subject</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        
+          <tbody>
+            {% for ticket in tickets %}
+              <tr>
+                <td>{{ ticket.creator }}</td>
+                <td>{{ ticket.id }}</td>
+                <td>{{ ticket.subject.name }}</td>
+                <td class="warning">Pending</td>
+                <td class="primary">Details</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+      </table>
+      <a class="dashboard-a" href="#">Show All</a>
+    </div>
+  </main>
+  <!-- End Main -->
+
+  <!-- Right -->
+  <div class="dashboard-right">    
+    <!-- Start Recent Updates -->
+    <div class="recent-updates">
+      <h2>Recent Updates</h2>
+      <div class="updates">
+        {% for ticket in tickets %}
+          <div class="update">
+            <div class="profile">
+              <div class="profile__avatar">
+                {% if request.user.is_authenticated %}
+                  {% if request.user.is_active %}
+                    <div class="avatar extra-small active">
+                      <img src="{{ ticket.creator.avatar.url }}">
+                    </div>
+                  {% else %}
+                    <div class="avatar extra-small">
+                      <img src="{{ ticket.creator.avatar.url }}">
+                    </div>
+                  {% endif %}
+                {% endif %} 
+              </div>
+            </div>
+            <div class="message">
+              <p><b class="dashboard-b">{{ ticket.creator }}</b> requested</p>
+              <small class="dashboard-text-muted dashboard-small">{{ticket.created|timesince}} ago</small>
+            </div>
+          </div>
+        {% endfor %}
+        <div class="update">
+          <div class="message">
+            <small class="dashboard-text-muted dashboard-small">More</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Recent Updates -->

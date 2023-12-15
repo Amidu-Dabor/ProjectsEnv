@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [ "$EUID" -ne 0 ]
+  then 
+    sudo ./service-install
+elif [ "$EUID" -eq 0 ]
+  then
+    >flexmonster-data-server.service
+
+    # Create Service configuration
+    echo "[Unit]
+    Description=Flexmonster Data Server
+    [Service]
+    WorkingDirectory=$PWD
+    ExecStart=$PWD/flexmonster-data-server --service
+    Restart=always
+    RestartSec=10
+    KillSignal=SIGINT
+    SyslogIdentifier=fds
+    User=$SUDO_USER
+    Environment=ASPNETCORE_ENVIRONMENT=Production
+    Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
+    [Install]
+    WantedBy=multi-user.target" > flexmonster-data-server.service
+
+    #Move file and run service
+    mv flexmonster-data-server.service /etc/systemd/system/flexmonster-data-server.service
+    systemctl daemon-reload
+    systemctl start flexmonster-data-server
+fi

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ "$EUID" -ne 0 ]
+  then 
+    sudo ./service-uninstall
+elif [ "$EUID" -eq 0 ]
+  then
+    sudo systemctl stop flexmonster-data-server
+    sudo rm /etc/systemd/system/flexmonster-data-server.service
+
+    echo "Flexmonster Data Server service is uninstalled."
+fi
