@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "express": "^4.18.2",
-    "json": "^11.0.0",
-    "mysql": "^2.18.1",
-    "webdatarocks": "^1.4.7"
-  }
-}
