@@ -46,10 +46,10 @@ This repository showcases a diverse collection of projects, workflows, and appli
 #### **Regression**
 - Builds models for predicting continuous outcomes, such as house prices or sales figures, leveraging algorithms like Simple Linear Regression, Multiple Linear Regression, Polynomial Linear Regression, Support Vector Regression (SVR), Decision Tree Regression, and Random Forest Regression.
 - I explored these algorithms on varying datasets like Salary Prediction Experience Dataset, Startup Profit vs Investment Dataset, Salary Benchmarking Dataset.
-* Algorithms implemented for each use case:
-1. Simple Linear Regression -> Salary Prediction Experience Dataset
-2. Multiple Linear Regression -> Startup Profit vs Investment Dataset
-3. [Polynomial Linear Regression, Support Vector Regression (SVR), Decision Tree Regression, and Random Forest Regression] -> Salary Benchmarking Dataset
+- Algorithms implemented for each use case:
+  1. Simple Linear Regression -> Salary Prediction Experience Dataset
+  2. Multiple Linear Regression -> Startup Profit vs Investment Dataset
+  3. [Polynomial Linear Regression, Support Vector Regression (SVR), Decision Tree Regression, and Random Forest Regression] -> Salary Benchmarking Dataset
 - The goal of these algorithms in this use case (salary benchmarking) is to predict the previous salary of a new recruit based on relevant features and compare it with their expected salary, enabling informed decision-making in salary benchmarking and negotiation processes.
 - Frameworks/Libraries/Tools/Techniques used: scikit-learn, numpy, pandas, matplotlib, and seaborn.
 
