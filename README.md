@@ -104,7 +104,7 @@ A minimal, Flask-based blog platform with features like dynamic content manageme
 
 ---
 
-### **4. Personal Projects**
+### **4. Other Projects (found in 'Personal Projects' directory)**
 
 #### Highlights:
 - **API - Finding Best Flight Deals**: A tool for retrieving flight deals using Google Sheets.
