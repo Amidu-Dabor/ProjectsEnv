@@ -5,6 +5,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   build-and-push:
@@ -58,10 +59,6 @@ jobs:
             docker compose logs
             exit 1
           fi
-          # Optional: Perform an inferencing test on one of your endpoints
-          # For example, if the UI has an inferencing endpoint, add:
-          # RESPONSE=$(curl -s http://localhost:7860/infer -X POST -d '{"input": "test"}')
-          # echo "Inferencing test response: $RESPONSE"
           echo "Services are healthy."
 
       - name: Tear down services
