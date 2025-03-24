@@ -5,7 +5,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  workflow_dispatch:  # Allows manual triggering
+  workflow_dispatch:
 
 jobs:
   build-and-push:
@@ -23,6 +23,16 @@ jobs:
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
+        with:
+          buildkitd-flags: --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host
+
+      - name: Cache Docker layers
+        uses: actions/cache@v3
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ matrix.service }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-${{ matrix.service }}-
 
       - name: Login to Docker Hub
         uses: docker/login-action@v2
@@ -37,6 +47,8 @@ jobs:
           file: ${{ fromJson(env.DOCKERFILES)[matrix.service] }}
           push: true
           tags: ${{ fromJson(env.IMAGES)[matrix.service] }}
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache,mode=max
 
   test-services:
     name: Test Docker Services Locally
@@ -54,7 +66,7 @@ jobs:
           docker compose up -d
           echo "Waiting 30 seconds for services to initialize..."
           sleep 30
-          # Perform a health check on API Gateway (assuming host port 5008 is mapped in your docker-compose.yml)
+          # Health check on API Gateway (assuming it's mapped to host port 5008)
           STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:5008)
           echo "API Gateway status code: $STATUS"
           if [ "$STATUS" != "200" ]; then
@@ -80,6 +92,14 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.11"
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
       - name: Install Modal CLI and dependencies
         run: pip install modal
