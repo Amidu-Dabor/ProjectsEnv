@@ -1,0 +1,11 @@
+Flask==2.2.2
+requests==2.28.1
+gradio==3.27.0
+beautifulsoup4==4.11.1
+langchain==0.0.148
+langchain-community
+transformers==4.30.0
+torch==2.6.0
+chromadb==0.6.3
+werkzeug==2.2.3
+accelerate
