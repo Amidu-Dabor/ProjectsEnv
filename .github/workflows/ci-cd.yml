@@ -5,16 +5,15 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  id-token: write
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   build-and-push:
     name: Build and Push Docker Images
     runs-on: ubuntu-latest
+    env:
+      DOCKERFILES: '{"api_gateway": "api_gateway/Dockerfile", "auth_service": "services/auth_service/Dockerfile", "general_chat_service": "services/general_chat_service/Dockerfile", "study_support_service": "services/study_support_service/Dockerfile", "data_service": "services/data_service/Dockerfile", "response_service": "services/response_service/Dockerfile", "system_prompt_service": "services/system_prompt_service/Dockerfile", "training_service": "services/training_service/Dockerfile", "ui": "ui/Dockerfile"}'
+      IMAGES: '{"api_gateway": "amidu/chatbot_prototype_api_gateway:latest", "auth_service": "amidu/chatbot_prototype_auth_service:latest", "general_chat_service": "amidu/chatbot_prototype_general_chat_service:latest", "study_support_service": "amidu/chatbot_prototype_study_support_service:latest", "data_service": "amidu/chatbot_prototype_data_service:latest", "response_service": "amidu/chatbot_prototype_response_service:latest", "system_prompt_service": "amidu/chatbot_prototype_system_prompt_service:latest", "training_service": "amidu/chatbot_prototype_training_service:latest", "ui": "amidu/chatbot_prototype_ui:latest"}'
     strategy:
       matrix:
         service: [ "api_gateway", "auth_service", "general_chat_service", "study_support_service", "data_service", "response_service", "system_prompt_service", "training_service", "ui" ]
@@ -35,9 +34,9 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: '${{ fromJson("{\"api_gateway\": \"api_gateway/Dockerfile\", \"auth_service\": \"services/auth_service/Dockerfile\", \"general_chat_service\": \"services/general_chat_service/Dockerfile\", \"study_support_service\": \"services/study_support_service/Dockerfile\", \"data_service\": \"services/data_service/Dockerfile\", \"response_service\": \"services/response_service/Dockerfile\", \"system_prompt_service\": \"services/system_prompt_service/Dockerfile\", \"training_service\": \"services/training_service/Dockerfile\", \"ui\": \"ui/Dockerfile\"}")[matrix.service] }}'
+          file: ${{ fromJson(env.DOCKERFILES)[matrix.service] }}
           push: true
-          tags: '${{ fromJson("{\"api_gateway\": \"amidu/chatbot_prototype_api_gateway:latest\", \"auth_service\": \"amidu/chatbot_prototype_auth_service:latest\", \"general_chat_service\": \"amidu/chatbot_prototype_general_chat_service:latest\", \"study_support_service\": \"amidu/chatbot_prototype_study_support_service:latest\", \"data_service\": \"amidu/chatbot_prototype_data_service:latest\", \"response_service\": \"amidu/chatbot_prototype_response_service:latest\", \"system_prompt_service\": \"amidu/chatbot_prototype_system_prompt_service:latest\", \"training_service\": \"amidu/chatbot_prototype_training_service:latest\", \"ui\": \"amidu/chatbot_prototype_ui:latest\"}")[matrix.service] }}'
+          tags: ${{ fromJson(env.IMAGES)[matrix.service] }}
 
   test-services:
     name: Test Docker Services Locally
@@ -47,7 +46,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install Docker Compose
+      - name: Verify Docker Compose installation
         run: docker compose version
 
       - name: Spin up services with Docker Compose
@@ -55,7 +54,7 @@ jobs:
           docker compose up -d
           echo "Waiting 30 seconds for services to initialize..."
           sleep 30
-          # Perform a health check on API Gateway (assumed exposed on host port 5008)
+          # Perform a health check on API Gateway (assuming host port 5008 is mapped in your docker-compose.yml)
           STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:5008)
           echo "API Gateway status code: $STATUS"
           if [ "$STATUS" != "200" ]; then
