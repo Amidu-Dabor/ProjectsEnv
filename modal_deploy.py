@@ -2,7 +2,7 @@ import modal
 
 stub = modal.Stub("chatbot_prototype")
 
-# Images for each microservice
+# Docker images for each microservice
 api_gateway_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_api_gateway:latest")
 auth_service_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_auth_service:latest")
 data_service_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_data_service:latest")
