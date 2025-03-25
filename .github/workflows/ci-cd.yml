@@ -69,15 +69,22 @@ jobs:
           docker compose up -d
           echo "Waiting 30 seconds for services to initialize..."
           sleep 30
-          # Health-check: verify API Gateway returns HTTP 200 (assumed mapped to host port 5008)
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:5008)
-          echo "API Gateway status code: $STATUS"
-          if [ "$STATUS" != "200" ]; then
-            echo "Health check failed. Dumping logs:"
-            docker compose logs
-            exit 1
-          fi
-          echo "Services are healthy."
+          RETRIES=5
+          COUNT=0
+          while [ $COUNT -lt $RETRIES ]; do
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:5008)
+            echo "Attempt $((COUNT+1)): API Gateway status code: $STATUS"
+            if [ "$STATUS" = "200" ]; then
+              echo "API Gateway is healthy."
+              exit 0
+            fi
+            COUNT=$((COUNT+1))
+            echo "Waiting 15 seconds before next check..."
+            sleep 15
+          done
+          echo "Health check failed after $RETRIES attempts. Dumping logs:"
+          docker compose logs
+          exit 1
 
       - name: Tear down services
         if: always()
