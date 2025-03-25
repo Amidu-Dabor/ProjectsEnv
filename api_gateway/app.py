@@ -1,13 +1,14 @@
 # api_gateway/app.py
+import os
 from flask import Flask, request, jsonify
 import requests
 
 app = Flask(__name__)
 
-# Service endpoints
-AUTH_SERVICE_URL = "http://localhost:5001"
-GENERAL_CHAT_SERVICE_URL = "http://localhost:5002"
-STUDY_SUPPORT_SERVICE_URL = "http://localhost:5003"
+# Use environment variables to override default endpoints.
+AUTH_SERVICE_URL = os.environ.get("AUTH_SERVICE_URL", "http://localhost:5001")
+GENERAL_CHAT_SERVICE_URL = os.environ.get("GENERAL_CHAT_SERVICE_URL", "http://localhost:5002")
+STUDY_SUPPORT_SERVICE_URL = os.environ.get("STUDY_SUPPORT_SERVICE_URL", "http://localhost:5003")
 
 @app.route('/query', methods=['POST'])
 def query():

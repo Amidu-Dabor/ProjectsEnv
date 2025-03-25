@@ -4,88 +4,60 @@ services:
     build:
       context: .
       dockerfile: api_gateway/Dockerfile
-    container_name: api_gateway
+    environment:
+      # Override endpoints to point to local containers
+      AUTH_SERVICE_URL: "http://auth_service:5001"
+      GENERAL_CHAT_SERVICE_URL: "http://general_chat_service:5002"
+      STUDY_SUPPORT_SERVICE_URL: "http://study_support_service:5003"
     ports:
       - "5008:5000"
-    depends_on:
-      - auth_service
-      - general_chat_service
-      - study_support_service
-      - data_service
-      - response_service
-      - system_prompt_service
-
   auth_service:
     build:
       context: .
       dockerfile: services/auth_service/Dockerfile
-    container_name: auth_service
     ports:
       - "5001:5001"
-
   general_chat_service:
     build:
       context: .
       dockerfile: services/general_chat_service/Dockerfile
-    container_name: general_chat_service
     ports:
       - "5002:5002"
-    depends_on:
-      - data_service
-      - response_service
-
   study_support_service:
     build:
       context: .
       dockerfile: services/study_support_service/Dockerfile
-    container_name: study_support_service
     ports:
       - "5003:5003"
-    depends_on:
-      - auth_service
-      - data_service
-      - response_service
-
   data_service:
     build:
       context: .
       dockerfile: services/data_service/Dockerfile
-    container_name: data_service
     ports:
       - "5004:5004"
-
   response_service:
     build:
       context: .
       dockerfile: services/response_service/Dockerfile
-    container_name: response_service
     ports:
       - "5005:5005"
-    depends_on:
-      - system_prompt_service
-
   system_prompt_service:
     build:
       context: .
       dockerfile: services/system_prompt_service/Dockerfile
-    container_name: system_prompt_service
     ports:
       - "5006:5006"
-
   training_service:
     build:
       context: .
       dockerfile: services/training_service/Dockerfile
-    container_name: training_service
     ports:
       - "5007:5007"
-
   ui:
     build:
       context: .
       dockerfile: ui/Dockerfile
-    container_name: ui
+    environment:
+      API_GATEWAY_URL: "http://api_gateway:5000/query"
     ports:
       - "7860:7860"
-    depends_on:
-      - api_gateway
