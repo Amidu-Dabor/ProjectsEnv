@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-# Use environment variables to override defaults
+# Endpoints can be overridden by environment variables.
 DATA_SERVICE_URL = os.environ.get("DATA_SERVICE_URL", "http://localhost:5004")
 RESPONSE_SERVICE_URL = os.environ.get("RESPONSE_SERVICE_URL", "http://localhost:5005")
 
@@ -20,4 +20,5 @@ def general_query():
     return jsonify(resp.json())
 
 if __name__ == '__main__':
-    app.run(port=5002, debug=True)
+    port = int(os.environ.get("PORT", 5002))
+    app.run(port=port, debug=True)

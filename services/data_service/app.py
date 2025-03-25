@@ -6,6 +6,7 @@ from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import Chroma
 import chromadb
 from typing import List
+import os
 
 app = Flask(__name__)
 VECTOR_STORE = None  # Global vector store
@@ -61,4 +62,5 @@ def fetch_data():
     return jsonify({"data": context})
 
 if __name__ == '__main__':
-    app.run(port=5004, debug=True)
+    port = int(os.environ.get("PORT", 5004))
+    app.run(port=port, debug=True)

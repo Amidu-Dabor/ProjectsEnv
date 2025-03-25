@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import uuid
 from typing import Dict
+import os
 
 app = Flask(__name__)
 
@@ -28,4 +29,5 @@ def validate():
     return jsonify({"error": "Invalid token"}), 401
 
 if __name__ == '__main__':
-    app.run(port=5001, debug=True)
+    port = int(os.environ.get("PORT", 5001))
+    app.run(port=port, debug=True)

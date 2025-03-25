@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-# Use environment variables for endpoints.
+# Endpoints configurable via environment variables.
 DATA_SERVICE_URL = os.environ.get("DATA_SERVICE_URL", "http://localhost:5004")
 RESPONSE_SERVICE_URL = os.environ.get("RESPONSE_SERVICE_URL", "http://localhost:5005")
 
@@ -20,4 +20,5 @@ def study_query():
     return jsonify(resp.json())
 
 if __name__ == '__main__':
-    app.run(port=5003, debug=True)
+    port = int(os.environ.get("PORT", 5003))
+    app.run(port=port, debug=True)

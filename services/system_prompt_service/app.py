@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+import os
 
 app = Flask(__name__)
 
@@ -20,4 +21,5 @@ def get_prompt():
     return jsonify({"prompt": GENERAL_PROMPT})
 
 if __name__ == '__main__':
-    app.run(port=5006, debug=True)
+    port = int(os.environ.get("PORT", 5006))
+    app.run(port=port, debug=True)

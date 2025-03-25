@@ -12,7 +12,6 @@ import base64
 app = Flask(__name__)
 
 def get_system_prompt(mode: str) -> str:
-    # Use environment variable to override default system prompt service URL
     SYSTEM_PROMPT_SERVICE_URL = os.environ.get("SYSTEM_PROMPT_SERVICE_URL", "http://localhost:5006")
     resp = requests.get(f"{SYSTEM_PROMPT_SERVICE_URL}/get_prompt?mode={mode}")
     if resp.status_code == 200:
@@ -20,7 +19,7 @@ def get_system_prompt(mode: str) -> str:
     return ""
 
 def load_llama_model() -> HuggingFacePipeline:
-    model_id = "huggyllama/llama-7b"  # Placeholder; adjust to a suitable model
+    model_id = "huggyllama/llama-7b"  # Placeholder; adjust as needed
     tokenizer = AutoTokenizer.from_pretrained(model_id)
     model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.float16, device_map="auto")
     gen_pipe = pipeline("text-generation", model=model, tokenizer=tokenizer, max_length=256, do_sample=True, temperature=0.7)
@@ -38,7 +37,7 @@ GENERAL_LLM = load_llama_model()
 STUDY_LLM = load_claude_model()
 
 def synthesize_tts(text: str) -> str:
-    dummy_audio = b"DummyAudioData"  # Replace with actual TTS output in production
+    dummy_audio = b"DummyAudioData"  # Replace with actual TTS output as needed.
     return base64.b64encode(dummy_audio).decode('utf-8')
 
 def generate_streaming_response(mode: str, query: str, chat_history: List[str]) -> Generator[Tuple[str, str], None, None]:
@@ -67,4 +66,5 @@ def generate_response():
     return Response(generate(), mimetype='application/json')
 
 if __name__ == '__main__':
-    app.run(port=5005, debug=True)
+    port = int(os.environ.get("PORT", 5005))
+    app.run(port=port, debug=True)

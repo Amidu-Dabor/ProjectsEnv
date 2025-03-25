@@ -4,7 +4,6 @@ import requests
 import json
 from typing import Generator, Tuple
 
-# Read endpoint from environment variable (Modal deployment will set this)
 API_GATEWAY_URL = os.environ.get("API_GATEWAY_URL", "http://localhost:5008/query")
 AUTH_SERVICE_URL = os.environ.get("AUTH_SERVICE_URL", "http://localhost:5001/login")
 
@@ -83,4 +82,7 @@ with gr.Blocks(css=css) as demo:
             study_send_btn.click(send_study, inputs=[study_query_input, chat_history_state, auth_token_state],
                                  outputs=[study_chatbot, study_voice_output], stream=True)
     
-demo.launch(share=True, server_name="0.0.0.0", server_port=7860, inbrowser=True)
+# Read PORT from environment; default to 7860.
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 7860))
+    demo.launch(share=True, server_name="0.0.0.0", server_port=port, inbrowser=True)
