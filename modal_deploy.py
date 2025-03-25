@@ -2,8 +2,7 @@ import modal
 
 stub = modal.Stub("chatbot_prototype")
 
-# Images for each microservice (ensure these images are available on Docker Hub)
-api_gateway_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_api_gateway:latest")
+# Define images from Docker Hub (ensure these are built and pushed)
 auth_service_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_auth_service:latest")
 data_service_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_data_service:latest")
 general_chat_service_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_general_chat_service:latest")
@@ -11,12 +10,8 @@ study_support_service_image = modal.Image.from_dockerhub("amidu/chatbot_prototyp
 response_service_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_response_service:latest")
 system_prompt_service_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_system_prompt_service:latest")
 training_service_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_training_service:latest")
+api_gateway_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_api_gateway:latest")
 ui_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_ui:latest")
-
-@stub.function(image=api_gateway_image, web=True, port=5000)
-def run_api_gateway():
-    import subprocess
-    subprocess.run(["python", "app.py"], check=True)
 
 @stub.function(image=auth_service_image, web=True, port=5001)
 def run_auth_service():
@@ -53,7 +48,19 @@ def run_training_service():
     import subprocess
     subprocess.run(["python", "app.py"], check=True)
 
-@stub.function(image=ui_image, web=True, port=7860)
+# Set environment variables to point to Modal function URLs.
+@stub.function(image=api_gateway_image, web=True, port=5000, env={
+    "AUTH_SERVICE_URL": "http://run_auth_service",
+    "GENERAL_CHAT_SERVICE_URL": "http://run_general_chat_service",
+    "STUDY_SUPPORT_SERVICE_URL": "http://run_study_support_service"
+})
+def run_api_gateway():
+    import subprocess
+    subprocess.run(["python", "app.py"], check=True)
+
+@stub.function(image=ui_image, web=True, port=7860, env={
+    "API_GATEWAY_URL": "http://run_api_gateway/query"
+})
 def run_ui():
     import subprocess
     subprocess.run(["python", "gradio_app.py"], check=True)

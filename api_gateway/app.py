@@ -1,4 +1,3 @@
-# api_gateway/app.py
 import os
 from flask import Flask, request, jsonify
 import requests
@@ -22,14 +21,18 @@ def query():
         auth_token = request.headers.get("Authorization")
         if not auth_token:
             return jsonify({"error": "Authentication token required"}), 401
-        resp = requests.post(f"{STUDY_SUPPORT_SERVICE_URL}/study_query",
-                             json={"query": query_text, "chat_history": chat_history},
-                             headers={"Authorization": auth_token})
+        resp = requests.post(
+            f"{STUDY_SUPPORT_SERVICE_URL}/study_query",
+            json={"query": query_text, "chat_history": chat_history},
+            headers={"Authorization": auth_token}
+        )
         return jsonify(resp.json())
     else:
         # General enquiries
-        resp = requests.post(f"{GENERAL_CHAT_SERVICE_URL}/general_query",
-                             json={"query": query_text, "chat_history": chat_history})
+        resp = requests.post(
+            f"{GENERAL_CHAT_SERVICE_URL}/general_query",
+            json={"query": query_text, "chat_history": chat_history}
+        )
         return jsonify(resp.json())
 
 if __name__ == '__main__':

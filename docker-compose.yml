@@ -5,7 +5,6 @@ services:
       context: .
       dockerfile: api_gateway/Dockerfile
     environment:
-      # Override endpoints to point to local containers
       AUTH_SERVICE_URL: "http://auth_service:5001"
       GENERAL_CHAT_SERVICE_URL: "http://general_chat_service:5002"
       STUDY_SUPPORT_SERVICE_URL: "http://study_support_service:5003"

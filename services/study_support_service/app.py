@@ -1,11 +1,12 @@
-# services/study_support_service/app.py
+import os
 from flask import Flask, request, jsonify
 import requests
 
 app = Flask(__name__)
 
-DATA_SERVICE_URL = "http://localhost:5004"
-RESPONSE_SERVICE_URL = "http://localhost:5005"
+# Use environment variables for endpoints.
+DATA_SERVICE_URL = os.environ.get("DATA_SERVICE_URL", "http://localhost:5004")
+RESPONSE_SERVICE_URL = os.environ.get("RESPONSE_SERVICE_URL", "http://localhost:5005")
 
 @app.route('/study_query', methods=['POST'])
 def study_query():

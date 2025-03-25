@@ -1,4 +1,3 @@
-# services/auth_service/app.py
 from flask import Flask, request, jsonify
 import uuid
 from typing import Dict

@@ -1,11 +1,10 @@
-# ui/gradio_app.py
 import os
 import gradio as gr
 import requests
 import json
 from typing import Generator, Tuple
 
-# Use env variable if set; otherwise default to localhost (for local testing)
+# Read endpoint from environment variable (Modal deployment will set this)
 API_GATEWAY_URL = os.environ.get("API_GATEWAY_URL", "http://localhost:5008/query")
 AUTH_SERVICE_URL = os.environ.get("AUTH_SERVICE_URL", "http://localhost:5001/login")
 
@@ -54,7 +53,6 @@ with gr.Blocks(css=css) as demo:
                     yield history, audio
                 return history, None
             
-            # Use .click(..., stream=True) with newer versions of Gradio.
             send_btn.click(send_general, inputs=[query_input, chat_history_state],
                            outputs=[chatbot, voice_output], stream=True)
         

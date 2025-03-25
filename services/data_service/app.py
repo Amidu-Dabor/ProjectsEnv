@@ -1,4 +1,3 @@
-# services/data_service/app.py
 from flask import Flask, request, jsonify
 from bs4 import BeautifulSoup
 import requests
@@ -12,7 +11,6 @@ app = Flask(__name__)
 VECTOR_STORE = None  # Global vector store
 
 def scrape_website(url: str) -> List[str]:
-    """Scrape a website and return a list of texts from all hyperlinks."""
     texts = []
     try:
         response = requests.get(url, timeout=10)
@@ -36,7 +34,6 @@ def scrape_website(url: str) -> List[str]:
     return texts
 
 def preprocess_and_store(texts: List[str]) -> None:
-    """Chunk texts, generate embeddings, and store in a Chroma DB."""
     global VECTOR_STORE
     splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
     docs = splitter.create_documents(texts)
@@ -54,7 +51,6 @@ def scrape():
 
 @app.route('/fetch_data', methods=['POST'])
 def fetch_data():
-    """Return relevant context for a query by performing a semantic search."""
     global VECTOR_STORE
     data = request.json
     query = data.get("query", "")
