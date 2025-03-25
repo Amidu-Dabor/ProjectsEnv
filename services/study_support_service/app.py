@@ -4,7 +4,6 @@ import requests
 
 app = Flask(__name__)
 
-# Endpoints configurable via environment variables.
 DATA_SERVICE_URL = os.environ.get("DATA_SERVICE_URL", "http://localhost:5004")
 RESPONSE_SERVICE_URL = os.environ.get("RESPONSE_SERVICE_URL", "http://localhost:5005")
 

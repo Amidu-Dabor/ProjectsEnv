@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/train', methods=['POST'])
 def train():
     data = request.json
-    # Dummy training process
+    # Dummy training process; implement your training logic here if needed.
     return jsonify({"status": "Training started", "data_received": data})
 
 if __name__ == '__main__':

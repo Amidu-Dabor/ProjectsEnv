@@ -82,7 +82,6 @@ with gr.Blocks(css=css) as demo:
             study_send_btn.click(send_study, inputs=[study_query_input, chat_history_state, auth_token_state],
                                  outputs=[study_chatbot, study_voice_output], stream=True)
     
-# Read PORT from environment; default to 7860.
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 7860))
     demo.launch(share=True, server_name="0.0.0.0", server_port=port, inbrowser=True)

@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, jsonify
 from bs4 import BeautifulSoup
 import requests
@@ -6,10 +7,9 @@ from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import Chroma
 import chromadb
 from typing import List
-import os
 
 app = Flask(__name__)
-VECTOR_STORE = None  # Global vector store
+VECTOR_STORE = None
 
 def scrape_website(url: str) -> List[str]:
     texts = []

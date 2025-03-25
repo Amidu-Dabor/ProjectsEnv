@@ -9,3 +9,6 @@ torch==2.6.0
 chromadb==0.6.3
 werkzeug==2.2.3
 accelerate
+transformers
+bitsandbytes
+peft

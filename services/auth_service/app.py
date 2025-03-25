@@ -1,11 +1,10 @@
+import os
 from flask import Flask, request, jsonify
 import uuid
 from typing import Dict
-import os
 
 app = Flask(__name__)
 
-# Simulated user database and token store
 USERS: Dict[str, str] = {"student": "password", "faculty": "faculty123"}
 TOKENS: Dict[str, str] = {}
 
