@@ -12,4 +12,4 @@ accelerate
 transformers
 bitsandbytes
 peft
-modal
+modal==0.73.126
