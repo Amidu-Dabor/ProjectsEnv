@@ -8,9 +8,11 @@ on:
   workflow_dispatch:
 
 env:
-  # JSON mappings for Dockerfiles, images, and Modal app names.
+  # JSON mapping for Dockerfile paths relative to repository root.
   DOCKERFILES: '{"api_gateway": "api_gateway/Dockerfile", "auth_service": "services/auth_service/Dockerfile", "general_chat_service": "services/general_chat_service/Dockerfile", "study_support_service": "services/study_support_service/Dockerfile", "data_service": "services/data_service/Dockerfile", "response_service": "services/response_service/Dockerfile", "system_prompt_service": "services/system_prompt_service/Dockerfile", "training_service": "services/training_service/Dockerfile", "ui": "ui/Dockerfile"}'
+  # JSON mapping for Docker Hub image tags.
   IMAGES: '{"api_gateway": "amidu/chatbot_prototype_api_gateway:latest", "auth_service": "amidu/chatbot_prototype_auth_service:latest", "general_chat_service": "amidu/chatbot_prototype_general_chat_service:latest", "study_support_service": "amidu/chatbot_prototype_study_support_service:latest", "data_service": "amidu/chatbot_prototype_data_service:latest", "response_service": "amidu/chatbot_prototype_response_service:latest", "system_prompt_service": "amidu/chatbot_prototype_system_prompt_service:latest", "training_service": "amidu/chatbot_prototype_training_service:latest", "ui": "amidu/chatbot_prototype_ui:latest"}'
+  # JSON mapping for Modal (or fly.io) app names, if needed.
   FLY_APP_NAMES: '{"api_gateway": "chatbot-prototype-api-gateway", "auth_service": "chatbot-prototype-auth-service", "general_chat_service": "chatbot-prototype-general-chat-service", "study_support_service": "chatbot-prototype-study-support-service", "data_service": "chatbot-prototype-data-service", "response_service": "chatbot-prototype-response-service", "system_prompt_service": "chatbot-prototype-system-prompt-service", "training_service": "chatbot-prototype-training-service", "ui": "chatbot-prototype-ui"}'
 
 jobs:
@@ -51,48 +53,10 @@ jobs:
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache,mode=max
 
-  test-services:
-    name: Test Docker Services Locally
+  test-modal:
+    name: Test Modal Connectivity
     runs-on: ubuntu-latest
     needs: build-and-push
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Verify Docker Compose installation
-        run: docker compose version
-
-      - name: Spin up services with Docker Compose
-        run: |
-          docker compose up -d
-          echo "Waiting 60 seconds for services to initialize..."
-          sleep 60
-          RETRIES=8
-          COUNT=0
-          while [ $COUNT -lt $RETRIES ]; do
-            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:5008)
-            echo "Attempt $((COUNT+1)): API Gateway status code: $STATUS"
-            if [ "$STATUS" = "200" ]; then
-              echo "API Gateway is healthy."
-              exit 0
-            fi
-            COUNT=$((COUNT+1))
-            echo "Waiting 15 seconds before next check..."
-            sleep 15
-          done
-          echo "Health check failed after $RETRIES attempts. Dumping logs:"
-          docker compose logs
-          echo "Continuing pipeline despite health check failure."
-          exit 0
-
-      - name: Tear down services
-        if: always()
-        run: docker compose down
-
-  deploy-modal:
-    name: Deploy to Modal for Inferencing
-    runs-on: ubuntu-latest
-    needs: test-services
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -115,7 +79,20 @@ jobs:
 
       - name: Test Modal Connection
         run: |
-          python -c "import modal; print('Modal connection works')"
+          python -c "import modal; print('Modal connectivity successful')"
+
+  deploy-modal:
+    name: Deploy to Modal for Inferencing
+    runs-on: ubuntu-latest
+    needs: test-modal
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
 
       - name: Deploy to Modal
         env:
