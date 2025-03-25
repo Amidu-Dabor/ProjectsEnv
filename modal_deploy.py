@@ -1,55 +1,55 @@
 import modal
 
-stub = modal.Stub("chatbot_prototype")
+app = modal.App("chatbot_prototype")  # Use modal.App (Stub is deprecated)
 
-# Define images from Docker Hub (ensure these are built and pushed)
-auth_service_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_auth_service:latest")
-data_service_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_data_service:latest")
-general_chat_service_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_general_chat_service:latest")
-study_support_service_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_study_support_service:latest")
-response_service_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_response_service:latest")
-system_prompt_service_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_system_prompt_service:latest")
-training_service_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_training_service:latest")
-api_gateway_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_api_gateway:latest")
-ui_image = modal.Image.from_dockerhub("amidu/chatbot_prototype_ui:latest")
+# Load images from Docker Hub using from_registry
+auth_service_image = modal.Image.from_registry("amidu/chatbot_prototype_auth_service:latest")
+data_service_image = modal.Image.from_registry("amidu/chatbot_prototype_data_service:latest")
+general_chat_service_image = modal.Image.from_registry("amidu/chatbot_prototype_general_chat_service:latest")
+study_support_service_image = modal.Image.from_registry("amidu/chatbot_prototype_study_support_service:latest")
+response_service_image = modal.Image.from_registry("amidu/chatbot_prototype_response_service:latest")
+system_prompt_service_image = modal.Image.from_registry("amidu/chatbot_prototype_system_prompt_service:latest")
+training_service_image = modal.Image.from_registry("amidu/chatbot_prototype_training_service:latest")
+api_gateway_image = modal.Image.from_registry("amidu/chatbot_prototype_api_gateway:latest")
+ui_image = modal.Image.from_registry("amidu/chatbot_prototype_ui:latest")
 
-@stub.function(image=auth_service_image, web=True, port=5001)
+@app.function(image=auth_service_image, web=True, port=5001)
 def run_auth_service():
     import subprocess
     subprocess.run(["python", "app.py"], check=True)
 
-@stub.function(image=data_service_image, web=True, port=5004)
+@app.function(image=data_service_image, web=True, port=5004)
 def run_data_service():
     import subprocess
     subprocess.run(["python", "app.py"], check=True)
 
-@stub.function(image=general_chat_service_image, web=True, port=5002)
+@app.function(image=general_chat_service_image, web=True, port=5002)
 def run_general_chat_service():
     import subprocess
     subprocess.run(["python", "app.py"], check=True)
 
-@stub.function(image=study_support_service_image, web=True, port=5003)
+@app.function(image=study_support_service_image, web=True, port=5003)
 def run_study_support_service():
     import subprocess
     subprocess.run(["python", "app.py"], check=True)
 
-@stub.function(image=response_service_image, web=True, port=5005)
+@app.function(image=response_service_image, web=True, port=5005)
 def run_response_service():
     import subprocess
     subprocess.run(["python", "app.py"], check=True)
 
-@stub.function(image=system_prompt_service_image, web=True, port=5006)
+@app.function(image=system_prompt_service_image, web=True, port=5006)
 def run_system_prompt_service():
     import subprocess
     subprocess.run(["python", "app.py"], check=True)
 
-@stub.function(image=training_service_image, web=True, port=5007)
+@app.function(image=training_service_image, web=True, port=5007)
 def run_training_service():
     import subprocess
     subprocess.run(["python", "app.py"], check=True)
 
-# Set environment variables to point to Modal function URLs.
-@stub.function(image=api_gateway_image, web=True, port=5000, env={
+# Deploy API gateway with environment variables pointing to the internal Modal function endpoints.
+@app.function(image=api_gateway_image, web=True, port=5000, env={
     "AUTH_SERVICE_URL": "http://run_auth_service",
     "GENERAL_CHAT_SERVICE_URL": "http://run_general_chat_service",
     "STUDY_SUPPORT_SERVICE_URL": "http://run_study_support_service"
@@ -58,7 +58,8 @@ def run_api_gateway():
     import subprocess
     subprocess.run(["python", "app.py"], check=True)
 
-@stub.function(image=ui_image, web=True, port=7860, env={
+# Deploy UI with the API gateway URL set to the internal endpoint.
+@app.function(image=ui_image, web=True, port=7860, env={
     "API_GATEWAY_URL": "http://run_api_gateway/query"
 })
 def run_ui():
@@ -66,4 +67,4 @@ def run_ui():
     subprocess.run(["python", "gradio_app.py"], check=True)
 
 if __name__ == "__main__":
-    stub.deploy("chatbot_prototype")
+    app.deploy("chatbot_prototype")
