@@ -7,13 +7,18 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+env:
+  # JSON mapping for Dockerfile paths relative to repository root.
+  DOCKERFILES: '{"api_gateway": "api_gateway/Dockerfile", "auth_service": "services/auth_service/Dockerfile", "general_chat_service": "services/general_chat_service/Dockerfile", "study_support_service": "services/study_support_service/Dockerfile", "data_service": "services/data_service/Dockerfile", "response_service": "services/response_service/Dockerfile", "system_prompt_service": "services/system_prompt_service/Dockerfile", "training_service": "services/training_service/Dockerfile", "ui": "ui/Dockerfile"}'
+  # JSON mapping for Docker Hub image tags.
+  IMAGES: '{"api_gateway": "amidu/chatbot_prototype_api_gateway:latest", "auth_service": "amidu/chatbot_prototype_auth_service:latest", "general_chat_service": "amidu/chatbot_prototype_general_chat_service:latest", "study_support_service": "amidu/chatbot_prototype_study_support_service:latest", "data_service": "amidu/chatbot_prototype_data_service:latest", "response_service": "amidu/chatbot_prototype_response_service:latest", "system_prompt_service": "amidu/chatbot_prototype_system_prompt_service:latest", "training_service": "amidu/chatbot_prototype_training_service:latest", "ui": "amidu/chatbot_prototype_ui:latest"}'
+  # JSON mapping for fly.io app names.
+  FLY_APP_NAMES: '{"api_gateway": "chatbot-prototype-api-gateway", "auth_service": "chatbot-prototype-auth-service", "general_chat_service": "chatbot-prototype-general-chat-service", "study_support_service": "chatbot-prototype-study-support-service", "data_service": "chatbot-prototype-data-service", "response_service": "chatbot-prototype-response-service", "system_prompt_service": "chatbot-prototype-system-prompt-service", "training_service": "chatbot-prototype-training-service", "ui": "chatbot-prototype-ui"}'
+
 jobs:
   build-and-push:
     name: Build and Push Docker Images
     runs-on: ubuntu-latest
-    env:
-      DOCKERFILES: '{"api_gateway": "api_gateway/Dockerfile", "auth_service": "services/auth_service/Dockerfile", "general_chat_service": "services/general_chat_service/Dockerfile", "study_support_service": "services/study_support_service/Dockerfile", "data_service": "services/data_service/Dockerfile", "response_service": "services/response_service/Dockerfile", "system_prompt_service": "services/system_prompt_service/Dockerfile", "training_service": "services/training_service/Dockerfile", "ui": "ui/Dockerfile"}'
-      IMAGES: '{"api_gateway": "amidu/chatbot_prototype_api_gateway:latest", "auth_service": "amidu/chatbot_prototype_auth_service:latest", "general_chat_service": "amidu/chatbot_prototype_general_chat_service:latest", "study_support_service": "amidu/chatbot_prototype_study_support_service:latest", "data_service": "amidu/chatbot_prototype_data_service:latest", "response_service": "amidu/chatbot_prototype_response_service:latest", "system_prompt_service": "amidu/chatbot_prototype_system_prompt_service:latest", "training_service": "amidu/chatbot_prototype_training_service:latest", "ui": "amidu/chatbot_prototype_ui:latest"}'
     strategy:
       matrix:
         service: [ "api_gateway", "auth_service", "general_chat_service", "study_support_service", "data_service", "response_service", "system_prompt_service", "training_service", "ui" ]
@@ -23,9 +28,14 @@ jobs:
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
-        with:
-          buildkitd-flags: --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host
 
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Cache Docker layers across builds for speed
       - name: Cache Docker layers
         uses: actions/cache@v3
         with:
@@ -33,12 +43,6 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ matrix.service }}-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-${{ matrix.service }}-
-
-      - name: Login to Docker Hub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push ${{ matrix.service }} image
         uses: docker/build-push-action@v3
@@ -63,10 +67,11 @@ jobs:
 
       - name: Spin up services with Docker Compose
         run: |
+          # Bring up all services defined in docker-compose.yml
           docker compose up -d
           echo "Waiting 30 seconds for services to initialize..."
           sleep 30
-          # Health check on API Gateway (assuming it's mapped to host port 5008)
+          # Health-check: ensure API Gateway returns HTTP 200.
           STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:5008)
           echo "API Gateway status code: $STATUS"
           if [ "$STATUS" != "200" ]; then
@@ -80,8 +85,8 @@ jobs:
         if: always()
         run: docker compose down
 
-  deploy-modal:
-    name: Deploy to Modal for Inferencing
+  deploy-fly:
+    name: Deploy to fly.io
     runs-on: ubuntu-latest
     needs: test-services
     steps:
@@ -93,6 +98,7 @@ jobs:
         with:
           python-version: "3.11"
 
+      # Cache pip dependencies for faster installs
       - name: Cache pip dependencies
         uses: actions/cache@v3
         with:
@@ -101,10 +107,21 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      - name: Install Modal CLI and dependencies
-        run: pip install modal
+      - name: Install Flyctl CLI
+        run: |
+          curl -L https://fly.io/install.sh | sh
+          export FLYCTL_INSTALL="$HOME/.fly"
+          export PATH="$FLYCTL_INSTALL/bin:$PATH"
+          flyctl version
 
-      - name: Deploy to Modal
+      - name: Deploy each service to fly.io
+        run: |
+          for service in $(echo '${{ join(matrix.service, " ") }}'); do
+            IMAGE=$(echo '${{ fromJson(env.IMAGES) }}' | jq -r --arg s "$service" '.[$s]')
+            FLY_APP=$(echo '${{ fromJson(env.FLY_APP_NAMES) }}' | jq -r --arg s "$service" '.[$s]')
+            echo "Deploying service $service with image $IMAGE to fly.io app $FLY_APP"
+            flyctl deploy --image "$IMAGE" --app "$FLY_APP" --detach || exit 1
+          done
         env:
-          MODAL_API_KEY: ${{ secrets.MODAL_API_KEY }}
-        run: python modal_deploy.py
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+
