@@ -87,4 +87,4 @@ jobs:
       - name: Deploy to Modal
         env:
           MODAL_API_KEY: ${{ secrets.MODAL_API_KEY }}
-        run: python modal_deploy.py
+        run: modal deploy modal_deploy.py

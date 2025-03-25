@@ -1,5 +1,5 @@
-import os
 import modal
+import os
 
 app = modal.App("chatbot_prototype")
 
@@ -14,7 +14,6 @@ training_service_image = modal.Image.from_registry("amidu/chatbot_prototype_trai
 api_gateway_image = modal.Image.from_registry("amidu/chatbot_prototype_api_gateway:latest")
 ui_image = modal.Image.from_registry("amidu/chatbot_prototype_ui:latest")
 
-# Define each microservice as a class with a web endpoint.
 @app.cls(image=auth_service_image)
 class AuthService:
     @modal.web_endpoint(method="POST")
@@ -77,6 +76,3 @@ class UI:
     def serve(self, request):
         import subprocess
         subprocess.run(["python", "gradio_app.py"], check=True)
-
-if __name__ == "__main__":
-    app.deploy("chatbot_prototype")
