@@ -10,7 +10,7 @@ app = App("chatbot_prototype")
 # Adjust the pip_install list as needed for your chatbot-prototype.
 base_image = Image.debian_slim().pip_install(
     "flask", "requests", "python-dotenv", "openai", "anthropic",
-    "transformers", "torch", "bitsandbytes", "accelerate", "peft", "langchain"
+    "transformers", "torch", "bitsandbytes", "accelerate", "peft", "langchain", "pip install modal"
 )
 
 # (Optional) Attach secrets if needed, for example, Hugging Face API keys.
