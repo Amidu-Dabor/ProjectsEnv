@@ -1,0 +1,1 @@
+{"columns": ["type", "message", "session_id", "query", "timestamp"], "data": [["rag_retrieval", "object of type 'generator' has no len() in query.", "general_1748443086", "hi", 1748443086.327103]]}

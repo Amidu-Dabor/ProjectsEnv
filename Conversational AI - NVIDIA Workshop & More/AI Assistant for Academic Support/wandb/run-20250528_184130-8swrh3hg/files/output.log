@@ -1,0 +1,65 @@
+W&B initialized for project usiu-chatbot
+2025-05-28 18:41:31,774 - api_gateway - INFO - Registered service: wandb_tracker
+2025-05-28 18:41:31,774 - api_gateway - INFO - Registered W&B tracking service
+2025-05-28 18:41:42,836 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:41:42,837 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.397621 seconds
+2025-05-28 18:41:55,432 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:41:55,433 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.911299 seconds
+2025-05-28 18:42:11,788 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+[Warning] could not generate dynamic greeting with Claude: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}
+2025-05-28 18:42:12,990 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 18:42:13,117 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 18:42:13,292 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 18:42:23,488 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:42:23,489 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.459904 seconds
+2025-05-28 18:42:36,634 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:42:36,637 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.873893 seconds
+2025-05-28 18:42:54,516 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+[Warning] could not generate dynamic greeting with Claude: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}
+
+================================================================================
+USIU Chatbot with W&B Integration starting up...
+================================================================================
+Current working directory: /Users/apple/Desktop/chatbot_prototype
+Serving static files from: /Users/apple/Desktop/chatbot_prototype/static
+Images path: /Users/apple/Desktop/chatbot_prototype/static/images
+Basic metrics dashboard: http://localhost:7860/metrics-dashboard
+W&B dashboard: https://wandb.ai/daboramidu93-united-states-international-university-africa/usiu-chatbot
+================================================================================
+
+* Running on local URL:  http://127.0.0.1:7860
+2025-05-28 18:42:55,032 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-05-28 18:42:55,050 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-05-28 18:42:55,720 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 18:42:56,050 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 18:42:56,052 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 18:42:56,358 - httpx - INFO - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+* Running on public URL: https://ae72cb02108beb0f8c.gradio.live
+
+This share link expires in 1 week. For free permanent hosting and GPU upgrades, run `gradio deploy` from the terminal in the working directory to deploy to Hugging Face Spaces (https://huggingface.co/spaces)
+2025-05-28 18:43:24,623 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:43:24,628 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.457515 seconds
+2025-05-28 18:43:25,453 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:43:25,454 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.420134 seconds
+2025-05-28 18:43:36,629 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:43:36,633 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.806822 seconds
+2025-05-28 18:43:36,727 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:43:36,728 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.751892 seconds
+2025-05-28 18:43:50,232 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+[Warning] could not generate dynamic greeting with Claude: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}
+2025-05-28 18:43:51,016 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+[Warning] could not generate dynamic greeting with Claude: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}
+2025-05-28 18:44:00,707 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:44:00,709 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.445648 seconds
+2025-05-28 18:44:06,765 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:44:06,766 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.426563 seconds
+2025-05-28 18:44:12,268 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:44:12,275 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.924153 seconds
+2025-05-28 18:44:19,037 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:44:19,038 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.919968 seconds
+2025-05-28 18:44:24,087 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+[Warning] could not generate dynamic greeting with Claude: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}
+2025-05-28 18:44:30,688 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+[Warning] could not generate dynamic greeting with Claude: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}
+Keyboard interruption in main thread... closing server.
+Killing tunnel 127.0.0.1:7860 <> https://ae72cb02108beb0f8c.gradio.live

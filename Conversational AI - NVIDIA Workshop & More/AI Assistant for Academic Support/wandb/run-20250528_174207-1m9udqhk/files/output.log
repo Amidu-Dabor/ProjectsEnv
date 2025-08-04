@@ -1,0 +1,98 @@
+W&B initialized for project usiu-chatbot
+2025-05-28 17:42:08,320 - api_gateway - INFO - Registered service: wandb_tracker
+2025-05-28 17:42:08,320 - api_gateway - INFO - Registered W&B tracking service
+2025-05-28 17:42:16,259 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-28 17:42:17,614 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 17:42:17,652 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 17:42:17,712 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/chatbot_prototype/app.py", line 566, in <module>
+    main()
+  File "/Users/apple/Desktop/chatbot_prototype/app.py", line 65, in main
+    dashboard = dashboard_ui(
+                ^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/services/ui_service.py", line 1314, in dashboard_ui
+    study_support_component = study_support_ui(study_prompt, study_model)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/services/ui_service.py", line 1105, in study_support_ui
+    chatbot = gr.Chatbot(
+              ^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/gradio/component_meta.py", line 182, in wrapper
+    return fn(self, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/gradio/components/chatbot.py", line 346, in __init__
+    super().__init__(
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/gradio/component_meta.py", line 182, in wrapper
+    return fn(self, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/gradio/components/base.py", line 220, in __init__
+    load_fn, initial_value = self.get_load_fn_and_initial_value(value, inputs)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/gradio/components/base.py", line 262, in get_load_fn_and_initial_value
+    initial_value = value()
+                    ^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/services/ui_service.py", line 1064, in initial_value_study
+    "content": generate_initial_greeting_study(system_prompt, model),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/services/ui_service.py", line 276, in generate_initial_greeting_study
+    response = claude_client.messages.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/anthropic/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/anthropic/resources/messages/messages.py", line 953, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/anthropic/_base_client.py", line 1336, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/anthropic/_base_client.py", line 1013, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/anthropic/_base_client.py", line 1049, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 128, in read
+    return self._sock.recv(max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/venv_py311/lib/python3.11/ssl.py", line 1295, in recv
+    return self.read(buflen)
+           ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/venv_py311/lib/python3.11/ssl.py", line 1168, in read
+    return self._sslobj.read(len)
+           ^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

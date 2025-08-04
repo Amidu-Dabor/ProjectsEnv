@@ -1,0 +1,69 @@
+W&B initialized for project usiu-chatbot
+2025-05-28 18:01:25,343 - api_gateway - INFO - Registered service: wandb_tracker
+2025-05-28 18:01:25,343 - api_gateway - INFO - Registered W&B tracking service
+2025-05-28 18:01:39,334 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:01:39,337 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.432338 seconds
+2025-05-28 18:01:56,205 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:01:56,206 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.769855 seconds
+2025-05-28 18:02:28,515 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+[Warning] could not generate dynamic greeting with Claude: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}
+2025-05-28 18:02:29,776 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 18:02:29,840 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 18:02:29,956 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 18:02:37,194 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+
+================================================================================
+USIU Chatbot with W&B Integration starting up...
+================================================================================
+Current working directory: /Users/apple/Desktop/chatbot_prototype
+Serving static files from: /Users/apple/Desktop/chatbot_prototype/static
+Images path: /Users/apple/Desktop/chatbot_prototype/static/images
+Basic metrics dashboard: http://localhost:7860/metrics-dashboard
+W&B dashboard: https://wandb.ai/daboramidu93-united-states-international-university-africa/usiu-chatbot
+================================================================================
+
+* Running on local URL:  http://127.0.0.1:7860
+2025-05-28 18:02:37,645 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-05-28 18:02:37,662 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-05-28 18:02:38,457 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 18:02:38,488 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 18:02:38,627 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 18:02:38,880 - httpx - INFO - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+* Running on public URL: https://d193ffe9c69bf5110a.gradio.live
+
+This share link expires in 1 week. For free permanent hosting and GPU upgrades, run `gradio deploy` from the terminal in the working directory to deploy to Hugging Face Spaces (https://huggingface.co/spaces)
+2025-05-28 18:03:09,617 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:03:09,618 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.419127 seconds
+2025-05-28 18:03:11,584 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-28 18:03:23,126 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:03:23,128 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.885981 seconds
+2025-05-28 18:03:23,641 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:03:23,643 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.450530 seconds
+2025-05-28 18:03:38,556 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:03:38,559 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.883208 seconds
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+ERROR: RAG retriever is returning a generator instead of a list
+2025-05-28 18:03:51,518 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-28 18:03:51,847 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Claude generation error: WandbTracker.log_conversation() got an unexpected keyword argument 'rag_success'
+2025-05-28 18:03:54,115 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+[Warning] could not generate dynamic greeting with Claude: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}
+2025-05-28 18:04:04,003 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:04:04,007 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.429434 seconds
+2025-05-28 18:04:17,980 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-28 18:04:17,982 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.989987 seconds
+2025-05-28 18:04:30,158 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+[Warning] could not generate dynamic greeting with Claude: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+ERROR: RAG retriever is returning a generator instead of a list
+2025-05-28 18:04:38,599 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Claude generation error: WandbTracker.log_conversation() got an unexpected keyword argument 'rag_success'
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+ERROR: RAG retriever is returning a generator instead of a list
+2025-05-28 18:04:51,763 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Claude generation error: WandbTracker.log_conversation() got an unexpected keyword argument 'rag_success'
+Keyboard interruption in main thread... closing server.
+Killing tunnel 127.0.0.1:7860 <> https://d193ffe9c69bf5110a.gradio.live
