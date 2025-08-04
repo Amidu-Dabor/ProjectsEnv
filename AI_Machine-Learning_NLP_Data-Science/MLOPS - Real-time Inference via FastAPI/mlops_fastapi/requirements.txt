@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+scikit-learn
+pandas
+numpy
+scikit-learn==1.6.1
