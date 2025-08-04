@@ -1,0 +1,69 @@
+W&B initialized for project usiu-chatbot
+2025-05-28 13:45:17,853 - api_gateway - INFO - Registered service: wandb_tracker
+2025-05-28 13:45:17,853 - api_gateway - INFO - Registered W&B tracking service
+2025-05-28 13:45:20,552 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+[Warning] could not generate dynamic greeting: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-05-28 13:45:21,839 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 13:45:21,842 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 13:45:21,924 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 13:45:24,986 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+
+================================================================================
+USIU Chatbot with W&B Integration starting up...
+================================================================================
+Current working directory: /Users/apple/Desktop/chatbot_prototype
+Serving static files from: /Users/apple/Desktop/chatbot_prototype/static
+Images path: /Users/apple/Desktop/chatbot_prototype/static/images
+Basic metrics dashboard: http://localhost:7860/metrics-dashboard
+W&B dashboard: https://wandb.ai/daboramidu93-united-states-international-university-africa/usiu-chatbot
+================================================================================
+
+* Running on local URL:  http://127.0.0.1:7860
+2025-05-28 13:45:25,434 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-05-28 13:45:25,451 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-05-28 13:45:26,191 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 13:45:26,411 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 13:45:26,426 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 13:45:26,592 - httpx - INFO - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+* Running on public URL: https://329cd13dac61907fe6.gradio.live
+
+This share link expires in 1 week. For free permanent hosting and GPU upgrades, run `gradio deploy` from the terminal in the working directory to deploy to Hugging Face Spaces (https://huggingface.co/spaces)
+2025-05-28 13:45:40,470 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+[Warning] could not generate dynamic greeting: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-05-28 13:45:41,485 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+[Warning] could not generate dynamic greeting: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-05-28 13:45:44,514 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-28 13:45:49,692 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-28 13:45:54,354 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 13:45:54,356 - openai._base_client - INFO - Retrying request to /embeddings in 0.468473 seconds
+2025-05-28 13:45:56,126 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 13:45:56,127 - openai._base_client - INFO - Retrying request to /embeddings in 0.977029 seconds
+2025-05-28 13:45:57,978 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+RAG retrieval failed: module 'openai' has no attribute 'error'
+2025-05-28 13:45:59,711 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-28 13:46:35,090 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 13:46:35,093 - openai._base_client - INFO - Retrying request to /embeddings in 0.488581 seconds
+2025-05-28 13:46:36,564 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 13:46:36,565 - openai._base_client - INFO - Retrying request to /embeddings in 0.927549 seconds
+2025-05-28 13:46:38,273 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+RAG retrieval failed: module 'openai' has no attribute 'error'
+2025-05-28 13:46:39,312 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-28 13:49:54,419 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 13:49:54,422 - openai._base_client - INFO - Retrying request to /embeddings in 0.421799 seconds
+2025-05-28 13:49:55,691 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 13:49:55,692 - openai._base_client - INFO - Retrying request to /embeddings in 0.980839 seconds
+2025-05-28 13:49:57,536 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+RAG retrieval failed: module 'openai' has no attribute 'error'
+2025-05-28 13:49:59,393 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/gradio/helpers.py:977: UserWarning: Unexpected argument. Filling with None.
+  warnings.warn("Unexpected argument. Filling with None.")
+Starting chat with file: None
+2025-05-28 13:51:58,485 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages?extended_thinking=true "HTTP/1.1 200 OK"
+Starting chat with file: None
+2025-05-28 14:00:55,086 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages?extended_thinking=true "HTTP/1.1 200 OK"
+Starting chat with file: None
+2025-05-28 14:01:51,641 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages?extended_thinking=true "HTTP/1.1 200 OK"
+Starting chat with file: None
+2025-05-28 14:12:16,779 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages?extended_thinking=true "HTTP/1.1 200 OK"
+Keyboard interruption in main thread... closing server.
+Killing tunnel 127.0.0.1:7860 <> https://329cd13dac61907fe6.gradio.live

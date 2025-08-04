@@ -1,0 +1,1 @@
+{"columns": ["type", "message", "session_id", "query", "timestamp"], "data": [["rag_retrieval", "module 'openai' has no attribute 'error'", "general_1748429151", "hi", 1748429157.9818828]]}
