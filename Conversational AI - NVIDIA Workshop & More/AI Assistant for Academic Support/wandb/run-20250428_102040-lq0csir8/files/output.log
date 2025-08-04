@@ -1,0 +1,22 @@
+W&B initialized for project usiu-chatbot
+2025-04-28 10:20:41,260 - api_gateway - INFO - Registered service: wandb_tracker
+2025-04-28 10:20:41,260 - api_gateway - INFO - Registered W&B tracking service
+2025-04-28 10:20:44,539 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 10:20:45,899 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-04-28 10:20:45,921 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-04-28 10:20:46,047 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-04-28 10:20:53,141 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/chatbot_prototype/app.py", line 572, in <module>
+    main()
+  File "/Users/apple/Desktop/chatbot_prototype/app.py", line 124, in main
+    dashboard = dashboard_ui(
+                ^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/services/ui_service.py", line 1904, in dashboard_ui
+    study_support_component = study_support_ui(study_prompt, study_model)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/services/ui_service.py", line 1874, in study_support_ui
+    chat_interface.submit(
+    ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ChatInterface' object has no attribute 'submit'
+2025-04-28 10:20:54,472 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"

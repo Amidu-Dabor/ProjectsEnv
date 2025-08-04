@@ -1,0 +1,18 @@
+W&B initialized for project usiu-chatbot
+2025-04-28 08:04:05,991 - api_gateway - INFO - Registered service: wandb_tracker
+2025-04-28 08:04:05,991 - api_gateway - INFO - Registered W&B tracking service
+2025-04-28 08:04:09,744 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/chatbot_prototype/app.py", line 569, in <module>
+    main()
+  File "/Users/apple/Desktop/chatbot_prototype/app.py", line 124, in main
+    dashboard = dashboard_ui(
+                ^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/services/ui_service.py", line 1869, in dashboard_ui
+    general_chat_component = general_chat_ui(general_chat_prompt, general_model)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/services/ui_service.py", line 1518, in general_chat_ui
+    chat_interface = gr.ChatInterface(
+                     ^^^^^^^^^^^^^^^^^
+TypeError: ChatInterface.__init__() got an unexpected keyword argument 'flagging_callback'
+2025-04-28 08:04:11,170 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"

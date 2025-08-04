@@ -1,0 +1,16 @@
+{"time":"2025-04-28T08:45:02.85079+03:00","level":"INFO","msg":"stream: starting","core version":"0.19.10","symlink path":"/Users/apple/Desktop/chatbot_prototype/wandb/run-20250428_084502-61t9amlj/logs/debug-core.log"}
+{"time":"2025-04-28T08:45:03.371466+03:00","level":"INFO","msg":"created new stream","id":"61t9amlj"}
+{"time":"2025-04-28T08:45:03.371542+03:00","level":"INFO","msg":"stream: started","id":"61t9amlj"}
+{"time":"2025-04-28T08:45:03.372049+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"61t9amlj"}
+{"time":"2025-04-28T08:45:03.372189+03:00","level":"INFO","msg":"handler: started","stream_id":"61t9amlj"}
+{"time":"2025-04-28T08:45:03.372451+03:00","level":"INFO","msg":"sender: started","stream_id":"61t9amlj"}
+{"time":"2025-04-28T08:45:03.752182+03:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-28T09:27:04.734296+03:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-28T09:27:04.734588+03:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-28T09:27:05.926769+03:00","level":"INFO","msg":"stream: closing","id":"61t9amlj"}
+{"time":"2025-04-28T09:27:05.926861+03:00","level":"WARN","msg":"sender: received Exit record more than once, ignoring"}
+{"time":"2025-04-28T09:27:06.771874+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-28T09:27:07.093231+03:00","level":"INFO","msg":"handler: closed","stream_id":"61t9amlj"}
+{"time":"2025-04-28T09:27:07.093446+03:00","level":"INFO","msg":"sender: closed","stream_id":"61t9amlj"}
+{"time":"2025-04-28T09:27:07.093782+03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"61t9amlj"}
+{"time":"2025-04-28T09:27:07.095118+03:00","level":"INFO","msg":"stream: closed","id":"61t9amlj"}
