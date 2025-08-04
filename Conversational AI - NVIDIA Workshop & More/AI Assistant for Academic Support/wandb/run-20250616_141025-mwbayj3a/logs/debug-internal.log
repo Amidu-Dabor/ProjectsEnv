@@ -1,0 +1,15 @@
+{"time":"2025-06-16T14:10:25.327095+03:00","level":"INFO","msg":"stream: starting","core version":"0.19.10","symlink path":"/Users/apple/Desktop/chatbot_prototype/wandb/run-20250616_141025-mwbayj3a/logs/debug-core.log"}
+{"time":"2025-06-16T14:10:25.701778+03:00","level":"INFO","msg":"created new stream","id":"mwbayj3a"}
+{"time":"2025-06-16T14:10:25.701817+03:00","level":"INFO","msg":"stream: started","id":"mwbayj3a"}
+{"time":"2025-06-16T14:10:25.701839+03:00","level":"INFO","msg":"handler: started","stream_id":"mwbayj3a"}
+{"time":"2025-06-16T14:10:25.701838+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"mwbayj3a"}
+{"time":"2025-06-16T14:10:25.701863+03:00","level":"INFO","msg":"sender: started","stream_id":"mwbayj3a"}
+{"time":"2025-06-16T14:10:25.702777+03:00","level":"INFO","msg":"stream: closing","id":"mwbayj3a"}
+{"time":"2025-06-16T14:10:26.060686+03:00","level":"ERROR","msg":"sender: upsertConfig: RunRecord is nil"}
+{"time":"2025-06-16T14:10:26.342033+03:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2025-06-16T14:10:26.342561+03:00","level":"ERROR","msg":"runfiles: CreateRunFiles returned error: returned error 404: {\"data\":{\"createRunFiles\":null},\"errors\":[{\"message\":\"project /usiu-chatbot not found during createRunFiles\",\"path\":[\"createRunFiles\"]}]}"}
+{"time":"2025-06-16T14:10:26.346338+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-16T14:10:26.34639+03:00","level":"INFO","msg":"handler: closed","stream_id":"mwbayj3a"}
+{"time":"2025-06-16T14:10:26.346401+03:00","level":"INFO","msg":"sender: closed","stream_id":"mwbayj3a"}
+{"time":"2025-06-16T14:10:26.346587+03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"mwbayj3a"}
+{"time":"2025-06-16T14:10:26.346599+03:00","level":"INFO","msg":"stream: closed","id":"mwbayj3a"}

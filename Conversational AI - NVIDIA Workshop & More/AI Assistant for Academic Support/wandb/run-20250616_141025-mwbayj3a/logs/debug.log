@@ -1,0 +1,12 @@
+2025-06-16 14:10:25,322 INFO    EnhancedWandbMetricsThread:2611 [wandb_init.py:setup_run_log_directory():724] Logging user logs to /Users/apple/Desktop/chatbot_prototype/wandb/run-20250616_141025-mwbayj3a/logs/debug.log
+2025-06-16 14:10:25,322 INFO    EnhancedWandbMetricsThread:2611 [wandb_init.py:setup_run_log_directory():725] Logging internal logs to /Users/apple/Desktop/chatbot_prototype/wandb/run-20250616_141025-mwbayj3a/logs/debug-internal.log
+2025-06-16 14:10:25,322 INFO    EnhancedWandbMetricsThread:2611 [wandb_init.py:init():852] calling init triggers
+2025-06-16 14:10:25,322 INFO    EnhancedWandbMetricsThread:2611 [wandb_init.py:init():857] wandb.init called with sweep_config: {}
+config: {'app_version': '1.0.0', 'interface_type': 'gradio', 'retrieval_method': 'vector_store', 'max_context_length': 8000, 'evaluation_metrics': ['accuracy', 'response_time', 'token_usage', 'user_satisfaction'], '_wandb': {}}
+2025-06-16 14:10:25,323 INFO    EnhancedWandbMetricsThread:2611 [wandb_init.py:init():893] starting backend
+2025-06-16 14:10:25,323 INFO    EnhancedWandbMetricsThread:2611 [wandb_init.py:init():897] sending inform_init request
+2025-06-16 14:10:25,325 INFO    EnhancedWandbMetricsThread:2611 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2025-06-16 14:10:25,325 INFO    EnhancedWandbMetricsThread:2611 [wandb_init.py:init():907] backend started and connected
+2025-06-16 14:10:25,330 INFO    EnhancedWandbMetricsThread:2611 [wandb_init.py:init():1002] updated telemetry
+2025-06-16 14:10:25,333 INFO    EnhancedWandbMetricsThread:2611 [wandb_init.py:init():1026] communicating run to backend with 90.0 second timeout
+2025-06-16 14:10:25,353 INFO    MsgRouterThr:2611 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 6 handles.

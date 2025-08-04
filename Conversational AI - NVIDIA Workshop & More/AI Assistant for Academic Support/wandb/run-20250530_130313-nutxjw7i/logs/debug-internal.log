@@ -1,0 +1,22 @@
+{"time":"2025-05-30T13:03:13.293259+03:00","level":"INFO","msg":"stream: starting","core version":"0.19.10","symlink path":"/Users/apple/Desktop/chatbot_prototype/wandb/run-20250530_130313-nutxjw7i/logs/debug-core.log"}
+{"time":"2025-05-30T13:03:13.523751+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.101.220:54757->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-05-30T13:03:15.869622+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.101.220:54781->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-05-30T13:03:20.517466+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.101.220:54799->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-05-30T13:03:28.761952+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.101.220:54826->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-05-30T13:03:46.228403+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.101.220:54866->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-05-30T13:04:23.47181+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.101.220:55019->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-05-30T13:05:35.934886+03:00","level":"ERROR","msg":"Failed to load features, feature will default to disabled","error":"api: failed sending: POST https://api.wandb.ai/graphql giving up after 7 attempt(s): Post \"https://api.wandb.ai/graphql\": tls: failed to verify certificate: x509: “FG10E1TB20901428” certificate is not standards compliant"}
+{"time":"2025-05-30T13:05:35.938162+03:00","level":"INFO","msg":"created new stream","id":"nutxjw7i"}
+{"time":"2025-05-30T13:05:35.938425+03:00","level":"INFO","msg":"stream: started","id":"nutxjw7i"}
+{"time":"2025-05-30T13:05:35.938896+03:00","level":"INFO","msg":"handler: started","stream_id":"nutxjw7i"}
+{"time":"2025-05-30T13:05:35.939151+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"nutxjw7i"}
+{"time":"2025-05-30T13:05:35.939323+03:00","level":"INFO","msg":"sender: started","stream_id":"nutxjw7i"}
+{"time":"2025-05-30T13:05:35.952443+03:00","level":"INFO","msg":"stream: closing","id":"nutxjw7i"}
+{"time":"2025-05-30T13:05:36.010911+03:00","level":"ERROR","msg":"sender: upsertRun:","error":"failed to upsert bucket: api: failed sending: POST https://api.wandb.ai/graphql giving up after 1 attempt(s): Post \"https://api.wandb.ai/graphql\": tls: failed to verify certificate: x509: “FG10E1TB20901428” certificate is not standards compliant"}
+{"time":"2025-05-30T13:05:36.011512+03:00","level":"ERROR","msg":"sender: upsertConfig: RunRecord is nil"}
+{"time":"2025-05-30T13:05:36.176358+03:00","level":"ERROR","msg":"runfiles: CreateRunFiles returned error: api: failed sending: POST https://api.wandb.ai/graphql giving up after 1 attempt(s): Post \"https://api.wandb.ai/graphql\": tls: failed to verify certificate: x509: “FG10E1TB20901428” certificate is not standards compliant"}
+{"time":"2025-05-30T13:05:36.179239+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-30T13:05:36.179323+03:00","level":"INFO","msg":"handler: closed","stream_id":"nutxjw7i"}
+{"time":"2025-05-30T13:05:36.179352+03:00","level":"INFO","msg":"sender: closed","stream_id":"nutxjw7i"}
+{"time":"2025-05-30T13:05:36.179534+03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"nutxjw7i"}
+{"time":"2025-05-30T13:05:36.179599+03:00","level":"INFO","msg":"stream: closed","id":"nutxjw7i"}
