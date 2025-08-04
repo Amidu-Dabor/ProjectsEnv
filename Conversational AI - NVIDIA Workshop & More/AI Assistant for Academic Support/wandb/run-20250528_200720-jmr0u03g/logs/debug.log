@@ -1,0 +1,47 @@
+2025-05-28 20:07:20,595 INFO    MainThread:19384 [wandb_setup.py:_flush():68] Current SDK version is 0.19.10
+2025-05-28 20:07:20,595 INFO    MainThread:19384 [wandb_setup.py:_flush():68] Configure stats pid to 19384
+2025-05-28 20:07:20,595 INFO    MainThread:19384 [wandb_setup.py:_flush():68] Loading settings from /Users/apple/.config/wandb/settings
+2025-05-28 20:07:20,595 INFO    MainThread:19384 [wandb_setup.py:_flush():68] Loading settings from /Users/apple/Desktop/chatbot_prototype/wandb/settings
+2025-05-28 20:07:20,596 INFO    MainThread:19384 [wandb_setup.py:_flush():68] Loading settings from environment variables
+2025-05-28 20:07:20,596 INFO    MainThread:19384 [wandb_init.py:setup_run_log_directory():724] Logging user logs to /Users/apple/Desktop/chatbot_prototype/wandb/run-20250528_200720-jmr0u03g/logs/debug.log
+2025-05-28 20:07:20,596 INFO    MainThread:19384 [wandb_init.py:setup_run_log_directory():725] Logging internal logs to /Users/apple/Desktop/chatbot_prototype/wandb/run-20250528_200720-jmr0u03g/logs/debug-internal.log
+2025-05-28 20:07:20,596 INFO    MainThread:19384 [wandb_init.py:init():852] calling init triggers
+2025-05-28 20:07:20,596 INFO    MainThread:19384 [wandb_init.py:init():857] wandb.init called with sweep_config: {}
+config: {'app_version': '1.0.0', 'interface_type': 'gradio', 'retrieval_method': 'vector_store', 'max_context_length': 8000, 'models': {'general_chat': 'gpt-4o', 'study_chat': 'claude-3-7-sonnet-20250219'}, 'features': {'rag_enabled': True, 'file_upload': True, 'authentication': True}, 'system_info': {'hostname': 'Apples-MacBook-Air-3.local', 'platform': 'macOS-15.3.1-arm64-arm-64bit', 'python_version': '3.11.8'}, 'environment': 'development', '_wandb': {}}
+2025-05-28 20:07:20,596 INFO    MainThread:19384 [wandb_init.py:init():893] starting backend
+2025-05-28 20:07:20,596 INFO    MainThread:19384 [wandb_init.py:init():897] sending inform_init request
+2025-05-28 20:07:20,614 INFO    MainThread:19384 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2025-05-28 20:07:20,614 INFO    MainThread:19384 [wandb_init.py:init():907] backend started and connected
+2025-05-28 20:07:20,619 INFO    MainThread:19384 [wandb_init.py:init():1002] updated telemetry
+2025-05-28 20:07:20,622 INFO    MainThread:19384 [wandb_init.py:init():1026] communicating run to backend with 90.0 second timeout
+2025-05-28 20:07:21,419 INFO    MainThread:19384 [wandb_init.py:init():1101] starting run threads in backend
+2025-05-28 20:07:21,526 INFO    MainThread:19384 [wandb_run.py:_console_start():2566] atexit reg
+2025-05-28 20:07:21,526 INFO    MainThread:19384 [wandb_run.py:_redirect():2414] redirect: wrap_raw
+2025-05-28 20:07:21,526 INFO    MainThread:19384 [wandb_run.py:_redirect():2483] Wrapping output streams.
+2025-05-28 20:07:21,526 INFO    MainThread:19384 [wandb_run.py:_redirect():2506] Redirects installed.
+2025-05-28 20:07:21,528 INFO    MainThread:19384 [wandb_init.py:init():1147] run started, returning control to user process
+2025-05-28 20:10:17,969 INFO    MainThread:19384 [wandb_run.py:_finish():2314] finishing run daboramidu93-united-states-international-university-africa/usiu-chatbot/jmr0u03g
+2025-05-28 20:10:17,970 INFO    MainThread:19384 [wandb_run.py:_atexit_cleanup():2531] got exitcode: 0
+2025-05-28 20:10:17,971 INFO    MainThread:19384 [wandb_run.py:_restore():2513] restore
+2025-05-28 20:10:17,971 INFO    MainThread:19384 [wandb_run.py:_restore():2519] restore done
+2025-05-28 20:10:18,977 INFO    MainThread:19384 [wandb_run.py:_restore():2513] restore
+2025-05-28 20:10:18,977 INFO    MainThread:19384 [wandb_run.py:_restore():2519] restore done
+2025-05-28 20:10:18,977 ERROR   MainThread:19384 [wandb_run.py:_atexit_cleanup():2552] Problem finishing run
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/wandb/sdk/wandb_run.py", line 2543, in _atexit_cleanup
+    self._on_finish()
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/wandb/sdk/wandb_run.py", line 2799, in _on_finish
+    wait_with_progress(
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 24, in wait_with_progress
+    return wait_all_with_progress(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 87, in wait_all_with_progress
+    return asyncio_compat.run(progress_loop_with_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/wandb/sdk/lib/asyncio_compat.py", line 27, in run
+    future = executor.submit(runner.run, fn)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/venv_py311/lib/python3.11/concurrent/futures/thread.py", line 169, in submit
+    raise RuntimeError('cannot schedule new futures after '
+RuntimeError: cannot schedule new futures after interpreter shutdown
+2025-05-28 20:10:19,609 INFO    MsgRouterThr:19384 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 2 handles.
