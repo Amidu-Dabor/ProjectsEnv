@@ -1,0 +1,5 @@
+tap "homebrew/bundle"
+tap "homebrew/services"
+tap "instantclienttap/instantclient"
+brew "instantclienttap/instantclient/instantclient-basic"
+brew "instantclienttap/instantclient/instantclient-sqlplus"
