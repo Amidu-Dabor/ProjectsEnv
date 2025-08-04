@@ -1,0 +1,1 @@
+{"columns": ["timestamp", "session_id", "user_id", "chat_type", "query", "response", "context_used", "tokens", "response_time", "feedback", "query_complexity", "accuracy_score"], "data": []}
