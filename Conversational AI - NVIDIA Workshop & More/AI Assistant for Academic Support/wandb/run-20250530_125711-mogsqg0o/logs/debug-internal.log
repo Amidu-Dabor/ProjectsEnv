@@ -1,0 +1,6 @@
+{"time":"2025-05-30T12:57:11.249867+03:00","level":"INFO","msg":"stream: starting","core version":"0.19.10","symlink path":"/Users/apple/Desktop/chatbot_prototype/wandb/run-20250530_125711-mogsqg0o/logs/debug-core.log"}
+{"time":"2025-05-30T12:57:11.504502+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.101.220:53647->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-05-30T12:57:13.67764+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.101.220:53652->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-05-30T12:57:18.233628+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.101.220:53691->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-05-30T12:57:27.598192+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.101.220:53733->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-05-30T12:57:44.241731+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.101.220:53783->35.186.228.49:443: read: connection reset by peer"}

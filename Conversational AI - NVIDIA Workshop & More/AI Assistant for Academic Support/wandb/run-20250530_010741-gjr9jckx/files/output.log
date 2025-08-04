@@ -1,0 +1,120 @@
+W&B initialized for project usiu-chatbot with enhanced metrics
+2025-05-30 01:07:42,242 - api_gateway - INFO - Registered service: wandb_tracker
+2025-05-30 01:07:42,242 - api_gateway - INFO - Registered enhanced W&B tracking service with Chapter 5 metrics
+
+Starting Chapter 5 LLM Evaluation
+Models: General=claude-3-7-sonnet-20250219, Study=claude-3-7-sonnet-20250219
+Iterations per complexity level: 5
+============================================================
+
+📚 Testing General Enquiries...
+
+  Testing SIMPLE queries:
+    - What time does the library close?...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:07:44,017 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-05-30 01:07:45,832 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+    - List available computer science programs...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:07:46,242 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-05-30 01:07:47,223 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+    - What is the main campus address?...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:07:48,187 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-05-30 01:07:49,212 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+
+  Testing MEDIUM queries:
+    - What are the admission requirements for international studen...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:07:49,551 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-05-30 01:07:49,904 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+    - Tell me about financial aid options and application deadline...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:07:50,338 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-05-30 01:07:50,749 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+    - What student support services are available on campus?...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:07:51,157 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-05-30 01:07:52,389 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+
+  Testing COMPLEX queries:
+    - Compare undergraduate vs graduate tuition fees and available...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:07:52,796 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-05-30 01:07:53,204 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+    - Explain the process for transferring credits from another un...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:07:53,615 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-05-30 01:07:54,024 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+    - What are all the steps involved in applying for on-campus ho...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:07:55,048 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-05-30 01:07:55,387 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+Error generating response: Error code: 404 - {'error': {'message': 'The model `claude-3-7-sonnet-20250219` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+
+
+🎓 Testing Study Support...
+
+  Testing SIMPLE queries:
+    - Help me understand recursion in programming...
+2025-05-30 01:08:09,898 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+    - Explain the Pythagorean theorem...
+2025-05-30 01:08:29,236 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+    - What is photosynthesis?...
+2025-05-30 01:08:40,825 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+
+  Testing MEDIUM queries:
+    - Debug this Python code: def factorial(n): return n * factori...
+2025-05-30 01:08:55,744 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+    - Help me write an introduction paragraph for an essay on clim...
+2025-05-30 01:09:12,405 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+    - Explain the difference between mean, median, and mode with e...
+2025-05-30 01:09:31,612 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+
+  Testing COMPLEX queries:
+    - Convert this recursive Fibonacci function to an iterative on...
+2025-05-30 01:09:48,485 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+    - Design a research methodology for studying the impact of soc...
+2025-05-30 01:10:10,328 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+    - Create a comprehensive study plan for preparing for calculus...
+2025-05-30 01:10:32,370 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/chatbot_prototype/evaluate_llm_responses.py", line 1098, in <module>
+    main()
+  File "/Users/apple/Desktop/chatbot_prototype/evaluate_llm_responses.py", line 817, in main
+    evaluator.run_chapter5_evaluation(iterations_per_complexity=args.iterations)
+  File "/Users/apple/Desktop/chatbot_prototype/evaluate_llm_responses.py", line 378, in run_chapter5_evaluation
+    self._generate_chapter5_report()
+  File "/Users/apple/Desktop/chatbot_prototype/evaluate_llm_responses.py", line 441, in _generate_chapter5_report
+    json.dump(report, f, indent=2)
+  File "/opt/anaconda3/envs/venv_py311/lib/python3.11/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/opt/anaconda3/envs/venv_py311/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/opt/anaconda3/envs/venv_py311/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/opt/anaconda3/envs/venv_py311/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/opt/anaconda3/envs/venv_py311/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/opt/anaconda3/envs/venv_py311/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bool_ is not JSON serializable

@@ -1,0 +1,218 @@
+W&B initialized for project usiu-chatbot with enhanced metrics
+2025-05-30 01:06:25,241 - api_gateway - INFO - Registered service: wandb_tracker
+2025-05-30 01:06:25,241 - api_gateway - INFO - Registered enhanced W&B tracking service with Chapter 5 metrics
+
+Starting Chapter 5 LLM Evaluation
+Models: General=gpt-4o, Study=claude-3-7-sonnet-20250219
+Iterations per complexity level: 5
+============================================================
+
+📚 Testing General Enquiries...
+
+  Testing SIMPLE queries:
+    - What time does the library close?...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:06:28,127 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:28,129 - openai._base_client - INFO - Retrying request to /chat/completions in 0.451632 seconds
+2025-05-30 01:06:29,851 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:29,853 - openai._base_client - INFO - Retrying request to /chat/completions in 0.828787 seconds
+2025-05-30 01:06:32,104 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-05-30 01:06:33,355 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:33,356 - openai._base_client - INFO - Retrying request to /chat/completions in 0.422010 seconds
+2025-05-30 01:06:35,620 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:35,622 - openai._base_client - INFO - Retrying request to /chat/completions in 0.903621 seconds
+2025-05-30 01:06:39,373 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+    - List available computer science programs...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:06:40,971 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:40,973 - openai._base_client - INFO - Retrying request to /chat/completions in 0.445114 seconds
+2025-05-30 01:06:41,755 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:41,755 - openai._base_client - INFO - Retrying request to /chat/completions in 0.921468 seconds
+2025-05-30 01:06:43,025 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-05-30 01:06:43,367 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:43,369 - openai._base_client - INFO - Retrying request to /chat/completions in 0.466634 seconds
+2025-05-30 01:06:44,290 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:44,291 - openai._base_client - INFO - Retrying request to /chat/completions in 0.843086 seconds
+2025-05-30 01:06:45,519 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+    - What is the main campus address?...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:06:46,133 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:46,135 - openai._base_client - INFO - Retrying request to /chat/completions in 0.402157 seconds
+2025-05-30 01:06:46,889 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:46,890 - openai._base_client - INFO - Retrying request to /chat/completions in 0.755112 seconds
+2025-05-30 01:06:48,077 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-05-30 01:06:49,921 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:49,922 - openai._base_client - INFO - Retrying request to /chat/completions in 0.407199 seconds
+2025-05-30 01:06:50,740 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:50,742 - openai._base_client - INFO - Retrying request to /chat/completions in 0.801413 seconds
+2025-05-30 01:06:51,969 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+
+  Testing MEDIUM queries:
+    - What are the admission requirements for international studen...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:06:52,378 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:52,379 - openai._base_client - INFO - Retrying request to /chat/completions in 0.468093 seconds
+2025-05-30 01:06:53,302 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:53,304 - openai._base_client - INFO - Retrying request to /chat/completions in 0.946121 seconds
+2025-05-30 01:06:54,631 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-05-30 01:06:54,964 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:54,964 - openai._base_client - INFO - Retrying request to /chat/completions in 0.408722 seconds
+2025-05-30 01:06:55,709 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:55,709 - openai._base_client - INFO - Retrying request to /chat/completions in 0.964640 seconds
+2025-05-30 01:06:57,017 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+    - Tell me about financial aid options and application deadline...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:06:57,351 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:57,352 - openai._base_client - INFO - Retrying request to /chat/completions in 0.409235 seconds
+2025-05-30 01:06:58,113 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:58,114 - openai._base_client - INFO - Retrying request to /chat/completions in 0.962383 seconds
+2025-05-30 01:06:59,418 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-05-30 01:06:59,854 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:06:59,855 - openai._base_client - INFO - Retrying request to /chat/completions in 0.417013 seconds
+2025-05-30 01:07:00,672 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:07:00,673 - openai._base_client - INFO - Retrying request to /chat/completions in 0.782758 seconds
+2025-05-30 01:07:01,792 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+    - What student support services are available on campus?...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:07:02,125 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:07:02,126 - openai._base_client - INFO - Retrying request to /chat/completions in 0.475597 seconds
+2025-05-30 01:07:03,233 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:07:03,234 - openai._base_client - INFO - Retrying request to /chat/completions in 0.985011 seconds
+2025-05-30 01:07:04,549 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-05-30 01:07:04,974 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:07:04,975 - openai._base_client - INFO - Retrying request to /chat/completions in 0.404575 seconds
+2025-05-30 01:07:05,718 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:07:05,718 - openai._base_client - INFO - Retrying request to /chat/completions in 0.803973 seconds
+2025-05-30 01:07:06,858 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+
+  Testing COMPLEX queries:
+    - Compare undergraduate vs graduate tuition fees and available...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:07:07,195 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:07:07,196 - openai._base_client - INFO - Retrying request to /chat/completions in 0.418495 seconds
+2025-05-30 01:07:08,046 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:07:08,046 - openai._base_client - INFO - Retrying request to /chat/completions in 0.853122 seconds
+2025-05-30 01:07:09,274 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-05-30 01:07:09,685 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:07:09,686 - openai._base_client - INFO - Retrying request to /chat/completions in 0.442716 seconds
+2025-05-30 01:07:10,466 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:07:10,466 - openai._base_client - INFO - Retrying request to /chat/completions in 0.826341 seconds
+2025-05-30 01:07:11,646 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+    - Explain the process for transferring credits from another un...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:07:12,039 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:07:12,040 - openai._base_client - INFO - Retrying request to /chat/completions in 0.461358 seconds
+2025-05-30 01:07:12,859 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:07:12,860 - openai._base_client - INFO - Retrying request to /chat/completions in 0.792221 seconds
+2025-05-30 01:07:14,088 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-05-30 01:07:14,429 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:07:14,430 - openai._base_client - INFO - Retrying request to /chat/completions in 0.428091 seconds
+2025-05-30 01:07:15,214 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:07:15,215 - openai._base_client - INFO - Retrying request to /chat/completions in 0.787267 seconds
+2025-05-30 01:07:16,444 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+    - What are all the steps involved in applying for on-campus ho...
+RAG retrieval error: object of type 'generator' has no len() in query.
+2025-05-30 01:07:16,852 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:07:16,853 - openai._base_client - INFO - Retrying request to /chat/completions in 0.434898 seconds
+2025-05-30 01:07:17,624 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:07:17,626 - openai._base_client - INFO - Retrying request to /chat/completions in 0.929557 seconds
+2025-05-30 01:07:18,910 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-05-30 01:07:19,241 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:07:19,244 - openai._base_client - INFO - Retrying request to /chat/completions in 0.419874 seconds
+2025-05-30 01:07:20,026 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-30 01:07:20,027 - openai._base_client - INFO - Retrying request to /chat/completions in 0.973499 seconds
+2025-05-30 01:07:21,339 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+
+
+🎓 Testing Study Support...
+
+  Testing SIMPLE queries:
+    - Help me understand recursion in programming...
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/chatbot_prototype/evaluate_llm_responses.py", line 1098, in <module>
+    main()
+  File "/Users/apple/Desktop/chatbot_prototype/evaluate_llm_responses.py", line 817, in main
+    evaluator.run_chapter5_evaluation(iterations_per_complexity=args.iterations)
+  File "/Users/apple/Desktop/chatbot_prototype/evaluate_llm_responses.py", line 333, in run_chapter5_evaluation
+    response, time_taken, metadata = self._generate_response(
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/evaluate_llm_responses.py", line 179, in _generate_response
+    response = self.claude_client.messages.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/anthropic/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/anthropic/resources/messages/messages.py", line 953, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/anthropic/_base_client.py", line 1336, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/anthropic/_base_client.py", line 1013, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/anthropic/_base_client.py", line 1049, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 128, in read
+    return self._sock.recv(max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/venv_py311/lib/python3.11/ssl.py", line 1295, in recv
+    return self.read(buflen)
+           ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/venv_py311/lib/python3.11/ssl.py", line 1168, in read
+    return self._sslobj.read(len)
+           ^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
