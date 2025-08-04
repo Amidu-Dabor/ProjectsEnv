@@ -1,0 +1,1 @@
+{"columns": ["timestamp", "model", "query_type", "response_time", "accuracy", "tokens", "with_rag", "error_rate"], "data": []}

@@ -1,0 +1,51 @@
+W&B initialized for project usiu-chatbot with enhanced metrics
+2025-06-25 08:30:29,096 - api_gateway - INFO - Registered service: wandb_tracker
+2025-06-25 08:30:29,096 - api_gateway - INFO - Registered enhanced W&B tracking service with Chapter 5 metrics
+2025-06-25 08:30:35,689 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-25 08:30:37,009 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-25 08:30:37,222 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-25 08:30:41,504 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+
+================================================================================
+USIU AI Assistant with Enhanced Metrics Starting Up...
+================================================================================
+Current working directory: /Users/apple/Desktop/chatbot_prototype
+Serving static files from: /Users/apple/Desktop/chatbot_prototype/static
+Images path: /Users/apple/Desktop/chatbot_prototype/static/images
+Models configured:
+  - General Enquiries: gpt-4o
+  - Study Support: claude-3-7-sonnet-20250219
+Enhanced metrics dashboard: http://localhost:7860/metrics-dashboard
+Performance summary API: http://localhost:7860/api/performance-summary
+W&B dashboard: https://wandb.ai/daboramidu93-united-states-international-university-africa/usiu-chatbot
+================================================================================
+
+* Running on local URL:  http://127.0.0.1:7860
+2025-06-25 08:30:42,427 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-06-25 08:30:42,451 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-06-25 08:30:42,738 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-25 08:30:42,917 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-25 08:30:42,917 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-25 08:30:43,070 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-25 08:30:43,672 - httpx - INFO - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+* Running on public URL: https://7a57b71e8960e87eaa.gradio.live
+
+This share link expires in 1 week. For free permanent hosting and GPU upgrades, run `gradio deploy` from the terminal in the working directory to deploy to Hugging Face Spaces (https://huggingface.co/spaces)
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+Error logging error to W&B: 'NoneType' object has no attribute 'add_data'
+2025-06-25 08:31:26,992 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+Error logging error to W&B: 'NoneType' object has no attribute 'add_data'
+2025-06-25 08:32:06,593 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+Error logging error to W&B: 'NoneType' object has no attribute 'add_data'
+2025-06-25 08:32:42,077 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+Error logging error to W&B: 'NoneType' object has no attribute 'add_data'
+2025-06-25 08:34:06,633 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Keyboard interruption in main thread... closing server.
+Killing tunnel 127.0.0.1:7860 <> https://7a57b71e8960e87eaa.gradio.live

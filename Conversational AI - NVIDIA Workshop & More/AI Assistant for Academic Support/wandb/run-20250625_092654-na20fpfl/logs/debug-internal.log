@@ -1,0 +1,43 @@
+{"time":"2025-06-25T09:26:54.837049+03:00","level":"INFO","msg":"stream: starting","core version":"0.19.10","symlink path":"/Users/apple/Desktop/chatbot_prototype/wandb/run-20250625_092654-na20fpfl/logs/debug-core.log"}
+{"time":"2025-06-25T09:26:55.659834+03:00","level":"INFO","msg":"created new stream","id":"na20fpfl"}
+{"time":"2025-06-25T09:26:55.663776+03:00","level":"INFO","msg":"stream: started","id":"na20fpfl"}
+{"time":"2025-06-25T09:26:55.668144+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"na20fpfl"}
+{"time":"2025-06-25T09:26:55.669366+03:00","level":"INFO","msg":"handler: started","stream_id":"na20fpfl"}
+{"time":"2025-06-25T09:26:55.669394+03:00","level":"INFO","msg":"sender: started","stream_id":"na20fpfl"}
+{"time":"2025-06-25T09:26:56.025048+03:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-25T17:37:39.016759+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/daboramidu93-united-states-international-university-africa/usiu-chatbot/na20fpfl/file_stream\": dial tcp 35.186.228.49:443: connect: operation timed out"}
+{"time":"2025-06-25T17:37:41.251939+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/daboramidu93-united-states-international-university-africa/usiu-chatbot/na20fpfl/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-25T17:37:54.776063+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.100.127:59833->35.186.228.49:443: read: can't assign requested address"}
+{"time":"2025-06-25T17:38:16.107939+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-25T17:38:16.10792+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/daboramidu93-united-states-international-university-africa/usiu-chatbot/na20fpfl/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-25T17:38:37.559123+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/daboramidu93-united-states-international-university-africa/usiu-chatbot/na20fpfl/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-25T17:38:37.55917+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-25T17:40:47.132006+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/daboramidu93-united-states-international-university-africa/usiu-chatbot/na20fpfl/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-06-25T17:41:09.706619+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.100.128:59931->35.186.228.49:443: read: can't assign requested address"}
+{"time":"2025-06-25T18:40:22.550561+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.100.127:59964->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-25T18:53:52.281518+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.100.127:60201->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-25T20:25:07.561067+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/daboramidu93-united-states-international-university-africa/usiu-chatbot/na20fpfl/file_stream\": read tcp 192.168.100.127:60685->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-25T20:27:09.135882+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/daboramidu93-united-states-international-university-africa/usiu-chatbot/na20fpfl/file_stream\": read tcp 192.168.100.127:60704->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-25T20:37:42.117189+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/daboramidu93-united-states-international-university-africa/usiu-chatbot/na20fpfl/file_stream\": read tcp 192.168.100.127:60750->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-25T22:22:17.059431+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.100.127:60971->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-25T22:48:53.798509+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.100.127:61008->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-25T23:21:01.665469+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.100.127:61047->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-25T23:44:20.22549+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.100.127:61108->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-26T00:25:23.480064+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/daboramidu93-united-states-international-university-africa/usiu-chatbot/na20fpfl/file_stream\": read tcp 192.168.100.127:61227->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-26T00:41:49.302123+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.100.127:61138->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-26T00:58:22.529737+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.100.127:61249->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-26T01:28:29.084922+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.100.127:61272->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-26T01:39:29.329956+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.100.127:61320->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-26T01:43:15.327263+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/daboramidu93-united-states-international-university-africa/usiu-chatbot/na20fpfl/file_stream\": read tcp 192.168.100.127:61342->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-26T01:59:20.445003+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.100.127:61333->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-26T01:59:37.236798+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/daboramidu93-united-states-international-university-africa/usiu-chatbot/na20fpfl/file_stream\": read tcp 192.168.100.127:61370->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-26T02:15:40.182047+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.100.127:61366->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-06-26T03:30:48.955053+03:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-26T03:30:48.955514+03:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-26T03:30:50.545172+03:00","level":"INFO","msg":"stream: closing","id":"na20fpfl"}
+{"time":"2025-06-26T03:30:50.545197+03:00","level":"WARN","msg":"sender: received Exit record more than once, ignoring"}
+{"time":"2025-06-26T03:30:54.669776+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-26T03:30:55.019878+03:00","level":"INFO","msg":"handler: closed","stream_id":"na20fpfl"}
+{"time":"2025-06-26T03:30:55.020216+03:00","level":"INFO","msg":"sender: closed","stream_id":"na20fpfl"}
+{"time":"2025-06-26T03:30:55.020223+03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"na20fpfl"}
+{"time":"2025-06-26T03:30:55.020322+03:00","level":"INFO","msg":"stream: closed","id":"na20fpfl"}
