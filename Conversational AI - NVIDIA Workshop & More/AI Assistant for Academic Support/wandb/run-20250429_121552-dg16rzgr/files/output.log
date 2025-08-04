@@ -1,0 +1,50 @@
+W&B initialized for project usiu-chatbot
+2025-04-29 12:15:53,597 - api_gateway - INFO - Registered service: wandb_tracker
+2025-04-29 12:15:53,597 - api_gateway - INFO - Registered W&B tracking service
+2025-04-29 12:15:56,261 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-29 12:15:57,691 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-04-29 12:15:57,701 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-04-29 12:15:57,799 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-04-29 12:16:04,046 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+
+================================================================================
+USIU Chatbot with W&B Integration starting up...
+================================================================================
+Current working directory: /Users/apple/Desktop/chatbot_prototype
+Serving static files from: /Users/apple/Desktop/chatbot_prototype/static
+Images path: /Users/apple/Desktop/chatbot_prototype/static/images
+Basic metrics dashboard: http://localhost:7860/metrics-dashboard
+W&B dashboard: https://wandb.ai/daboramidu93-united-states-international-university-africa/usiu-chatbot
+================================================================================
+
+* Running on local URL:  http://127.0.0.1:7860
+2025-04-29 12:16:04,488 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-04-29 12:16:04,506 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-04-29 12:16:05,261 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-04-29 12:16:05,363 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-04-29 12:16:05,510 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-04-29 12:16:05,748 - httpx - INFO - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+* Running on public URL: https://6e5fcd6c973db06d8e.gradio.live
+
+This share link expires in 1 week. For free permanent hosting and GPU upgrades, run `gradio deploy` from the terminal in the working directory to deploy to Hugging Face Spaces (https://huggingface.co/spaces)
+2025-04-29 12:16:21,613 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-29 12:16:23,484 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-29 12:16:26,211 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-04-29 12:16:32,808 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/gradio/helpers.py:977: UserWarning: Unexpected argument. Filling with None.
+  warnings.warn("Unexpected argument. Filling with None.")
+Starting chat with file: None
+2025-04-29 12:20:58,165 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages?extended_thinking=true "HTTP/1.1 200 OK"
+Claude generation error: {'type': 'error', 'error': {'details': None, 'type': 'overloaded_error', 'message': 'Overloaded'}}
+Starting chat with file: None
+2025-04-29 12:21:37,824 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages?extended_thinking=true "HTTP/1.1 200 OK"
+Starting chat with file: None
+2025-04-29 12:22:15,737 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages?extended_thinking=true "HTTP/1.1 200 OK"
+Claude generation error: {'type': 'error', 'error': {'details': None, 'type': 'overloaded_error', 'message': 'Overloaded'}}
+Starting chat with file: None
+2025-04-29 12:22:35,189 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages?extended_thinking=true "HTTP/1.1 200 OK"
+Claude generation error: {'type': 'error', 'error': {'details': None, 'type': 'overloaded_error', 'message': 'Overloaded'}}
+Starting chat with file: None
+2025-04-29 12:22:45,894 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages?extended_thinking=true "HTTP/1.1 200 OK"
+Keyboard interruption in main thread... closing server.
+Killing tunnel 127.0.0.1:7860 <> https://6e5fcd6c973db06d8e.gradio.live

@@ -1,0 +1,1 @@
+{"columns": ["timestamp", "session_id", "user_id", "chat_type", "query", "response", "context_used", "tokens", "response_time", "feedback"], "data": [[1745919426.954408, "study_1745919421", "anonymous", "study_support", "Hi there", "", "[]", 2, 5.204182147979736, "none"]]}

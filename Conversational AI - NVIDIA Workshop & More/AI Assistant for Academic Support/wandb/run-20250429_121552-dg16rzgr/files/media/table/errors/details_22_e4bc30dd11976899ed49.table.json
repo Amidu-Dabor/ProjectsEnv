@@ -1,0 +1,1 @@
+{"columns": ["type", "message", "session_id", "query", "timestamp"], "data": [["claude_generation", "{'type': 'error', 'error': {'details': None, 'type': 'overloaded_error', 'message': 'Overloaded'}}", "study_1745918446", "Hey there", 1745918458.1706822]]}
