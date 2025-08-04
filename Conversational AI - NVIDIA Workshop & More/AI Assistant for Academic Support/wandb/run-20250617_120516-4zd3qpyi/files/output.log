@@ -1,0 +1,105 @@
+W&B initialized for project usiu-chatbot with enhanced metrics
+2025-06-17 12:05:17,191 - api_gateway - INFO - Registered service: wandb_tracker
+2025-06-17 12:05:17,192 - api_gateway - INFO - Registered enhanced W&B tracking service with Chapter 5 metrics
+2025-06-17 12:05:22,723 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-17 12:05:24,050 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-17 12:05:24,051 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-17 12:05:28,659 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+
+================================================================================
+USIU AI Assistant with Enhanced Metrics Starting Up...
+================================================================================
+Current working directory: /Users/apple/Desktop/chatbot_prototype
+Serving static files from: /Users/apple/Desktop/chatbot_prototype/static
+Images path: /Users/apple/Desktop/chatbot_prototype/static/images
+Models configured:
+  - General Enquiries: gpt-4o
+  - Study Support: claude-3-7-sonnet-20250219
+Enhanced metrics dashboard: http://localhost:7860/metrics-dashboard
+Performance summary API: http://localhost:7860/api/performance-summary
+W&B dashboard: https://wandb.ai/daboramidu93-united-states-international-university-africa/usiu-chatbot
+================================================================================
+
+* Running on local URL:  http://127.0.0.1:7860
+2025-06-17 12:05:29,129 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-06-17 12:05:29,145 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-06-17 12:05:29,845 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-17 12:05:29,885 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-17 12:05:30,065 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-17 12:05:30,084 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-17 12:05:30,326 - httpx - INFO - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+* Running on public URL: https://7d0ff769056ba51bed.gradio.live
+
+This share link expires in 1 week. For free permanent hosting and GPU upgrades, run `gradio deploy` from the terminal in the working directory to deploy to Hugging Face Spaces (https://huggingface.co/spaces)
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+Error logging error to W&B: 'NoneType' object has no attribute 'add_data'
+2025-06-17 12:09:12,494 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+Error logging error to W&B: 'NoneType' object has no attribute 'add_data'
+2025-06-17 12:10:51,370 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+Error logging error to W&B: 'NoneType' object has no attribute 'add_data'
+2025-06-17 12:12:10,430 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+Error logging error to W&B: 'NoneType' object has no attribute 'add_data'
+2025-06-17 12:14:27,701 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+Error logging error to W&B: 'NoneType' object has no attribute 'add_data'
+2025-06-17 12:17:02,032 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+Error logging error to W&B: 'NoneType' object has no attribute 'add_data'
+2025-06-17 12:18:23,373 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+Error logging error to W&B: 'NoneType' object has no attribute 'add_data'
+2025-06-17 12:19:08,941 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+Error logging error to W&B: 'NoneType' object has no attribute 'add_data'
+2025-06-17 12:21:01,075 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+Error logging error to W&B: 'NoneType' object has no attribute 'add_data'
+2025-06-17 12:21:36,647 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+Error logging error to W&B: 'NoneType' object has no attribute 'add_data'
+2025-06-17 12:22:15,328 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Attempting RAG retrieval...
+RAG retrieval failed: object of type 'generator' has no len() in query.
+Error logging error to W&B: 'NoneType' object has no attribute 'add_data'
+2025-06-17 12:24:06,541 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Starting chat with file: None
+2025-06-17 12:28:29,711 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Starting chat with file: None
+2025-06-17 12:31:30,034 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Starting chat with file: None
+2025-06-17 12:32:04,040 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Starting chat with file: None
+2025-06-17 12:32:44,067 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Starting chat with file: None
+2025-06-17 12:36:15,752 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Starting chat with file: None
+2025-06-17 12:39:44,501 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Starting chat with file: None
+2025-06-17 12:41:41,391 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Starting chat with file: None
+2025-06-17 12:42:01,042 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Starting chat with file: /private/var/folders/x4/dd2xz8_d4fjbb7kzdq5sp8_40000gn/T/gradio/c262b0bb5d5333044245a439baefe88c5826472b2b350d30eef49a5691de5313/Amidu_Dabor_Resume.pdf
+Processing file: /private/var/folders/x4/dd2xz8_d4fjbb7kzdq5sp8_40000gn/T/gradio/c262b0bb5d5333044245a439baefe88c5826472b2b350d30eef49a5691de5313/Amidu_Dabor_Resume.pdf
+Error logging file upload to W&B: 'NoneType' object has no attribute 'add_data'
+2025-06-17 12:45:55,993 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Starting chat with file: None
+2025-06-17 12:47:25,288 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Starting chat with file: /private/var/folders/x4/dd2xz8_d4fjbb7kzdq5sp8_40000gn/T/gradio/c262b0bb5d5333044245a439baefe88c5826472b2b350d30eef49a5691de5313/Amidu_Dabor_Resume.pdf
+Processing file: /private/var/folders/x4/dd2xz8_d4fjbb7kzdq5sp8_40000gn/T/gradio/c262b0bb5d5333044245a439baefe88c5826472b2b350d30eef49a5691de5313/Amidu_Dabor_Resume.pdf
+Error logging file upload to W&B: 'NoneType' object has no attribute 'add_data'
+2025-06-17 12:48:23,245 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Keyboard interruption in main thread... closing server.
+Killing tunnel 127.0.0.1:7860 <> https://7d0ff769056ba51bed.gradio.live

@@ -1,0 +1,35 @@
+W&B initialized for project usiu-chatbot with enhanced metrics
+2025-06-16 15:48:45,299 - api_gateway - INFO - Registered service: wandb_tracker
+2025-06-16 15:48:45,300 - api_gateway - INFO - Registered enhanced W&B tracking service with Chapter 5 metrics
+2025-06-16 15:48:51,246 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-16 15:48:52,507 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-16 15:48:52,537 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-16 15:48:57,083 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+
+================================================================================
+USIU AI Assistant with Enhanced Metrics Starting Up...
+================================================================================
+Current working directory: /Users/apple/Desktop/chatbot_prototype
+Serving static files from: /Users/apple/Desktop/chatbot_prototype/static
+Images path: /Users/apple/Desktop/chatbot_prototype/static/images
+Models configured:
+  - General Enquiries: gpt-4o
+  - Study Support: claude-3-7-sonnet-20250219
+Enhanced metrics dashboard: http://localhost:7860/metrics-dashboard
+Performance summary API: http://localhost:7860/api/performance-summary
+W&B dashboard: https://wandb.ai/daboramidu93-united-states-international-university-africa/usiu-chatbot
+================================================================================
+
+* Running on local URL:  http://127.0.0.1:7860
+2025-06-16 15:48:57,546 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-06-16 15:48:57,562 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-06-16 15:48:58,272 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-16 15:48:58,354 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-16 15:48:58,412 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-16 15:48:58,540 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-16 15:48:58,738 - httpx - INFO - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+* Running on public URL: https://ea9d98ffc4064cef1b.gradio.live
+
+This share link expires in 1 week. For free permanent hosting and GPU upgrades, run `gradio deploy` from the terminal in the working directory to deploy to Hugging Face Spaces (https://huggingface.co/spaces)
+Keyboard interruption in main thread... closing server.
+Killing tunnel 127.0.0.1:7860 <> https://ea9d98ffc4064cef1b.gradio.live
