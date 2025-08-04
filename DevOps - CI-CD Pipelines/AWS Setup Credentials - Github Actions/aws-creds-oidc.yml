@@ -1,0 +1,20 @@
+on:
+  workflow_dispatch:
+  push:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::295793222430:role/github-actions-oidc
+          aws-region: us-west-2
+      - run: |
+          Install-Module -Name AWS.Tools.EC2 -Force
+          Get-EC2Vpc
+        shell: pwsh

@@ -1,0 +1,17 @@
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+      - run: |
+          Install-Module -Name AWS.Tools.EC2 -Force
+          Get-EC2Vpc
+        shell: pwsh

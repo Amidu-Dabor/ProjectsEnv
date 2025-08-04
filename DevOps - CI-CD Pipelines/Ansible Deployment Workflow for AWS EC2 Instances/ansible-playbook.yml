@@ -1,0 +1,16 @@
+---
+# Can be accessed via ansible.builtin.apt - Manages apt-packages
+- name: Set up EC2 Instances
+  hosts: AnsibleKey2 # The Ansible key group name
+  tasks:
+    - name: Install Python3-pip
+      apt:
+        name: python3-pip
+        state: "present"
+        update_cache: true
+        
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: "present"
+        update_cache: true

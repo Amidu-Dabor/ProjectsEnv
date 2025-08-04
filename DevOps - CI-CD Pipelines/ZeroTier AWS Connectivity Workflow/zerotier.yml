@@ -1,0 +1,108 @@
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  zerotier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install ZeroTier Client
+        run: |
+          echo "Installing ZeroTier Client"
+          curl -s https://install.zerotier.com | sudo bash
+
+      - name: Authorize ZeroTier Client
+        shell: pwsh
+        run: |
+          # Get ZeroTier Client information
+          $result = sudo zerotier-cli info
+          Write-Output "ZeroTier CLI Info: $result"
+
+          # Extract Client ID
+          if ($result -match '([a-z0-9]{10})') {
+            $ClientId = $matches[0]
+            Write-Output "Extracted Client ID: $ClientId"
+          } else {
+            throw "Failed to extract Client ID from ZeroTier info"
+          }
+
+          # Prepare API request parameters
+          $networkId = "${{ secrets.ZEROTIER_NETWORKID }}"
+          $apiKey = "${{ secrets.ZEROTIER_API_KEY }}"
+          $Uri = "https://api.zerotier.com/api/v1/network/$networkId/member/$ClientId"
+          $Headers = @{
+            "Authorization" = "Bearer $apiKey"
+            "Content-Type"  = "application/json"
+          }
+
+          Write-Output "Network ID: $networkId"
+          Write-Output "Client ID: $ClientId"
+          Write-Output "API URL: $Uri"
+
+          # Check if Client ID exists in the network
+          try {
+            $member = Invoke-RestMethod -Uri $Uri -Headers $Headers -Method Get
+            $existingMember = $member.id -eq $ClientId
+          } catch {
+            Write-Output "Failed to retrieve member information. Status Code: $_.Exception.Response.StatusCode"
+            Write-Output $_.Exception.Message
+            $existingMember = $false
+          }
+
+          if ($existingMember) {
+            Write-Output "Client ID $ClientId already exists in the network. Skipping join step."
+          } else {
+            Write-Output "Client ID $ClientId does not exist in the network. Joining network."
+            # Join the network
+            sudo zerotier-cli join $networkId
+
+            # Authorize the client
+            $Body = '{"config": {"authorized": true}}'
+
+            Write-Output "Authorizing Client ID $ClientId"
+            Invoke-RestMethod -Uri $Uri -Headers $Headers -Body $Body -Method Post
+          }
+
+      - name: Get the GitHub Actions runner's IP address
+        shell: pwsh
+        run: curl https://ipinfo.io/ip
+
+      - name: Test GitHub Actions Connectivity to VPC-Router on ZeroTier network
+        shell: pwsh
+        run: |
+          ping -c 5 10.147.17.94
+
+      - name: Test GitHub Actions Connectivity to EC2(Router) Private IPv4 Address in AWS VPC
+        shell: pwsh
+        run: |
+          ping -c 5 10.98.10.148
+
+      - name: Test DNS Resolution Against Route 53 Resolver - 1
+        shell: pwsh
+        run: |
+          nslookup ip-10-98-10-148.ec2.internal 10.98.20.144
+
+      - name: Test DNS Resolution Against Route 53 Resolver - 2
+        shell: pwsh
+        run: |
+          nslookup ip-10-98-10-148.ec2.internal 10.98.21.175
+
+      - name: Test Connectivity to Amazon RDS
+        shell: pwsh
+        run: |
+          $mysqlPassword = "${{ secrets.MYSQL_PASSWORD }}"
+          $dbHostEndpoint = "database-1.cvm4ii6kq7xb.us-east-1.rds.amazonaws.com"
+          mysql --user admin --password=$mysqlPassword --host $dbHostEndpoint --execute='CREATE DATABASE IF NOT EXISTS mydatabase; SHOW DATABASES;'
+
+
+
+
+
+# Unused Code
+
+# ConvertTo-SecureString -AsPlainText -Force String
+# $membersUri = 'https://api.zerotier.com/api/v1/network/$networkId/member/{0}' -f $ClientId (This is .NET string formatting)
+
+# Check if Client ID exists in the network
+# $members = Invoke-RestMethod -Uri $membersUri -Headers $Headers -Method Get
+# $existingMember = $members | Where-Object { $_.nodeId -eq $ClientId }

@@ -1,0 +1,25 @@
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  s3sync:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Hello from S3 sync'
+      - name: Install Rclone
+        run: sudo -v ; curl https://rclone.org/install.sh | sudo bash
+      - uses: actions/checkout@v4.1.7
+      - uses: cuchi/jinja2-action@v1.2.2
+        with:
+          template: rclone.template.conf
+          output_file: rclone.prod.conf
+          variables: |
+            RCLONE_CONFIG_AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
+            RCLONE_CONFIG_AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            RCLONE_CONFIG_FILEBASE_ACCESS_KEY_ID=${{ secrets.FILEBASE_ACCESS_KEY_ID }}
+            RCLONE_CONFIG_FILEBASE_SECRET_ACCESS_KEY=${{ secrets.FILEBASE_SECRET_ACCESS_KEY }}
+      - run: cat rclone.prod.conf
+      - name: Execute Rclone Sync Job
+        run: rclone --config=rclone.prod.conf sync awss3source:dabsawss3bucket filebases3destination:dabsfilebases3bucket

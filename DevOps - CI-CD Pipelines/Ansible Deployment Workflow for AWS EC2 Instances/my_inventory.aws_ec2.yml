@@ -1,0 +1,8 @@
+plugin: amazon.aws.aws_ec2
+regions:
+  - us-east-1
+  - us-east-2
+  - us-west-2
+keyed_groups:
+  - key: key_name
+    separator: ''
