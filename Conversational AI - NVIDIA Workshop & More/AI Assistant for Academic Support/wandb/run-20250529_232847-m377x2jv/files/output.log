@@ -1,0 +1,27 @@
+W&B initialized for project usiu-chatbot with enhanced metrics
+2025-05-29 23:28:48,800 - api_gateway - INFO - Registered service: wandb_tracker
+2025-05-29 23:28:48,800 - api_gateway - INFO - Registered enhanced W&B tracking service with Chapter 5 metrics
+2025-05-29 23:28:49,256 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 404 Not Found"
+[Warning] could not generate dynamic greeting: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: gpt-4o'}}
+/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/gradio/chat_interface.py:321: UserWarning: The gr.ChatInterface was not provided with a type, so the type of the gr.Chatbot, 'messages', will be used.
+  warnings.warn(
+2025-05-29 23:28:50,512 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-29 23:28:50,561 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-29 23:28:57,681 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/chatbot_prototype/app.py", line 489, in <module>
+    main()
+  File "/Users/apple/Desktop/chatbot_prototype/app.py", line 83, in main
+    dashboard = dashboard_ui(
+                ^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/services/ui_service.py", line 176, in dashboard_ui
+    study_support_component = study_support_service.create_interface()
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/services/study_support_service.py", line 290, in create_interface
+    chat_interface = gr.ChatInterface(
+                     ^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/gradio/chat_interface.py", line 230, in __init__
+    raise ValueError(
+ValueError: Examples must be a list of lists when additional inputs are provided.
+2025-05-29 23:28:58,907 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-29 23:28:58,945 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"

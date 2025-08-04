@@ -1,0 +1,34 @@
+W&B initialized for project usiu-chatbot with enhanced metrics
+2025-05-30 00:26:43,029 - api_gateway - INFO - Registered service: wandb_tracker
+2025-05-30 00:26:43,029 - api_gateway - INFO - Registered enhanced W&B tracking service with Chapter 5 metrics
+2025-05-30 00:26:47,765 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+/Users/apple/Desktop/chatbot_prototype/services/general_chat_service.py:236: UserWarning: You have not specified a value for the `type` parameter. Defaulting to the 'tuples' format for chatbot messages, but this is deprecated and will be removed in a future version of Gradio. Please set type='messages' instead, which uses openai-style dictionaries with 'role' and 'content' keys.
+  chatbot_comp = gr.Chatbot(
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/chatbot_prototype/app.py", line 489, in <module>
+    main()
+  File "/Users/apple/Desktop/chatbot_prototype/app.py", line 83, in main
+    dashboard = dashboard_ui(
+                ^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/services/ui_service.py", line 175, in dashboard_ui
+    general_chat_component = general_chat_service.create_interface()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/services/general_chat_service.py", line 236, in create_interface
+    chatbot_comp = gr.Chatbot(
+                   ^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/gradio/component_meta.py", line 182, in wrapper
+    return fn(self, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/gradio/components/chatbot.py", line 346, in __init__
+    super().__init__(
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/gradio/component_meta.py", line 182, in wrapper
+    return fn(self, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/gradio/components/base.py", line 221, in __init__
+    initial_value = self.postprocess(initial_value)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/gradio/components/chatbot.py", line 627, in postprocess
+    self._check_format(value, "tuples")
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/gradio/components/chatbot.py", line 426, in _check_format
+    raise Error(
+gradio.exceptions.Error: 'Data incompatible with tuples format. Each message should be a list of length 2.'

@@ -1,0 +1,21 @@
+W&B initialized for project usiu-chatbot with enhanced metrics
+2025-05-30 00:21:41,430 - api_gateway - INFO - Registered service: wandb_tracker
+2025-05-30 00:21:41,430 - api_gateway - INFO - Registered enhanced W&B tracking service with Chapter 5 metrics
+2025-05-30 00:21:58,522 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/chatbot_prototype/app.py", line 489, in <module>
+    main()
+  File "/Users/apple/Desktop/chatbot_prototype/app.py", line 83, in main
+    dashboard = dashboard_ui(
+                ^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/services/ui_service.py", line 175, in dashboard_ui
+    general_chat_component = general_chat_service.create_interface()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/services/general_chat_service.py", line 247, in create_interface
+    chat_interface = gr.ChatInterface(
+                     ^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/venv311/lib/python3.11/site-packages/gradio/chat_interface.py", line 200, in __init__
+    raise ValueError("save_history is only supported for type='messages'")
+ValueError: save_history is only supported for type='messages'
+2025-05-30 00:21:59,853 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-30 00:21:59,854 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
