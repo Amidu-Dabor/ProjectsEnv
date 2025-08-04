@@ -1,0 +1,23 @@
+W&B initialized for project usiu-chatbot with enhanced metrics
+2025-05-29 22:59:12,370 - api_gateway - INFO - Registered service: wandb_tracker
+2025-05-29 22:59:12,370 - api_gateway - INFO - Registered enhanced W&B tracking service with Chapter 5 metrics
+2025-05-29 22:59:14,289 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-29 22:59:14,290 - openai._base_client - INFO - Retrying request to /chat/completions in 0.479249 seconds
+2025-05-29 22:59:15,101 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-05-29 22:59:15,102 - openai._base_client - INFO - Retrying request to /chat/completions in 0.839170 seconds
+2025-05-29 22:59:17,169 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+[Warning] could not generate dynamic greeting: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/chatbot_prototype/app.py", line 483, in <module>
+    main()
+  File "/Users/apple/Desktop/chatbot_prototype/app.py", line 77, in main
+    dashboard = dashboard_ui(
+                ^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/services/ui_service.py", line 175, in dashboard_ui
+    general_chat_component = general_chat_service.create_interface()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/Desktop/chatbot_prototype/services/general_chat_service.py", line 264, in create_interface
+    chat_interface = gr.ChatInterface(
+                     ^^^^^^^^^^^^^^^^^
+TypeError: ChatInterface.__init__() got an unexpected keyword argument 'retry_btn'
+2025-05-29 22:59:18,699 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"

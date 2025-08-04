@@ -1,0 +1,1 @@
+{"columns": ["type", "message", "session_id", "query", "timestamp"], "data": [["claude_api_error", "{'type': 'error', 'error': {'details': None, 'type': 'overloaded_error', 'message': 'Overloaded'}}", "study_1748469715", "Include the numbering to follow the flow. Make it comprehensive yet simple and very visible.", 1748469726.199931]]}
