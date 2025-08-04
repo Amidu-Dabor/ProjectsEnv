@@ -1,0 +1,22 @@
+[
+  {
+    "query": "What are the admission requirements?",
+    "expected_elements": [
+      "GPA",
+      "test scores",
+      "application process"
+    ],
+    "complexity": "simple",
+    "category": "admissions"
+  },
+  {
+    "query": "How do I register for classes?",
+    "expected_elements": [
+      "registration dates",
+      "course catalog",
+      "advisor"
+    ],
+    "complexity": "simple",
+    "category": "academics"
+  }
+]

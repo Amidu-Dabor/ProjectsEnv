@@ -1,0 +1,51 @@
+query_id,query_text,query_category,query_complexity,response_time,token_count,with_rag,accuracy,relevance,completeness,coherence,elements_covered,total_elements,has_error
+study_0,How do I register for classes?,academics,simple,9.727795839309692,402.5,False,0.6499999999999999,0.5,0.5,0.5,3,3,False
+study_1,How do I register for classes?,academics,simple,9.938167095184326,367.40000000000003,False,0.58,0.5,0.5,0.5,2,3,False
+study_2,What are the admission requirements?,admissions,simple,7.378274202346802,310.5,False,0.58,0.5,0.5,0.5,2,3,False
+study_3,How do I register for classes?,academics,simple,8.096832990646362,333.6,False,0.58,0.5,0.5,0.5,2,3,False
+study_4,How do I register for classes?,academics,simple,14.7192702293396,345.3,False,0.58,0.5,0.5,0.5,2,3,False
+study_5,How do I register for classes?,academics,simple,8.649811267852783,385.6,False,0.51,0.5,0.5,0.5,1,3,False
+study_6,How do I register for classes?,academics,simple,11.33128023147583,507.8,False,0.51,0.5,0.5,0.5,1,3,False
+study_7,What are the admission requirements?,admissions,simple,10.51436710357666,393.7,False,0.6499999999999999,0.5,0.5,0.5,3,3,False
+study_8,What are the admission requirements?,admissions,simple,12.814217805862427,419.7,False,0.51,0.5,0.5,0.5,1,3,False
+study_9,What are the admission requirements?,admissions,simple,10.098378896713257,383.3,False,0.58,0.5,0.5,0.5,2,3,False
+study_10,What are the admission requirements?,admissions,simple,9.751648902893066,398.90000000000003,False,0.6499999999999999,0.5,0.5,0.5,3,3,False
+study_11,What are the admission requirements?,admissions,simple,8.51395320892334,330.0,False,0.43999999999999995,0.5,0.5,0.5,0,3,False
+study_12,How do I register for classes?,academics,simple,10.109930753707886,354.40000000000003,False,0.58,0.5,0.5,0.5,2,3,False
+study_13,How do I register for classes?,academics,simple,10.681867122650146,396.0,False,0.6499999999999999,0.5,0.5,0.5,3,3,False
+study_14,How do I register for classes?,academics,simple,8.746876955032349,377.8,False,0.51,0.5,0.5,0.5,1,3,False
+study_15,How do I register for classes?,academics,simple,9.728559017181396,402.5,False,0.51,0.5,0.5,0.5,1,3,False
+study_16,What are the admission requirements?,admissions,simple,8.8379967212677,375.5,False,0.58,0.5,0.5,0.5,2,3,False
+study_17,What are the admission requirements?,admissions,simple,7.7903969287872314,189.6,False,0.43999999999999995,0.5,0.5,0.5,0,3,False
+study_18,What are the admission requirements?,admissions,simple,9.963696956634521,358.6,False,0.43999999999999995,0.5,0.5,0.5,0,3,False
+study_19,How do I register for classes?,academics,simple,9.94635820388794,340.1,False,0.58,0.5,0.5,0.5,2,3,False
+study_20,How do I register for classes?,academics,simple,10.467119216918945,444.1,False,0.58,0.5,0.5,0.5,2,3,False
+study_21,What are the admission requirements?,admissions,simple,10.183770895004272,413.2,False,0.58,0.5,0.5,0.5,2,3,False
+study_22,How do I register for classes?,academics,simple,9.906346797943115,384.3,False,0.51,0.5,0.5,0.5,1,3,False
+study_23,How do I register for classes?,academics,simple,9.69436001777649,370.0,False,0.58,0.5,0.5,0.5,2,3,False
+study_24,What are the admission requirements?,admissions,simple,10.554526805877686,400.2,False,0.58,0.5,0.5,0.5,2,3,False
+study_25,What are the admission requirements?,admissions,simple,10.028256177902222,320.90000000000003,False,0.58,0.5,0.5,0.5,2,3,False
+study_26,What are the admission requirements?,admissions,simple,9.590757846832275,431.40000000000003,False,0.58,0.5,0.5,0.5,2,3,False
+study_27,How do I register for classes?,academics,simple,10.2380211353302,366.1,False,0.58,0.5,0.5,0.5,2,3,False
+study_28,How do I register for classes?,academics,simple,8.84789490699768,403.8,False,0.58,0.5,0.5,0.5,2,3,False
+study_29,What are the admission requirements?,admissions,simple,11.116706848144531,392.40000000000003,False,0.51,0.5,0.5,0.5,1,3,False
+study_30,How do I register for classes?,academics,simple,7.51665735244751,341.40000000000003,False,0.51,0.5,0.5,0.5,1,3,False
+study_31,What are the admission requirements?,admissions,simple,13.253973960876465,398.90000000000003,False,0.58,0.5,0.5,0.5,2,3,False
+study_32,What are the admission requirements?,admissions,simple,12.705513954162598,315.7,False,0.58,0.5,0.5,0.5,2,3,False
+study_33,What are the admission requirements?,admissions,simple,11.119493961334229,350.8,False,0.51,0.5,0.5,0.5,1,3,False
+study_34,What are the admission requirements?,admissions,simple,12.411304235458374,384.6,False,0.51,0.5,0.5,0.5,1,3,False
+study_35,How do I register for classes?,academics,simple,14.27665400505066,354.40000000000003,False,0.58,0.5,0.5,0.5,2,3,False
+study_36,How do I register for classes?,academics,simple,9.659520864486694,344.0,False,0.51,0.5,0.5,0.5,1,3,False
+study_37,What are the admission requirements?,admissions,simple,9.955965042114258,353.40000000000003,False,0.58,0.5,0.5,0.5,2,3,False
+study_38,What are the admission requirements?,admissions,simple,4.530300140380859,162.3,False,0.42712999999999995,0.5,0.5,0.5,0,3,False
+study_39,How do I register for classes?,academics,simple,9.290786027908325,406.40000000000003,False,0.51,0.5,0.5,0.5,1,3,False
+study_40,What are the admission requirements?,admissions,simple,12.117854118347168,362.5,False,0.51,0.5,0.5,0.5,1,3,False
+study_41,How do I register for classes?,academics,simple,9.713656902313232,397.3,False,0.39599999999999996,0.5,0.5,0.5,2,3,True
+study_42,How do I register for classes?,academics,simple,10.33716893196106,424.6,False,0.51,0.5,0.5,0.5,1,3,False
+study_43,How do I register for classes?,academics,simple,8.752300024032593,359.6,False,0.58,0.5,0.5,0.5,2,3,False
+study_44,How do I register for classes?,academics,simple,8.480122089385986,373.90000000000003,False,0.51,0.5,0.5,0.5,1,3,False
+study_45,How do I register for classes?,academics,simple,10.725570917129517,385.6,False,0.58,0.5,0.5,0.5,2,3,False
+study_46,What are the admission requirements?,admissions,simple,9.439046859741211,387.2,False,0.58,0.5,0.5,0.5,2,3,False
+study_47,What are the admission requirements?,admissions,simple,10.14546799659729,428.8,False,0.58,0.5,0.5,0.5,2,3,False
+study_48,What are the admission requirements?,admissions,simple,10.94936990737915,422.3,False,0.6499999999999999,0.5,0.5,0.5,3,3,False
+study_49,What are the admission requirements?,admissions,simple,9.740616798400879,275.40000000000003,False,0.58,0.5,0.5,0.5,2,3,False

@@ -1,0 +1,101 @@
+query_id,query_text,query_category,query_complexity,response_time,token_count,with_rag,accuracy,relevance,completeness,coherence,elements_covered,total_elements,has_error
+general_0_rag,How do I register for classes?,academics,simple,10.907876014709473,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_0_no_rag,How do I register for classes?,academics,simple,2.4385499954223633,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_1_rag,How do I register for classes?,academics,simple,5.827308893203735,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_1_no_rag,How do I register for classes?,academics,simple,2.3698570728302,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_2_rag,How do I register for classes?,academics,simple,5.445513963699341,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_2_no_rag,How do I register for classes?,academics,simple,2.5521841049194336,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_3_rag,What are the admission requirements?,admissions,simple,7.308813095092773,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_3_no_rag,What are the admission requirements?,admissions,simple,2.4852590560913086,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_4_rag,What are the admission requirements?,admissions,simple,5.479636192321777,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_4_no_rag,What are the admission requirements?,admissions,simple,2.5604772567749023,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_5_rag,How do I register for classes?,academics,simple,6.141174077987671,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_5_no_rag,How do I register for classes?,academics,simple,2.547483205795288,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_6_rag,What are the admission requirements?,admissions,simple,4.911120891571045,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_6_no_rag,What are the admission requirements?,admissions,simple,2.332556962966919,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_7_rag,What are the admission requirements?,admissions,simple,5.735381841659546,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_7_no_rag,What are the admission requirements?,admissions,simple,2.416929006576538,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_8_rag,How do I register for classes?,academics,simple,4.783290147781372,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_8_no_rag,How do I register for classes?,academics,simple,2.440772294998169,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_9_rag,What are the admission requirements?,admissions,simple,5.047491073608398,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_9_no_rag,What are the admission requirements?,admissions,simple,2.4849817752838135,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_10_rag,What are the admission requirements?,admissions,simple,4.90271782875061,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_10_no_rag,What are the admission requirements?,admissions,simple,2.5448319911956787,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_11_rag,What are the admission requirements?,admissions,simple,5.939937114715576,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_11_no_rag,What are the admission requirements?,admissions,simple,2.3763461112976074,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_12_rag,What are the admission requirements?,admissions,simple,5.076329231262207,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_12_no_rag,What are the admission requirements?,admissions,simple,2.4307940006256104,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_13_rag,How do I register for classes?,academics,simple,5.178071022033691,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_13_no_rag,How do I register for classes?,academics,simple,2.3897757530212402,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_14_rag,How do I register for classes?,academics,simple,5.487689971923828,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_14_no_rag,How do I register for classes?,academics,simple,2.308638095855713,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_15_rag,How do I register for classes?,academics,simple,5.027277946472168,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_15_no_rag,How do I register for classes?,academics,simple,2.485869884490967,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_16_rag,How do I register for classes?,academics,simple,4.947792053222656,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_16_no_rag,How do I register for classes?,academics,simple,2.507613182067871,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_17_rag,What are the admission requirements?,admissions,simple,4.959324836730957,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_17_no_rag,What are the admission requirements?,admissions,simple,2.423063039779663,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_18_rag,What are the admission requirements?,admissions,simple,5.084290027618408,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_18_no_rag,What are the admission requirements?,admissions,simple,2.33115291595459,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_19_rag,How do I register for classes?,academics,simple,5.2844390869140625,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_19_no_rag,How do I register for classes?,academics,simple,2.4545998573303223,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_20_rag,How do I register for classes?,academics,simple,5.319920301437378,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_20_no_rag,How do I register for classes?,academics,simple,2.421260118484497,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_21_rag,What are the admission requirements?,admissions,simple,5.314910888671875,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_21_no_rag,What are the admission requirements?,admissions,simple,2.4030027389526367,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_22_rag,How do I register for classes?,academics,simple,4.944835186004639,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_22_no_rag,How do I register for classes?,academics,simple,2.392022132873535,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_23_rag,What are the admission requirements?,admissions,simple,4.985073089599609,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_23_no_rag,What are the admission requirements?,admissions,simple,2.3367443084716797,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_24_rag,How do I register for classes?,academics,simple,4.826781988143921,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_24_no_rag,How do I register for classes?,academics,simple,2.355764150619507,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_25_rag,What are the admission requirements?,admissions,simple,5.783325910568237,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_25_no_rag,What are the admission requirements?,admissions,simple,2.3756959438323975,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_26_rag,How do I register for classes?,academics,simple,8.708431959152222,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_26_no_rag,How do I register for classes?,academics,simple,2.4103899002075195,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_27_rag,How do I register for classes?,academics,simple,5.2501020431518555,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_27_no_rag,How do I register for classes?,academics,simple,2.3668010234832764,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_28_rag,What are the admission requirements?,admissions,simple,4.882629156112671,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_28_no_rag,What are the admission requirements?,admissions,simple,2.3869569301605225,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_29_rag,How do I register for classes?,academics,simple,5.325844049453735,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_29_no_rag,How do I register for classes?,academics,simple,2.372797966003418,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_30_rag,What are the admission requirements?,admissions,simple,4.91300892829895,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_30_no_rag,What are the admission requirements?,admissions,simple,2.451198101043701,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_31_rag,How do I register for classes?,academics,simple,5.268770933151245,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_31_no_rag,How do I register for classes?,academics,simple,2.5011231899261475,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_32_rag,How do I register for classes?,academics,simple,5.080746173858643,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_32_no_rag,How do I register for classes?,academics,simple,2.4808552265167236,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_33_rag,How do I register for classes?,academics,simple,4.9637532234191895,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_33_no_rag,How do I register for classes?,academics,simple,2.5791738033294678,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_34_rag,What are the admission requirements?,admissions,simple,5.027131795883179,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_34_no_rag,What are the admission requirements?,admissions,simple,2.5193281173706055,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_35_rag,How do I register for classes?,academics,simple,5.0421202182769775,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_35_no_rag,How do I register for classes?,academics,simple,2.517143964767456,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_36_rag,How do I register for classes?,academics,simple,5.08754825592041,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_36_no_rag,How do I register for classes?,academics,simple,2.5378050804138184,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_37_rag,What are the admission requirements?,admissions,simple,5.672806978225708,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_37_no_rag,What are the admission requirements?,admissions,simple,2.476639986038208,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_38_rag,What are the admission requirements?,admissions,simple,5.505548715591431,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_38_no_rag,What are the admission requirements?,admissions,simple,2.4837021827697754,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_39_rag,How do I register for classes?,academics,simple,4.921465873718262,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_39_no_rag,How do I register for classes?,academics,simple,2.407665252685547,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_40_rag,What are the admission requirements?,admissions,simple,4.960880994796753,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_40_no_rag,What are the admission requirements?,admissions,simple,2.4797141551971436,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_41_rag,What are the admission requirements?,admissions,simple,4.971333980560303,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_41_no_rag,What are the admission requirements?,admissions,simple,2.31559681892395,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_42_rag,What are the admission requirements?,admissions,simple,4.930595874786377,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_42_no_rag,What are the admission requirements?,admissions,simple,2.323888063430786,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_43_rag,What are the admission requirements?,admissions,simple,5.834022045135498,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_43_no_rag,What are the admission requirements?,admissions,simple,2.553138017654419,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_44_rag,How do I register for classes?,academics,simple,4.682013988494873,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_44_no_rag,How do I register for classes?,academics,simple,2.391662120819092,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_45_rag,What are the admission requirements?,admissions,simple,5.410231113433838,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_45_no_rag,What are the admission requirements?,admissions,simple,2.5770621299743652,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_46_rag,What are the admission requirements?,admissions,simple,5.067474842071533,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_46_no_rag,What are the admission requirements?,admissions,simple,2.480802059173584,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_47_rag,What are the admission requirements?,admissions,simple,4.973973035812378,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_47_no_rag,What are the admission requirements?,admissions,simple,2.4222311973571777,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_48_rag,What are the admission requirements?,admissions,simple,4.9490180015563965,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_48_no_rag,What are the admission requirements?,admissions,simple,2.374763011932373,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_49_rag,What are the admission requirements?,admissions,simple,4.907863140106201,0,True,0.35570599999999997,0.5,0.5,0.5,0,3,True
+general_49_no_rag,What are the admission requirements?,admissions,simple,2.3190481662750244,0,False,0.35570599999999997,0.5,0.5,0.5,0,3,True

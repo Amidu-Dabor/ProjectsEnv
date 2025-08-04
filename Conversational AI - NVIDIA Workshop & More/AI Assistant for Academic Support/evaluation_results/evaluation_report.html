@@ -1,0 +1,323 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>LLM Response Evaluation Report</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    line-height: 1.6;
+                    color: #333;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                h1, h2, h3 {
+                    color: #2c3e50;
+                }
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    margin: 20px 0;
+                }
+                th, td {
+                    border: 1px solid #ddd;
+                    padding: 12px;
+                }
+                th {
+                    background-color: #f2f2f2;
+                    text-align: left;
+                }
+                tr:nth-child(even) {
+                    background-color: #f9f9f9;
+                }
+                .summary-card {
+                    background-color: #f8f9fa;
+                    border-radius: 5px;
+                    padding: 15px;
+                    margin-bottom: 20px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+                }
+                .visualization {
+                    margin: 30px 0;
+                    text-align: center;
+                }
+                .metrics-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                    gap: 15px;
+                    margin: 20px 0;
+                }
+                .metric-card {
+                    background-color: #fff;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    padding: 15px;
+                }
+                .metric-value {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #2c3e50;
+                    margin: 10px 0;
+                }
+                .metric-title {
+                    font-size: 14px;
+                    color: #7f8c8d;
+                }
+                .rag-comparison {
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: #fff;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    padding: 20px;
+                    margin: 20px 0;
+                }
+                .rag-column {
+                    flex: 1;
+                    padding: 0 10px;
+                }
+                .highlight {
+                    color: #27ae60;
+                    font-weight: bold;
+                }
+                .lowlight {
+                    color: #e74c3c;
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>LLM Response Evaluation Report</h1>
+            <p>Generated on: 2025-05-16 09:59:44</p>
+            
+            <div class="summary-card">
+                <h2>Evaluation Summary</h2>
+                <p>
+                    <strong>General Enquiries Model:</strong> gpt-4o<br>
+                    <strong>Study Support Model:</strong> claude-3-7-sonnet-20250219
+                </p>
+            </div>
+        
+            <h2>General Queries Evaluation</h2>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-title">Queries Evaluated</div>
+                    <div class="metric-value">100</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Average Response Time</div>
+                    <div class="metric-value">3.9288s</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Average Accuracy</div>
+                    <div class="metric-value">0.3557</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Average Relevance</div>
+                    <div class="metric-value">0.5</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Average Completeness</div>
+                    <div class="metric-value">0.5</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Average Coherence</div>
+                    <div class="metric-value">0.5</div>
+                </div>
+            </div>
+            
+                <h3>RAG vs. No-RAG Comparison</h3>
+                
+                <div class="rag-comparison">
+                    <div class="rag-column">
+                        <h4>With RAG</h4>
+                        <p>
+                            <strong>Accuracy:</strong> <span class="lowlight">0.3557</span><br>
+                            <strong>Response Time:</strong> <span class="lowlight">5.4198s</span>
+                        </p>
+                    </div>
+                    <div class="rag-column">
+                        <h4>Without RAG</h4>
+                        <p>
+                            <strong>Accuracy:</strong> <span class="lowlight">0.3557</span><br>
+                            <strong>Response Time:</strong> <span class="highlight">2.4379s</span>
+                        </p>
+                    </div>
+                    <div class="rag-column">
+                        <h4>Difference</h4>
+                        <p>
+                            <strong>Accuracy Difference:</strong> 0.0000<br>
+                            <strong>Response Time Difference:</strong> 2.9819s
+                        </p>
+                    </div>
+                </div>
+                
+            <div class="visualization">
+                <h3>Visualizations</h3>
+                <img src="general_visualizations.png" alt="general Visualizations" style="max-width:100%;">
+            </div>
+            
+            <h3>Sample Queries and Responses</h3>
+            <table>
+                <tr>
+                    <th>Query</th>
+                    <th>Response</th>
+                    <th>Response Time</th>
+                    <th>Accuracy</th>
+                    <th>Evaluation Comment</th>
+                </tr>
+            
+                <tr>
+                    <td>What are the admission requirements?</td>
+                    <td>Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insu...</td>
+                    <td>4.9490s</td>
+                    <td>0.3557</td>
+                    <td>Evaluation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}</td>
+                </tr>
+                
+                <tr>
+                    <td>What are the admission requirements?</td>
+                    <td>Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insu...</td>
+                    <td>4.9111s</td>
+                    <td>0.3557</td>
+                    <td>Evaluation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}</td>
+                </tr>
+                
+                <tr>
+                    <td>What are the admission requirements?</td>
+                    <td>Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insu...</td>
+                    <td>2.4308s</td>
+                    <td>0.3557</td>
+                    <td>Evaluation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}</td>
+                </tr>
+                
+                <tr>
+                    <td>How do I register for classes?</td>
+                    <td>Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insu...</td>
+                    <td>4.9478s</td>
+                    <td>0.3557</td>
+                    <td>Evaluation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}</td>
+                </tr>
+                
+                <tr>
+                    <td>How do I register for classes?</td>
+                    <td>Error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insu...</td>
+                    <td>4.7833s</td>
+                    <td>0.3557</td>
+                    <td>Evaluation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}</td>
+                </tr>
+                </table>
+            <h2>Study Queries Evaluation</h2>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-title">Queries Evaluated</div>
+                    <div class="metric-value">50</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Average Response Time</div>
+                    <div class="metric-value">10.0618s</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Average Accuracy</div>
+                    <div class="metric-value">0.5509</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Average Relevance</div>
+                    <div class="metric-value">0.5</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Average Completeness</div>
+                    <div class="metric-value">0.5</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Average Coherence</div>
+                    <div class="metric-value">0.5</div>
+                </div>
+            </div>
+            
+            <div class="visualization">
+                <h3>Visualizations</h3>
+                <img src="study_visualizations.png" alt="study Visualizations" style="max-width:100%;">
+            </div>
+            
+            <h3>Sample Queries and Responses</h3>
+            <table>
+                <tr>
+                    <th>Query</th>
+                    <th>Response</th>
+                    <th>Response Time</th>
+                    <th>Accuracy</th>
+                    <th>Evaluation Comment</th>
+                </tr>
+            
+                <tr>
+                    <td>What are the admission requirements?</td>
+                    <td>Hello there from Nairobi, KE!!
+
+For questions specifically about USIU-Africa's admission requirements, I'd recommend consulting the General Academic Information service for the most current and accurate details. However, I can provide you with some general information about typical university admiss...</td>
+                    <td>10.1455s</td>
+                    <td>0.5800</td>
+                    <td>Evaluation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}</td>
+                </tr>
+                
+                <tr>
+                    <td>What are the admission requirements?</td>
+                    <td>Hello there from Nairobi, KE!!
+
+For questions about USIU-Africa's admission requirements, I can provide some general information, but I recommend consulting the General Academic Information service or the official USIU-Africa admissions office for the most up-to-date and accurate details.
+
+# General...</td>
+                    <td>10.0283s</td>
+                    <td>0.5800</td>
+                    <td>Evaluation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}</td>
+                </tr>
+                
+                <tr>
+                    <td>How do I register for classes?</td>
+                    <td>Hello there from Nairobi, KE!!
+
+# USIU-Africa Class Registration Guide
+
+To register for classes at USIU-Africa, you'll need to follow a specific process. While I can provide general guidance on the registration process, I recommend consulting the General Academic Information service for the most up-...</td>
+                    <td>9.6944s</td>
+                    <td>0.5800</td>
+                    <td>Evaluation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}</td>
+                </tr>
+                
+                <tr>
+                    <td>How do I register for classes?</td>
+                    <td>Hello there from Nairobi, KE!!
+
+# Class Registration at USIU-Africa
+
+To register for classes at USIU-Africa, you'll need to follow a specific process. While I can provide you with general guidance on class registration, for the most current and specific information about USIU-Africa's registration p...</td>
+                    <td>9.2908s</td>
+                    <td>0.5100</td>
+                    <td>Evaluation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}</td>
+                </tr>
+                
+                <tr>
+                    <td>How do I register for classes?</td>
+                    <td>Hello there from Nairobi, KE!!
+
+# Registering for Classes at USIU-Africa
+
+Registration for classes at USIU-Africa typically follows a specific process. While I can provide you with general information about course registration, for the most up-to-date and specific details about USIU-Africa's registr...</td>
+                    <td>8.8479s</td>
+                    <td>0.5800</td>
+                    <td>Evaluation failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}</td>
+                </tr>
+                </table>
+            <div class="summary-card">
+                <h2>Conclusion</h2>
+                <p>
+                    This report presents a comprehensive evaluation of the LLM responses for both general enquiries and study support queries.
+                    The metrics provide insights into the performance, accuracy, and efficiency of the models used in the chatbot system.
+                </p>
+            </div>
+        </body>
+        </html>
+        

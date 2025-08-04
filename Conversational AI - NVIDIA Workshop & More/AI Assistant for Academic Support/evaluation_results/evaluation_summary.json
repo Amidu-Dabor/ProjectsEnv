@@ -1,0 +1,30 @@
+{
+  "date": "2025-05-16 09:59:44",
+  "general_model": "gpt-4o",
+  "study_model": "claude-3-7-sonnet-20250219",
+  "metrics": {
+    "general": {
+      "query_count": 100,
+      "avg_response_time": 3.9288,
+      "avg_accuracy": 0.3557,
+      "avg_relevance": 0.5,
+      "avg_completeness": 0.5,
+      "avg_coherence": 0.5,
+      "rag_comparison": {
+        "rag_response_time": 5.4198,
+        "no_rag_response_time": 2.4379,
+        "rag_accuracy": 0.3557,
+        "no_rag_accuracy": 0.3557,
+        "rag_vs_no_rag_accuracy_diff": 0.0
+      }
+    },
+    "study": {
+      "query_count": 50,
+      "avg_response_time": 10.0618,
+      "avg_accuracy": 0.5509,
+      "avg_relevance": 0.5,
+      "avg_completeness": 0.5,
+      "avg_coherence": 0.5
+    }
+  }
+}
