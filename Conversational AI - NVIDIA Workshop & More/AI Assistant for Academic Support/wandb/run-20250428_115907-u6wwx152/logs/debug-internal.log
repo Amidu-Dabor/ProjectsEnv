@@ -1,0 +1,21 @@
+{"time":"2025-04-28T11:59:07.778151+03:00","level":"INFO","msg":"stream: starting","core version":"0.19.10","symlink path":"/Users/apple/Desktop/chatbot_prototype/wandb/run-20250428_115907-u6wwx152/logs/debug-core.log"}
+{"time":"2025-04-28T11:59:08.291964+03:00","level":"INFO","msg":"created new stream","id":"u6wwx152"}
+{"time":"2025-04-28T11:59:08.292007+03:00","level":"INFO","msg":"stream: started","id":"u6wwx152"}
+{"time":"2025-04-28T11:59:08.29202+03:00","level":"INFO","msg":"handler: started","stream_id":"u6wwx152"}
+{"time":"2025-04-28T11:59:08.292056+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"u6wwx152"}
+{"time":"2025-04-28T11:59:08.292052+03:00","level":"INFO","msg":"sender: started","stream_id":"u6wwx152"}
+{"time":"2025-04-28T11:59:08.679856+03:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-28T19:35:26.130081+03:00","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/daboramidu93-united-states-international-university-africa/usiu-chatbot/u6wwx152/file_stream","body":"{\"error\":\"rate limit exceeded\"}"}
+{"time":"2025-04-28T19:35:28.960013+03:00","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/daboramidu93-united-states-international-university-africa/usiu-chatbot/u6wwx152/file_stream","body":"{\"error\":\"rate limit exceeded\"}"}
+{"time":"2025-04-29T04:05:23.053733+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.100.106:62917->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-04-29T06:18:32.524786+03:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/daboramidu93-united-states-international-university-africa/usiu-chatbot/u6wwx152/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-04-29T06:18:36.182908+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-04-29T09:10:39.874585+03:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-29T09:10:39.874948+03:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-29T09:10:41.17829+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-29T09:10:41.578474+03:00","level":"INFO","msg":"stream: closing","id":"u6wwx152"}
+{"time":"2025-04-29T09:10:41.578544+03:00","level":"WARN","msg":"sender: received Exit record more than once, ignoring"}
+{"time":"2025-04-29T09:10:41.586509+03:00","level":"INFO","msg":"handler: closed","stream_id":"u6wwx152"}
+{"time":"2025-04-29T09:10:41.586571+03:00","level":"INFO","msg":"sender: closed","stream_id":"u6wwx152"}
+{"time":"2025-04-29T09:10:41.586868+03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"u6wwx152"}
+{"time":"2025-04-29T09:10:41.587253+03:00","level":"INFO","msg":"stream: closed","id":"u6wwx152"}
