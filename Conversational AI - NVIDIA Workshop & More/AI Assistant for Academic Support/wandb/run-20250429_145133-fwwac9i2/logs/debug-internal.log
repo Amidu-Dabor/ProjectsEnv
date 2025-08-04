@@ -1,0 +1,9 @@
+{"time":"2025-04-29T14:51:33.920944+03:00","level":"INFO","msg":"stream: starting","core version":"0.19.10","symlink path":"/Users/apple/Desktop/chatbot_prototype/wandb/run-20250429_145133-fwwac9i2/logs/debug-core.log"}
+{"time":"2025-04-29T14:51:34.327479+03:00","level":"INFO","msg":"created new stream","id":"fwwac9i2"}
+{"time":"2025-04-29T14:51:34.327776+03:00","level":"INFO","msg":"stream: started","id":"fwwac9i2"}
+{"time":"2025-04-29T14:51:34.327976+03:00","level":"INFO","msg":"handler: started","stream_id":"fwwac9i2"}
+{"time":"2025-04-29T14:51:34.328223+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"fwwac9i2"}
+{"time":"2025-04-29T14:51:34.328429+03:00","level":"INFO","msg":"sender: started","stream_id":"fwwac9i2"}
+{"time":"2025-04-29T14:51:34.692731+03:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-29T14:54:08.721621+03:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T14:54:08.72489+03:00","level":"INFO","msg":"Resuming system monitor"}
