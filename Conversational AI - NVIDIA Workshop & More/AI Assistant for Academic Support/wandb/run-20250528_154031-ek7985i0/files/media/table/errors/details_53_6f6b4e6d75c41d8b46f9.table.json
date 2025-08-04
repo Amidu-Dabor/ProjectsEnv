@@ -1,0 +1,1 @@
+{"columns": ["type", "message", "session_id", "query", "timestamp"], "data": [["rag_retrieval", "Embedding dimension 384 does not match collection dimensionality 1536", "general_1748436842", "Hi there", 1748436846.674788]]}

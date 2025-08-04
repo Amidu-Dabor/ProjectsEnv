@@ -1,0 +1,132 @@
+W&B initialized for project usiu-chatbot
+2025-05-28 16:39:15,693 - api_gateway - INFO - Registered service: wandb_tracker
+2025-05-28 16:39:15,693 - api_gateway - INFO - Registered W&B tracking service
+2025-05-28 16:39:21,930 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-28 16:39:23,237 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 16:39:23,282 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 16:39:23,348 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 16:39:30,031 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+
+================================================================================
+USIU Chatbot with W&B Integration starting up...
+================================================================================
+Current working directory: /Users/apple/Desktop/chatbot_prototype
+Serving static files from: /Users/apple/Desktop/chatbot_prototype/static
+Images path: /Users/apple/Desktop/chatbot_prototype/static/images
+Basic metrics dashboard: http://localhost:7860/metrics-dashboard
+W&B dashboard: https://wandb.ai/daboramidu93-united-states-international-university-africa/usiu-chatbot
+================================================================================
+
+* Running on local URL:  http://127.0.0.1:7860
+2025-05-28 16:39:30,463 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-05-28 16:39:30,480 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-05-28 16:39:31,220 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 16:39:31,320 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 16:39:31,504 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-05-28 16:39:31,621 - httpx - INFO - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+* Running on public URL: https://9cd7128898d3662e55.gradio.live
+
+This share link expires in 1 week. For free permanent hosting and GPU upgrades, run `gradio deploy` from the terminal in the working directory to deploy to Hugging Face Spaces (https://huggingface.co/spaces)
+2025-05-28 16:39:51,929 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-28 16:39:52,482 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-28 16:39:58,507 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-28 16:40:00,977 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Attempting RAG retrieval...
+2025-05-28 16:41:11,587 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:41:11,589 - openai._base_client - INFO - Retrying request to /embeddings in 0.472324 seconds
+2025-05-28 16:41:13,475 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:41:13,476 - openai._base_client - INFO - Retrying request to /embeddings in 0.854237 seconds
+2025-05-28 16:41:15,474 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+Rate limit exceeded. Retry 1/5. Waiting 20 seconds...
+2025-05-28 16:41:35,795 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:41:35,798 - openai._base_client - INFO - Retrying request to /embeddings in 0.436390 seconds
+2025-05-28 16:41:36,531 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:41:36,532 - openai._base_client - INFO - Retrying request to /embeddings in 0.773213 seconds
+2025-05-28 16:41:38,320 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+Rate limit exceeded. Retry 2/5. Waiting 40 seconds...
+2025-05-28 16:42:19,888 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:42:19,889 - openai._base_client - INFO - Retrying request to /embeddings in 0.488323 seconds
+2025-05-28 16:42:21,840 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:42:21,842 - openai._base_client - INFO - Retrying request to /embeddings in 0.959058 seconds
+2025-05-28 16:42:23,514 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+Rate limit exceeded. Retry 3/5. Waiting 80 seconds...
+2025-05-28 16:43:47,191 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:43:47,192 - openai._base_client - INFO - Retrying request to /embeddings in 0.394019 seconds
+2025-05-28 16:43:48,777 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:43:48,778 - openai._base_client - INFO - Retrying request to /embeddings in 0.755968 seconds
+2025-05-28 16:43:50,314 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+Rate limit exceeded. Retry 4/5. Waiting 160 seconds...
+2025-05-28 16:46:37,216 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:46:37,219 - openai._base_client - INFO - Retrying request to /embeddings in 0.446961 seconds
+2025-05-28 16:46:38,709 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:46:38,710 - openai._base_client - INFO - Retrying request to /embeddings in 0.762447 seconds
+2025-05-28 16:46:40,286 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+Rate limit exceeded. Retry 5/5. Waiting 320 seconds...
+Failed after 5 retries due to rate limits
+Rate limit exceeded. Retry 1/5. Waiting 20 seconds...
+2025-05-28 16:52:22,668 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:52:22,672 - openai._base_client - INFO - Retrying request to /embeddings in 0.389164 seconds
+2025-05-28 16:52:24,261 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:52:24,262 - openai._base_client - INFO - Retrying request to /embeddings in 0.881500 seconds
+2025-05-28 16:52:25,479 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+Rate limit exceeded. Retry 1/5. Waiting 20 seconds...
+2025-05-28 16:52:46,979 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:52:46,980 - openai._base_client - INFO - Retrying request to /embeddings in 0.485095 seconds
+2025-05-28 16:52:48,364 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:52:48,365 - openai._base_client - INFO - Retrying request to /embeddings in 0.974364 seconds
+2025-05-28 16:52:50,255 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+Rate limit exceeded. Retry 2/5. Waiting 40 seconds...
+2025-05-28 16:53:32,778 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:53:32,781 - openai._base_client - INFO - Retrying request to /embeddings in 0.475039 seconds
+2025-05-28 16:53:34,317 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:53:34,318 - openai._base_client - INFO - Retrying request to /embeddings in 0.854854 seconds
+2025-05-28 16:53:36,118 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+Rate limit exceeded. Retry 3/5. Waiting 80 seconds...
+2025-05-28 16:55:00,912 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:55:00,914 - openai._base_client - INFO - Retrying request to /embeddings in 0.396513 seconds
+2025-05-28 16:55:01,637 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:55:01,639 - openai._base_client - INFO - Retrying request to /embeddings in 0.829810 seconds
+2025-05-28 16:55:03,375 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+Rate limit exceeded. Retry 4/5. Waiting 160 seconds...
+2025-05-28 16:57:48,759 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:57:48,761 - openai._base_client - INFO - Retrying request to /embeddings in 0.398449 seconds
+2025-05-28 16:57:50,330 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 16:57:50,332 - openai._base_client - INFO - Retrying request to /embeddings in 0.973540 seconds
+2025-05-28 16:57:51,573 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+Rate limit exceeded. Retry 5/5. Waiting 320 seconds...
+Failed after 5 retries due to rate limits
+Rate limit exceeded. Retry 2/5. Waiting 40 seconds...
+2025-05-28 17:03:53,529 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 17:03:53,534 - openai._base_client - INFO - Retrying request to /embeddings in 0.438024 seconds
+2025-05-28 17:03:54,944 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 17:03:54,945 - openai._base_client - INFO - Retrying request to /embeddings in 0.922928 seconds
+2025-05-28 17:03:56,157 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+Rate limit exceeded. Retry 1/5. Waiting 20 seconds...
+2025-05-28 17:04:18,423 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 17:04:18,426 - openai._base_client - INFO - Retrying request to /embeddings in 0.413596 seconds
+2025-05-28 17:04:19,130 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 17:04:19,133 - openai._base_client - INFO - Retrying request to /embeddings in 0.908515 seconds
+2025-05-28 17:04:21,196 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+Rate limit exceeded. Retry 2/5. Waiting 40 seconds...
+2025-05-28 17:05:02,388 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 17:05:02,389 - openai._base_client - INFO - Retrying request to /embeddings in 0.413123 seconds
+2025-05-28 17:05:03,871 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 17:05:03,872 - openai._base_client - INFO - Retrying request to /embeddings in 0.807904 seconds
+2025-05-28 17:05:05,098 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+Rate limit exceeded. Retry 3/5. Waiting 80 seconds...
+2025-05-28 17:06:28,397 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 17:06:28,399 - openai._base_client - INFO - Retrying request to /embeddings in 0.440873 seconds
+2025-05-28 17:06:29,588 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 17:06:29,590 - openai._base_client - INFO - Retrying request to /embeddings in 0.836235 seconds
+2025-05-28 17:06:30,766 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+Rate limit exceeded. Retry 4/5. Waiting 160 seconds...
+2025-05-28 17:09:13,572 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 17:09:13,575 - openai._base_client - INFO - Retrying request to /embeddings in 0.453575 seconds
+2025-05-28 17:09:14,801 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-05-28 17:09:14,802 - openai._base_client - INFO - Retrying request to /embeddings in 0.957826 seconds
+2025-05-28 17:09:16,084 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+Rate limit exceeded. Retry 5/5. Waiting 320 seconds...
+Failed after 5 retries due to rate limits
+Rate limit exceeded. Retry 3/5. Waiting 80 seconds...
+Keyboard interruption in main thread... closing server.
+Killing tunnel 127.0.0.1:7860 <> https://9cd7128898d3662e55.gradio.live
