@@ -80,7 +80,8 @@ Practical and creative software solutions, automation tools, bots, APIs, web app
 - [**YouTube Download Manager**](./More%20Software%20Projects/YouTube%20Download%20Manager) – A simple and efficient YouTube video downloader tool.
 - [**Quiz App**](./More%20Software%20Projects/Quiz%20App) – An interactive and customizable quiz application.
 - [**Snake Game**](./More%20Software%20Projects/Snake%20Game) – A classic arcade game in Python.
-- *(Plus more automation scripts, data apps, GUI tools, and micro-projects - all linked in the repository.)*
+- *(Plus more automation scripts, data apps, GUI tools, and micro-projects - all available in the [main repository](https://github.com/Amidu-Dabor/ProjectsEnv).)*
+
 
 ---
 
