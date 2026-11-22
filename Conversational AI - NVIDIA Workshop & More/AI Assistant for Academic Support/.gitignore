@@ -1,0 +1,11 @@
+# Secrets
+.env
+
+# Experiment tracking runs (large, machine-specific)
+wandb/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

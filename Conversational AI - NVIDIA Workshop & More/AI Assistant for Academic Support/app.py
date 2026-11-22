@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from services.data_service import DataService
-from services.ui_service6 import dashboard_ui
+from services.ui_service import dashboard_ui
 from configs.config import GPT4O_MODEL, CLAUDE_MODEL
 from vector_services.data_curator import DataCurator, safe_embeddings_constructor
 from api_gateway.gateway import (
@@ -23,7 +23,7 @@ import asyncio
 
 def main() -> None:
     base_dir = "usiu-knowledge-base"
-    vector_store_dir = "vector_services/usiu_vector_db"
+    vector_store_dir = "usiu_vector_db"  # same folder that data_curator.py builds into
 
     # Load the existing vector store and obtain its retriever
     curator = DataCurator(knowledge_base_dir=base_dir, persist_directory=vector_store_dir)

@@ -160,3 +160,16 @@ wrapt==1.17.2
 yarl==1.20.0
 zipp==3.21.0
 zstandard==0.23.0
+# Imported by the app but previously missing from this file
+# (on Hugging Face Spaces, Gradio is installed by the Space itself).
+gradio==5.12.0
+anthropic
+langchain-openai
+wandb
+hume
+beautifulsoup4
+PyPDF2
+python-docx
+python-pptx
+seaborn
+psutil
