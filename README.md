@@ -120,6 +120,7 @@ Smaller projects from learning Python: object-oriented design, GUIs with Tkinter
 | [**Squirrel Census**](./More%20Software%20Projects/Squirrel%20Census) | pandas counts from Central Park census data |
 | [**File Operations**](./More%20Software%20Projects/FileOperations) | Reading files practice |
 | [**PrettyTable Practice**](./More%20Software%20Projects/Turtle%20Project) | First external-package exercise |
+| [**Small Programs**](./More%20Software%20Projects/Python%20Basics%20-%20Small%20Programs) | Blackjack, Caesar cipher, number guessing, turtle race and more |
 
 ---
 
