@@ -1,3 +1,4 @@
+import os
 from twilio.rest import Client
 from flight_search import FlightSearch
 from flight_data import FlightData
@@ -11,8 +12,8 @@ class NotificationManager:
 
     def __init__(self):
 
-        self.account_sid = "AC939811610f03e1e597fcdfa04f53f4be"
-        self.auth_token = "084f9331f5bf75bcce43981d4b7bbf89"
+        self.account_sid = os.environ.get("TWILIO_ACCOUNT_SID")
+        self.auth_token = os.environ.get("TWILIO_AUTH_TOKEN")
         self.client = Client(self.account_sid, self.auth_token)
 
     def send_sms(self):

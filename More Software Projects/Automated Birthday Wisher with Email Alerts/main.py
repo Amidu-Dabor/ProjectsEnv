@@ -1,3 +1,4 @@
+import os
 import smtplib
 from datetime import datetime
 import random
@@ -12,7 +13,7 @@ with open("quotes.txt", mode="r") as file:
 
 
 my_email = "amiddabs93@gmail.com"
-password = "zgryezbwwxjwjzik"
+password = os.environ.get("EMAIL_APP_PASSWORD")
 
 with smtplib.SMTP("smtp.gmail.com") as connection:
     connection.starttls()

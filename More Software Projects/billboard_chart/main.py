@@ -1,3 +1,4 @@
+import os
 import spotipy
 import requests
 from bs4 import BeautifulSoup
@@ -10,7 +11,7 @@ soup = BeautifulSoup(contents, "html.parser")
 
 scope = "playlist-modify-private"
 client_id = "1efbce89d811454fbebd0b8abfabc2e7"
-client_secret = "aae9ded9cbda4c658dd4e361d9561faa"
+client_secret = os.environ.get("SPOTIFY_CLIENT_SECRET")
 redirect_uri = "https://example.com"
 
 sp = spotipy.Spotify(

@@ -15,14 +15,14 @@ news_piece_api = 'https://newsapi.org/v2/everything'
 
 # proxy_client = TwilioHttpClient(proxy={'http': os.environ['http_proxy'], 'https': os.environ['https_proxy']})
 # Twilio account details
-account_sid = "AC939811610f03e1e597fcdfa04f53f4be"
-auth_token = "084f9331f5bf75bcce43981d4b7bbf89"
+account_sid = os.environ.get("TWILIO_ACCOUNT_SID")
+auth_token = os.environ.get("TWILIO_AUTH_TOKEN")
 
 # STOCK
 stock_params = {
     "function": "TIME_SERIES_DAILY",
     "symbol": STOCK,
-    "apikey": "HZWKWQ95J8I6NA67",
+    "apikey": os.environ.get("ALPHAVANTAGE_API_KEY"),
 }
 
 stock_response = requests.get(stock_price_api, params=stock_params)
@@ -39,7 +39,7 @@ difference_in_percentage = round((difference / yesterday_closing_price) * 100)
 # NEWS
 news_piece_params = {
             "q": COMPANY_NAME,
-            "apiKey": "93b796b076c247f7a90408693415e797",
+            "apiKey": os.environ.get("NEWS_API_KEY"),
         }
 
 news_response = requests.get(news_piece_api, params=news_piece_params)

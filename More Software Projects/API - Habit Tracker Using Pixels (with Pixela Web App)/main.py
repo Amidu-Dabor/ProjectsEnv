@@ -1,10 +1,11 @@
+import os
 import requests
 from datetime import datetime
 
 
 USERNAME ="amidu"
 GRAPH_ID = "graph1"
-TOKEN = "1b4cee1f27c4c13cb07d51f96993160a"
+TOKEN = os.environ.get("PIXELA_TOKEN")
 
 # Get current date, remove dashes
 unformatted_date = datetime.now()

@@ -6,7 +6,7 @@ from datetime import datetime
 
 
 SENDER_EMAIL = "amiddabs93@gmail.com"
-PASSWORD = "zgryezbwwxjwjzik"
+PASSWORD = os.environ.get("EMAIL_APP_PASSWORD")
 
 today = datetime.now()
 birthday_tuple = (today.month, today.day)

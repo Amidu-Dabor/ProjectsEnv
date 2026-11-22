@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, redirect, url_for
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
@@ -7,7 +8,7 @@ import csv
 
 app = Flask(__name__)
 # app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
-app.secret_key = "my-secret-strings"
+app.secret_key = os.environ.get("FLASK_SECRET_KEY")
 Bootstrap(app)
 
 

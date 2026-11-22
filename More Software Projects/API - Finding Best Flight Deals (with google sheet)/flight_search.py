@@ -1,3 +1,4 @@
+import os
 import requests
 from flight_data import FlightData
 from data_manager import DataManager
@@ -6,7 +7,7 @@ flight_details = FlightData()
 data_mgr = DataManager()
 
 FLIGHT_SEARCH_API_ENDPOINT = "https://api.tequila.kiwi.com/v2/search"
-SEARCH_API_KEY = "D4pQsEghYsjJecPPTyR-TaTOyjpJrVop"
+SEARCH_API_KEY = os.environ.get("FLIGHT_SEARCH_API_KEY")
 
 
 class FlightSearch:

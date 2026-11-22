@@ -1,3 +1,4 @@
+import os
 import requests
 from datetime import datetime
 import smtplib
@@ -10,7 +11,7 @@ MY_LAT = -1.292066
 MY_LONG = 36.821945
 
 SENDER_EMAIL = "amiddabs93@gmail.com"
-PASSWORD = "zgryezbwwxjwjzik"
+PASSWORD = os.environ.get("EMAIL_APP_PASSWORD")
 
 
 def iss_api():

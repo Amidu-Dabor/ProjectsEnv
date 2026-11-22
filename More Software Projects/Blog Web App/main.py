@@ -20,7 +20,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from templates.forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = os.environ.get("FLASK_SECRET_KEY")
 app.config['CKEDITOR_PKG_TYPE'] = 'full-all'
 ckeditor = CKEditor(app)
 Bootstrap(app)
@@ -109,8 +109,7 @@ class Comment(db.Model):
 
 # Load credentials from environment variables or a configuration file
 RECIPIENT_EMAIL = os.environ.get("RECIPIENT_EMAIL")
-RECIPIENT_PASSWORD = "avxb mryk rckh ehlx"
-# RECIPIENT_PASSWORD = "newConnection."
+RECIPIENT_PASSWORD = os.environ.get("EMAIL_APP_PASSWORD")
 
 LIST_OF_RECIPIENTS = ["amiddabs93@gmail.com", "232a.dabor@gmail.com", "daboramidu93@gmail.com"]
 
