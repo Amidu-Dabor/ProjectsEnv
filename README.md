@@ -1,8 +1,8 @@
 # Amidu Dabor: Software Engineering & AI Portfolio
 
-Projects in **backend and full-stack software engineering, AI/ML, data science and cloud DevOps**, from production-style services to learning exercises. Each project folder has its own README explaining what it does, how it works and how to run it.
+AI/ML and backend software engineer, working mainly in **Python**, with an MSc in Information Systems & Technology (Software Engineering) from USIU-Africa. I build AI products end to end: data and models, APIs and services, and the apps people use. Currently an **AI/ML Engineer at UMTECH Solution**, a tech start-up in Freetown, Sierra Leone.
 
-**Main languages and tools:** Python, JavaScript/TypeScript, R, SQL · FastAPI, Django, Flask · scikit-learn, TensorFlow/Keras, Hugging Face, LangChain · AWS, Azure, Terraform, Ansible, GitHub Actions · Tableau, Power BI
+**Languages and tools:** Python, JavaScript/TypeScript, R, SQL · FastAPI, Django, Flask, React · scikit-learn, TensorFlow/Keras, Hugging Face, LangChain · AWS, Azure, Terraform, Ansible, Docker, GitHub Actions · Tableau, Power BI
 
 ---
 
@@ -11,9 +11,19 @@ Projects in **backend and full-stack software engineering, AI/ML, data science a
 | Project | Why it's worth a look |
 |---|---|
 | [**Python-to-C++ Translator**](https://github.com/Amidu-Dabor/python-to-cpp-translator) *(separate repo)* | GPT/Claude port Python to C++, which is compiled and **verified against the original output**: over 77,000× faster on a benchmark, and it caught an LLM's integer-overflow bug. 22 tests run in CI. |
-| [**AI Assistant for Academic Support**](./Conversational%20AI%20-%20NVIDIA%20Workshop%20%26%20More/AI%20Assistant%20for%20Academic%20Support) | MSc project: modular RAG assistant with an API gateway, separate services, voice chat and an evaluation script |
-| [**USIU-Support Help Desk**](./More%20Software%20Projects/USIU-Support) | Django help desk with custom users, tickets, comments and analytics dashboards |
-| [**House Prices API (MLOps)**](./AI_Machine-Learning_NLP_Data-Science/MLOPS%20-%20Real-time%20Inference%20via%20FastAPI) | A trained model served as a validated FastAPI endpoint |
+| [**AI Assistant for Academic Support**](./Conversational%20AI%20-%20NVIDIA%20Workshop%20%26%20More/AI%20Assistant%20for%20Academic%20Support) | MSc project: a modular RAG assistant in Python, with an API gateway routing to separate chat, study-support, voice, auth and file services, a scraper and vector-database pipeline, and an evaluation script |
+| [**USIU-Support Help Desk**](./More%20Software%20Projects/USIU-Support) | Django help desk with a custom user model, student and staff accounts, tickets, comments and analytics dashboards |
+
+## Currently building (2026)
+
+Recent work in team or client repositories that aren't public:
+
+| Project | What it is |
+|---|---|
+| **AgriSmart** | AI farming app for West African farmers: leaf-photo disease diagnosis, harvest-date prediction and an AI farming assistant. I built the AI/ML features; the team placed in the **top 5 Sierra Leone start-ups at WAIIS 2026**. In Google Play testing. |
+| **ImpactLens** | Offline-ready web app (React, TypeScript, Supabase) that turns any SDG dataset into data-backed findings, a transparent priority index and a budget simulator. Built for the 10Alytics Hackathon 2026. |
+| **AI WhatsApp assistant** | Client project for a UN agency: answers enquiries on WhatsApp from approved information (RAG) and hands complex cases to staff. *In progress.* |
+| **AnyStack** | A Git-native AI software builder that works in a customer's own stack and repository, with a build-and-test gate before code reaches users. *In development.* |
 
 ---
 
@@ -21,7 +31,7 @@ Projects in **backend and full-stack software engineering, AI/ML, data science a
 
 | Project | What it is |
 |---|---|
-| [**AI Assistant for Academic Support**](./Conversational%20AI%20-%20NVIDIA%20Workshop%20%26%20More/AI%20Assistant%20for%20Academic%20Support) | MSc project: modular RAG assistant (Claude, GPT-4o) with an API gateway, voice and an evaluation script |
+| [**AI Assistant for Academic Support**](./Conversational%20AI%20-%20NVIDIA%20Workshop%20%26%20More/AI%20Assistant%20for%20Academic%20Support) | MSc project: modular RAG assistant (Claude, GPT-4o) with an API gateway, voice and an evaluation script *(featured)* |
 | [**NVIDIA DLI: Conversational AI**](./Conversational%20AI%20-%20NVIDIA%20Workshop%20%26%20More/NVIDIA%20-%20Conversational%20AI%20App%20Workshop) | Completed course labs: Riva ASR/TTS, NeMo and Kubernetes deployment |
 
 ## Machine Learning & NLP
@@ -43,7 +53,7 @@ Projects in **backend and full-stack software engineering, AI/ML, data science a
 | [**Market Basket Analysis**](./AI_Machine-Learning_NLP_Data-Science/Market%20Basket%20Optimization%20-%20Association%20Rule%20Learning) | Apriori and Eclat on 7,500 shopping baskets |
 | [**Model Selection and XGBoost**](./AI_Machine-Learning_NLP_Data-Science/Model%20Selection%20Boosting) | k-fold cross-validation, grid search and XGBoost |
 
-**Core notebooks** (neural-network maths by hand): [Backpropagation](./AI_Machine-Learning_NLP_Data-Science/Applied%20backpropagation.ipynb) · [Feedforward ANN](./AI_Machine-Learning_NLP_Data-Science/Applied%20feedforward_ann.ipynb) · [Regression](./AI_Machine-Learning_NLP_Data-Science/Applied%20regression.ipynb) · [Softmax](./AI_Machine-Learning_NLP_Data-Science/Applied%20softmax.ipynb)
+**Neural networks by hand** (NumPy, course exercises): [Backpropagation](./AI_Machine-Learning_NLP_Data-Science/Applied%20backpropagation.ipynb) · [Feedforward ANN](./AI_Machine-Learning_NLP_Data-Science/Applied%20feedforward_ann.ipynb) · [Regression](./AI_Machine-Learning_NLP_Data-Science/Applied%20regression.ipynb) · [Softmax](./AI_Machine-Learning_NLP_Data-Science/Applied%20softmax.ipynb) · [XOR and donut problems](./AI_Machine-Learning_NLP_Data-Science/xor_donut.py)
 
 ## Data Analysis & Visualisation
 
@@ -76,12 +86,15 @@ Projects in **backend and full-stack software engineering, AI/ML, data science a
 
 | Project | What it is |
 |---|---|
-| [**USIU-Support Help Desk**](./More%20Software%20Projects/USIU-Support) | Django help desk: student/staff accounts, tickets, comments, dashboards |
+| [**USIU-Support Help Desk**](./More%20Software%20Projects/USIU-Support) | Django help desk: student/staff accounts, tickets, comments, dashboards *(featured)* |
 | [**Blog Web App**](./More%20Software%20Projects/Blog%20Web%20App) | Flask blog with accounts, admin-only posting, comments and a contact form |
 | [**Coffee & Wifi**](./More%20Software%20Projects/Coffee%20and%20Wifi) | Flask café directory with a validated add-café form |
 | [**YouTube Download Manager**](./More%20Software%20Projects/YouTube%20Download%20Manager) | Kivy desktop app using yt-dlp, with Android packaging settings |
 
-## APIs, Automation & Bots
+## More projects
+
+<details>
+<summary><b>APIs, automation and bots</b> (13 projects): flight deals, stock alerts, Spotify playlists, Selenium bots and more</summary>
 
 | Project | What it is |
 |---|---|
@@ -99,9 +112,10 @@ Projects in **backend and full-stack software engineering, AI/ML, data science a
 | [**Quote Emailer**](./More%20Software%20Projects/Automated%20Birthday%20Wisher%20with%20Email%20Alerts) | Emails a random motivational quote |
 | [**Mail Merge**](./More%20Software%20Projects/Automated%20Mail%20Merge) | Personalised letters from a name list |
 
-## Desktop Apps, Games & Python Fundamentals
+</details>
 
-Smaller projects from learning Python: object-oriented design, GUIs with Tkinter, and games with turtle graphics.
+<details>
+<summary><b>Desktop apps, games and Python fundamentals</b> (16 projects): Tkinter apps and turtle-graphics games from learning Python</summary>
 
 | Project | What it is |
 |---|---|
@@ -119,16 +133,18 @@ Smaller projects from learning Python: object-oriented design, GUIs with Tkinter
 | [**Coffee Machine**](./More%20Software%20Projects/Coffee%20Machine) | Object-oriented command-line coffee machine |
 | [**Squirrel Census**](./More%20Software%20Projects/Squirrel%20Census) | pandas counts from Central Park census data |
 | [**File Operations**](./More%20Software%20Projects/FileOperations) | Reading files practice |
-| [**PrettyTable Practice**](./More%20Software%20Projects/Turtle%20Project) | First external-package exercise |
+| [**PrettyTable Practice**](./More%20Software%20Projects/PrettyTable%20Practice) | First external-package exercise |
 | [**Small Programs**](./More%20Software%20Projects/Python%20Basics%20-%20Small%20Programs) | Blackjack, Caesar cipher, number guessing, turtle race and more |
+
+</details>
 
 ---
 
 ## Notes
 
-- **Secrets:** no API keys or passwords are stored in this repository. Projects read them from environment variables; each README lists the ones it needs.
+- **Secrets:** no API keys or passwords are stored in this repository. Projects read them from environment variables, and each README lists the ones it needs.
 - **Learning projects:** many of the smaller projects and several ML notebooks were built while learning. Projects built for the Cyber Shujaa Data & AI programme say so in their READMEs.
 
 ## Contact
 
-[LinkedIn](https://linkedin.com/in/adabor) · [GitHub](https://github.com/Amidu-Dabor)
+📧 [232a.dabor@gmail.com](mailto:232a.dabor@gmail.com) · [LinkedIn](https://linkedin.com/in/adabor) · [GitHub](https://github.com/Amidu-Dabor)
