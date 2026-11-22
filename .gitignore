@@ -1,0 +1,22 @@
+# Secrets
+.env
+*.pem
+*.PublishSettings
+token.txt
+
+# Databases and generated data
+*.db
+*.sqlite3
+db.sqlite3
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+venv.zip
+
+# Editors and OS
+.DS_Store
+.idea/
+~$*

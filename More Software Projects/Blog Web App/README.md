@@ -1,87 +1,33 @@
-# Blog Website
+# Blog Web App (Flask)
 
-A minimal blog platform built with Python Flask. This project is designed to showcase a lightweight, functional blog application suitable for sharing articles and managing content efficiently.
-
----
+A full-stack blog. Anyone can read posts, registered users can comment, and the site owner (the admin) writes, edits and deletes posts.
 
 ## Features
 
-1. **Dynamic Content Management**: Create, edit, and delete blog posts.
-2. **User-Friendly Interface**: Responsive and clean design for better readability.
-3. **Enhanced User Experience**:
-   - **User Authentication**: Supports login and registration.
-   - **Commenting System**: Users can comment on blog posts.
-4. **Search and Organization**:
-   - **Search Feature**: Easily find specific posts with a search bar.
-   - **Tagging**: Posts can be tagged and categorized for better organization.
+- **Accounts:** register, log in and log out (Flask-Login), with passwords hashed using Werkzeug.
+- **Admin-only posting:** an `@admin_only` decorator restricts creating, editing and deleting posts to the first user (ID 1).
+- **Rich-text posts** written with CKEditor.
+- **Comments** on each post, linked to their authors.
+- **Contact form** that emails the message to the site owner through Gmail's SMTP server.
+- **Database:** SQLite through SQLAlchemy, with related users, posts and comments. Tables are created automatically on first run.
 
----
+## Routes
 
-## Technology Stack
+`/` home · `/post/<id>` read and comment · `/new-post`, `/edit-post/<id>`, `/delete-post/<id>` (admin) · `/register` · `/login` · `/logout` · `/about` · `/contact`
 
-- **Backend**: Flask (Python)
-- **Frontend**: HTML, CSS
-- **Database**: SQLite
-- **Version Control**: Git
+## Run locally
 
----
-
-## Installation and Setup
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Amidu-Dabor/ProjectsEnv.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd your-blog-repo
-   ```
-3. Create a virtual environment:
-   ```bash
-   python3 -m venv venv
-   ```
-4. Activate the virtual environment:
-   - **Linux/MacOS**:
-     ```bash
-     source venv/bin/activate
-     ```
-   - **Windows**:
-     ```bash
-     venv\Scripts\activate
-     ```
-5. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-6. Run the application:
-   ```bash
-   flask run
-   ```
-7. Open your browser and navigate to `http://127.0.0.1:5000/`.
-
----
-
-## Project Structure
-
-```
-|-- static/          # Static files (CSS, JS, images)
-|-- templates/       # HTML templates
-|-- main.py          # Main application file
-|-- blog.db          # SQLite database
-|-- requirements.txt # Dependencies
+```bash
+python -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+export FLASK_SECRET_KEY="any-long-random-string"
+export RECIPIENT_EMAIL="you@example.com"          # for the contact form
+export EMAIL_APP_PASSWORD="your-gmail-app-password"
+python main.py
 ```
 
----
+Open http://127.0.0.1:5000. The first account you register becomes the admin.
 
-## Future Enhancements
+## Tech
 
-1. **Advanced Analytics**: Track user engagement and traffic statistics.
-2. **Media Uploads**: Enable image and video uploads for posts.
-3. **API Integration**: Develop RESTful APIs for external integrations.
-4. **Mobile Optimization**: Enhance mobile responsiveness and performance.
-
----
-
-## Getting Started
-
-This project provides a foundation for creating a personal or professional blog. The design, features, and functionality can be customised to meet one's needs.
+Python · Flask · Flask-Login · Flask-SQLAlchemy · Flask-WTF · Flask-CKEditor · Flask-Bootstrap · SQLite · HTML/CSS

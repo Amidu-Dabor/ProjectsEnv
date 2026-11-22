@@ -102,8 +102,8 @@ class Comment(db.Model):
 
 
 # Create all the tables in the database
-# with app.app_context():
-#     db.create_all()
+with app.app_context():
+    db.create_all()
 
 # posts = requests.get("https://api.npoint.io/c790b4d5cab58020d391").json()
 

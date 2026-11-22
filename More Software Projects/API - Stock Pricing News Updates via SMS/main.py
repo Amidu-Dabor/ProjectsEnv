@@ -52,7 +52,7 @@ for detail in articles_details:
 
     client = Client(account_sid, auth_token)
 
-    if abs(difference_in_percentage) < 0:
+    if difference_in_percentage < 0:
         message = client.messages.create(
             body=f"{STOCK}: 🔻{difference_in_percentage}% \n"
                 f"Headline: {article_title} \n"
@@ -60,7 +60,7 @@ for detail in articles_details:
             from_='+16185912908',
             to='+254795455796',
         )
-    elif abs(difference_in_percentage) > 0:
+    elif difference_in_percentage > 0:
         message = client.messages.create(
             body=f"{STOCK}: 🔺{difference_in_percentage}% \n"
                  f"Headline: {article_title} \n"

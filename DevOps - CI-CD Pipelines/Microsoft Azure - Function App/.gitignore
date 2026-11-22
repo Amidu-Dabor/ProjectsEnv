@@ -1,0 +1,5 @@
+# Credentials: never commit
+*.PublishSettings
+*.pem
+*.pem.pub
+local.settings.json

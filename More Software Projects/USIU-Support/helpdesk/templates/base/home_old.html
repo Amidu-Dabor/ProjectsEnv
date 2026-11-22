@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+<style>
+    .home-container{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+
+
+
+</style>
+
+<h1>Welcome to QSupport 🤗</h1>
+
+<div class="home-container">
+
+    <div>
+        {% include 'base/components/subject_component.html' %}
+        {% include 'base/components/user_component.html' %}
+    </div>
+
+    <div>
+        {% if ticket_count > 1 %}
+            <small>{{ticket_count}} tickets need attention!</small>
+        {% elif ticket_count == 1 %}
+            <small>{{ticket_count}} ticket needs attention!</small>
+        {% else %}
+            <small>No ticket has been created.</small>
+        {% endif %}
+        {% include 'base/components/feed_component.html' %}
+    </div>
+
+    <div>
+        {% include 'base/components/activity_component.html' %}
+    </div>
+</div>
+
+{% endblock content %}

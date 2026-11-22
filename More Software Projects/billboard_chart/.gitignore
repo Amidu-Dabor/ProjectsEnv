@@ -1,0 +1,3 @@
+# Spotify login token cache: never commit
+token.txt
+.cache

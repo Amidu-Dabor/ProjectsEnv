@@ -1,0 +1,74 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+<style>
+    .ticket-container{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+
+
+
+</style>
+
+<div class="ticket-container">
+    <div>
+        {% if ticket.is_open %}
+            <h1>{{ ticket.subject.name }} <small class="btn btn-primary">Open</small></h1>
+        {% elif ticket.is_pending %}
+            <h1>{{ ticket.subject.name }} <small class="btn btn-secondary">Pending</small></h1>
+        {% elif ticket.is_approved %}
+            <h1>{{ ticket.subject.name }} <small class="btn btn-info">Approved</small></h1>
+        {% elif ticket.is_resoved %}
+            <h1>{{ ticket.subject.name }} <small class="btn btn-success">Resolved</small></h1>
+        {% endif %}
+
+
+        <p>{{ ticket.description }}</p>
+
+        <div class="comment-wrapper">
+            <h3>Comments</h3>
+            <hr>
+            {% if request.user.is_authenticated %}
+                <div class="comment-form">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <input name="body" placeholder="Write a comment..." type="text">
+                        <button value="body">Comment</button>
+                    </form>
+                </div>
+            {% endif %}
+            <hr>
+            {% for comment in ticket_comments %}
+                <div>
+                    {% if request.user == comment.user %}
+                        <a href="{% url 'edit-comment' %}">Edit</a>
+                        <a href="{% url 'delete-comment' comment.id %}">Delete</a>
+                        <p>@You&nbsp;<b>></b>&nbsp;{{ comment.user.department }}&nbsp;&nbsp;&nbsp;<small>{{comment.created|timesince}} ago</small></p>
+                    {% else %}
+                        <p>@{{comment.user}}&nbsp;<b>></b>&nbsp;{{ comment.user.department }}&nbsp;&nbsp;&nbsp;<small>{{comment.created|timesince}} ago</small></p>
+                    {% endif %}
+                    
+                    
+                    <p>{{comment.body}}</p>
+                    
+                    <hr>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div>
+        <h3>Contributors</h3>
+        <hr>
+        {% for user in contributors %}
+            <div>
+                <p>@{{ user.user_name }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}
